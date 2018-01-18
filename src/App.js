@@ -55,7 +55,7 @@ const App = () => (
   <Router>
     <div>
       <Route exact={true} path="/" component={Home} />
-        <Route exact={true} path="/aboutus" component={AboutUs} />
+        <Route path="/aboutus" component={AboutUs} />
       <Route path="/event/:id" component={ViewEvent} />
       <Route path="/newEvent" component={NewEvent} />
     </div>
