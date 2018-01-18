@@ -1,7 +1,8 @@
 import React from 'react'
 import MottoBookHeader from './Header'
 import MottoBookFooter from './Footer'
-const ContactUs = () =>(
+
+const AboutUs = () =>(
     <div>
     <MottoBookHeader />
 
@@ -53,4 +54,4 @@ const ContactUs = () =>(
     </div>
 )
 
-export default ContactUs
+export default AboutUs

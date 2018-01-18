@@ -21,7 +21,7 @@ import FeedExampleBasic from './Components/Feed'
 import MenuExampleVerticalPointing from './Components/VerticalMenu'
 
 import MottoBookHeader from './Components/Header'
-import ContactUs from './Components/AboutUs'
+import AboutUs from './Components/AboutUs'
 import MottoBookFooter from './Components/Footer'
 
 const Home = () => (
@@ -55,7 +55,7 @@ const App = () => (
   <Router>
     <div>
       <Route exact={true} path="/" component={Home} />
-        <Route exact={true} path="/contactus" component={ContactUs} />
+        <Route exact={true} path="/aboutus" component={AboutUs} />
       <Route path="/event/:id" component={ViewEvent} />
       <Route path="/newEvent" component={NewEvent} />
     </div>
