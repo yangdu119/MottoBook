@@ -6,8 +6,7 @@ import QueryAllQuotes from "../GraphQL/QueryAllQuotes";
 import MutationDeleteEvent from "../GraphQL/MutationDeleteEvent";
 
 import moment from "moment";
-import { Card, Icon, Image } from 'semantic-ui-react'
-import faker from 'faker'
+import { Card, Icon, Image, Button } from 'semantic-ui-react'
 
 import xmlToJSON from 'xmltojson'
 import 'whatwg-fetch'
@@ -44,9 +43,6 @@ class AllQuotes extends Component {
             }).then(function(xml) {
             let result = xmlToJSON.parseString(xml);
             let length = result['ListBucketResult'][0]['Contents'].length
-            //console.log('length', length);
-            //console.log('result', result);
-            //console.log('randomeNumber', randomNumber)
             let allItems = result['ListBucketResult'][0]['Contents'];
             let images = []
 
@@ -58,12 +54,7 @@ class AllQuotes extends Component {
 
             self.setState({'images': images});
 
-            // let item = result['ListBucketResult'][0]['Contents'][randomNumber];
-            // let filename = item['Key'][0]['_text']
-            // //console.log('filename', filename)
-            // let url = "https://s3-us-west-2.amazonaws.com/mottobook-images/"+filename
-            // //console.log('url', url);
-            // return url;
+
         }).catch(function(ex) {
             console.log('parsing failed', ex)
         });
@@ -76,27 +67,6 @@ class AllQuotes extends Component {
 
     }
 
-    // renderEvent = (event) => (
-    //     <Link to={`/event/${event.id}`} className="card" key={event.id}>
-    //         <div className="content">
-    //             <div className="header">{event.content}</div>
-    //         </div>
-    //         <div className="content">
-    //             <p><i className="icon calendar"></i>{moment(event.createdDate).format('LL')}</p>
-    //             <p><i className="icon marker"></i>{event.author}</p>
-    //         </div>
-    //         <div className="content">
-    //             <div className="description"><i className="icon info circle"></i>{event.content}</div>
-    //         </div>
-    //         <div className="extra content">
-    //             <i className="icon comment"></i> {event.comments.items.length} comments
-    //         </div>
-    //         <button className="ui bottom attached button" onClick={this.handleDeleteClick.bind(this, event)}>
-    //             <i className="trash icon"></i>
-    //             Delete
-    //         </button>
-    //     </Link>
-    // );
     renderQuote = (quote) => (
         <Link to={`/event/${quote.id}`} className="card" key={quote.id}>
             <Card style={{ width: '500px' }}>
@@ -106,6 +76,7 @@ class AllQuotes extends Component {
                         {quote.author}
                     </Card.Header>
                     <Card.Meta>
+                        {quote.profession}
                     </Card.Meta>
                     <Card.Description>
                         {quote.content}
@@ -128,41 +99,18 @@ class AllQuotes extends Component {
         </Link>
     );
 
-    // render() {
-    //     const { events } = this.props;
-    //     console.log("events:", events);
-    //
-    //     return (
-    //         <div className="ui link cards">
-    //             <div className="card blue">
-    //                 <Link to="/newEvent" className="new-event content center aligned">
-    //                     <i className="icon add massive"></i>
-    //                     <p>Create new event</p>
-    //                 </Link>
-    //             </div>
-    //             {[].concat(events).sort((a, b) => a.createdDate.localeCompare(b.createdDate)).map(this.renderEvent)}
-    //         </div>
-    //     );
-    // }
+
 
     render() {
         const { events, nextToken } = this.props;
-        //console.log("events:", events);
-        //console.log("nextToken", nextToken);
 
         return (
             <div>
-                {/*<div className="card blue">*/}
-                    {/*<Link to="/newEvent" className="new-event content center aligned">*/}
-                        {/*<i className="icon add massive"></i>*/}
-                        {/*<p>Create new event</p>*/}
-                    {/*</Link>*/}
-                {/*</div>*/}
                 {[].concat(events).sort((a, b) => a.createdDate.localeCompare(b.createdDate)).map(this.renderQuote)}
 
-                <button onClick={this.props.loadOlderMessages}>
+                <Button primary onClick={this.props.loadOlderMessages}>
                     Load More Quotes
-                </button>
+                </Button>
             </div>
 
         );

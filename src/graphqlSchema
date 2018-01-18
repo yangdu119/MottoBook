@@ -48,6 +48,7 @@ type Quote {
     id: ID!
     content: String!
     author: String!
+    profession: String
     createdDate: String!
     likes: Int
     dislikes: Int

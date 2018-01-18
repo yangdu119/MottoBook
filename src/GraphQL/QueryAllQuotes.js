@@ -10,6 +10,7 @@ query ($nextToken: String){
         createdDate
         likes
         dislikes
+        profession
         comments {
         items {
           commentId
