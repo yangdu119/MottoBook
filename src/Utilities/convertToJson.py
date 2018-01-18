@@ -1,5 +1,6 @@
 import requests, json, csv
 from json import JSONEncoder
+from uuid import UUID
 import uuid
 JSONEncoder_olddefault = JSONEncoder.default
 def JSONEncoder_newdefault(self, o):
@@ -39,6 +40,7 @@ with open("FinalProcessedData.csv", "rU") as f:
 			'id': uuid.uuid4(),
 			'author': name,
 			'content': quote,
+			'profession': profession,
 			'createdDate': '2018 1 15'
 		}
 		output.append(quote)
