@@ -29,7 +29,7 @@ const AboutUs = () =>(
             </p>
             <p>
                 One's power is limited, however with all your help, this website can grow like a giant tree. You can
-                give help by continue using this website or providing support by donating.
+                give help by continue using this website or providing support by donation.
             </p>
             <p>
                 This website is under active development, you may notice some features are not working properly.
