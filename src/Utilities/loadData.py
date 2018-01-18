@@ -1,0 +1,27 @@
+from __future__ import print_function # Python 2/3 compatibility
+import boto3
+import json
+import decimal
+
+dynamodb = boto3.resource('dynamodb', region_name='us-west-2')
+
+table = dynamodb.Table('QuoteTable')
+
+with open("quotes.json") as json_file:
+	quotes = json.load(json_file, parse_float = decimal.Decimal)
+	for quote in quotes:
+		id = quote['id']
+		content = quote['content']
+		author = quote['author']
+		createdDate = quote['createdDate']
+
+		print("Adding quote:", author, content)
+
+		table.put_item(
+			Item={
+				'id': id,
+				'author': author,
+				'content': content,
+				'createdDate': createdDate
+			}
+		)
