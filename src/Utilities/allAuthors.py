@@ -47,16 +47,38 @@ with open("FinalProcessedData.csv", "rU") as f:
 				born = ''
 
 			try:
-				occupation = soup.find('th', string="Occupation").find_next_siblings('td')[0].get_text()
+				birthname = born.split('\n')[0]
+				birthday = born.split('\n')[1]
+				birthplace = born.split('\n')[2]
 			except:
-				occupation = ''
-			print born
-			print occupation
+				try:
+					birthday = born.split('\n')[0]
+					birthplace = born.split('\n')[1]
+					birthname = ''
+				except:
+					birthname = ''
+					birthplace = ''
+					birthday = ''
+
+			try:
+				occupation = soup.find('th', string="Occupation").find_next_siblings('td')[0].get_text()
+				tokens = occupation.split('\n')
+				occupationList = []
+				for token in tokens:
+					if token != '\n':
+						occupationList.append(token)
+			except:
+				occupationList = ''
+			#print born
+			#print occupation
 
 
 			content = {}
-			content['born'] = born
-			content['occupation'] = occupation
+			#content['born'] = born
+			content['birthname'] = birthname
+			content['birthday'] = birthday
+			content['birthplace'] = birthplace
+			content['occupation'] = occupationList
 			output[name] = content
 			#print output
 			#sys.exit(0)
@@ -64,7 +86,7 @@ with open("FinalProcessedData.csv", "rU") as f:
 
 	#sendData(i,name,country,profession,quote)
 
-	json_data = json.dumps(output)
+	json_data = json.dumps(output, indent=4)
 	fh = open('authors.json','w')
 	fh.write(json_data)
 	fh.close()
