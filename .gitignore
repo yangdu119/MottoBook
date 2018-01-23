@@ -21,7 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # AppSync
-AppSync.js
+#AppSync.js
 
 #awsmobilejs
 awsmobilejs/.awsmobile/backend-build
