@@ -6,8 +6,7 @@ import QueryAllQuotes from "../GraphQL/QueryAllQuotes";
 import MutationDeleteEvent from "../GraphQL/MutationDeleteEvent";
 
 import moment from "moment";
-import { Card, Icon, Image, Button } from 'semantic-ui-react'
-
+import {Card,Icon, Image, Button } from 'semantic-ui-react'
 import xmlToJSON from 'xmltojson'
 import 'whatwg-fetch'
 
@@ -68,19 +67,23 @@ class AllQuotes extends Component {
     }
 
     renderQuote = (quote) => (
-        <Link to={`/event/${quote.id}`} className="card" key={quote.id}>
+        <div className="card" >
             <Card style={{ width: '500px' }}>
-                <Image src={this.getRandomImage()} />
                 <Card.Content>
                     <Card.Header>
-                        {quote.author}
-                    </Card.Header>
-                    <Card.Meta>
-                        {quote.profession}
-                    </Card.Meta>
-                    <Card.Description>
                         {quote.content}
+                    </Card.Header>
+                    <Card.Description>
+                        {quote.author}
                     </Card.Description>
+                    <Image src={this.getRandomImage()} />
+                    <Card.Description className={'black'}>
+                        {quote.authorOccupation}
+                    </Card.Description>
+                    <Card.Description>
+                        Born: {quote.authorBirthday}, {quote.authorBirthplace}
+                    </Card.Description>
+
                 </Card.Content>
 
                 <Card.Content extra>
@@ -93,10 +96,26 @@ class AllQuotes extends Component {
                         <Icon name='dislike outline' />
                         {quote.dislikes}
                     </a>
+
+                    <a style={{ marginLeft: '2em' }}>
+                        <Icon name='heart outline' />
+                        Add to my MottoBook
+                    </a>
+
+                    <a style={{ marginLeft: '2em' }}>
+                        <Icon name='comments' />
+                        Comments
+                    </a>
+
+                    <a style={{ marginLeft: '2em' }}>
+                        <Icon name='share' />
+                        Share
+                    </a>
                 </Card.Content>
+
             </Card>
             <br/>
-        </Link>
+        </div>
     );
 
 

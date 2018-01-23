@@ -10,46 +10,12 @@ import { Rehydrated } from "aws-appsync-react";
 
 // import './App.css';
 import AllEvents from './Components/AllEvents';
-import AllQuotes from './Components/AllQuotes';
+
 import NewEvent from './Components/NewEvent';
 import ViewEvent from './Components/ViewEvent';
-
-import { Container, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment, Card, Button} from 'semantic-ui-react'
-import QuoteCard from './Components/Card'
-import InputExampleFluid from './Components/InputExampleFluid'
-import FeedExampleBasic from './Components/Feed'
-import MenuExampleVerticalPointing from './Components/VerticalMenu'
-
-import MottoBookHeader from './Components/Header'
 import AboutUs from './Components/AboutUs'
-import MottoBookFooter from './Components/Footer'
-
-const Home = () => (
-    <div>
-        <MottoBookHeader />
-
-        <div class="ui grid container" style={{ marginTop: '1em' }}>
-            <div class="three wide column" >
-                <MenuExampleVerticalPointing />
-            </div>
-            <div class="eight wide column">
-                <div className={"ui"} >
-                    <AllQuotes />
-
-                </div>
-            </div>
-            <div class="five wide column">
-                <FeedExampleBasic />
-            </div>
-
-        </div>
-
-
-        <MottoBookFooter />
-
-
-    </div>
-);
+import Home from './Components/Home'
+import NewQuote from './Components/NewQuote'
 
 const App = () => (
   <Router>
@@ -58,6 +24,7 @@ const App = () => (
         <Route path="/aboutus" component={AboutUs} />
       <Route path="/event/:id" component={ViewEvent} />
       <Route path="/newEvent" component={NewEvent} />
+        <Route path="/newQuote" component={NewQuote}/>
     </div>
   </Router>
 );

@@ -3,6 +3,7 @@ import {Menu, Button} from 'semantic-ui-react'
 import SearchBar from './SearchBar'
 
 const MottoBookHeader = () =>(
+
     <Menu fixed='top' inverted className={'ui blue'}>
         <Menu.Item style={{ marginLeft: '6em' }} as='a' header >
             MottoBook
@@ -12,10 +13,13 @@ const MottoBookHeader = () =>(
 
         <Menu.Menu position='right' style={{ marginRight: '6em' }}>
             <Menu.Item className='item'>
-                <Button as='a' primary>New Quote</Button>
+                <a href="/newquote">New Quote</a>
             </Menu.Item>
             <Menu.Item className='item'>
-                <Button as='a' primary>Log in</Button>
+                <a href="/newquote">Login</a>
+            </Menu.Item>
+            <Menu.Item className='item'>
+                <a href="/newquote">Sign up</a>
             </Menu.Item>
         </Menu.Menu>
 
