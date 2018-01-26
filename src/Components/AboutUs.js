@@ -24,9 +24,17 @@ const AboutUs = () =>(
                 By looking at other successful people's quotes, we can find our own motto through them.
             </p>
             <p>
-                I hope one day, people will all come to this website looking for wisdom, inspiration, love.
-                And I wish it can help people change their life for good.
+                We are bombarded by information nowadays. Facebook/Twitter bring all kinds of information to us. No matter
+                good or bad; no matter happy or sad; no matter important or non-sense.
+                Imagine a social network where only good quotes are present on the platform where people come here only looking
+                for wisdom, inspiration, love, good, light. This is what this MottoBook is aimed to achieve.
             </p>
+            <p>
+                I have two beautiful young boys. One is one year old and the other is 3 years old. I hope when they grow up,
+                they are living in a better world. Their mind are not pollutted by all kinds of information from platform such as
+                Facebook or Twitter. I will build a platform only having good information and filter out bad information.
+            </p>
+
             <p>
                 One's power is limited, however with all your help, this website can grow like a giant tree. You can
                 give help by continue using this website or providing support by donation.

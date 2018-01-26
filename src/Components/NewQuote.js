@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import { graphql } from "react-apollo";
 import QueryAllEvents from "../GraphQL/QueryAllEvents";
-import MutationCreateEvent from "../GraphQL/MutationCreateEvent";
 
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
@@ -14,11 +13,13 @@ import DateTimePickerCustomInput from "./DateTimePickerCustomInput";
 
 import MottoBookHeader from './Header'
 import MottoBookFooter from './Footer'
+import gql from 'graphql-tag'
+import { withRouter } from 'react-router-dom'
 
 class NewQuote extends Component {
 
     static defaultProps = {
-        createEvent: () => null,
+        createQuote: () => null,
     }
 
     state = {
@@ -47,12 +48,17 @@ class NewQuote extends Component {
         e.stopPropagation();
         e.preventDefault();
 
-        const { createEvent, history } = this.props;
-        const { event } = this.state;
+        const { quote } = this.state;
+        const author = quote.author
+        const authorBirthday = quote.authorBirthday
+        const authorBirthplace = quote.authorBirthplace
+        const authorOccupation = quote.authorOccupation
+        const authorQuote = quote.authorQuote
 
-        await createEvent(event);
+        await this.props.createQuoteMutation({variables: {author, authorBirthday, authorBirthplace, authorOccupation, authorQuote}})
 
-        history.push('/');
+        this.props.history.replace('/');
+
     }
 
     render() {
@@ -77,7 +83,7 @@ class NewQuote extends Component {
                     </div>
 
                     <div className="field required eight wide">
-                        <label htmlFor="authorBirthplace">Author Birthday</label>
+                        <label htmlFor="authorBirthplace">Author Birthplace</label>
                         <input type="text" id="authorBirthplace" value={quote.authorBirthplace} onChange={this.handleChange.bind(this, 'authorBirthplace')} />
                     </div>
 
@@ -106,31 +112,58 @@ class NewQuote extends Component {
 
 }
 
-export default graphql(
-    MutationCreateEvent,
-    {
-        options: {
-            refetchQueries: [{ query: QueryAllEvents }],
-            update: (proxy, { data: { createEvent } }) => {
-                const query = QueryAllEvents;
-                const data = proxy.readQuery({ query });
 
-                data.listEvents.items.push(createEvent);
 
-                proxy.writeQuery({ query, data });
-            }
-        },
-        props: (props) => ({
-            createEvent: (event) => {
-                return props.mutate({
-                    variables: event,
-                    optimisticResponse: () => ({
-                        createEvent: {
-                            ...event, id: uuid(), __typename: 'Event', comments: { __typename: 'CommentConnection', items: [] }
-                        }
-                    }),
-                })
-            }
-        })
+const CREATE_QUOTE_MUTATION = gql`
+    mutation CreateQuoteMutation($author: String!, $authorBirthday: String!, 
+    $authorBirthplace: String!, $authorOccupation: String!, $authorQuote: String!){
+        createQuote(
+            author: $author,
+            authorBirthday: $authorBirthday,
+            authorBirthplace: $authorBirthplace,
+            authorOccupation: $authorOccupation,
+            authorQuote: $authorQuote,
+            authorBirthname: $author,
+            likes: 0,
+            dislikes: 0,
+            imageUrl: ""
+            
+        ){
+            id
+            author
+            authorQuote
+        }
     }
-)(NewQuote);
+`
+
+const CreatePageWithMutation = graphql(CREATE_QUOTE_MUTATION, {name: 'createQuoteMutation'})(NewQuote)
+export default withRouter(CreatePageWithMutation)
+//
+// export default graphql(
+//     MutationcreateQuote,
+//     {
+//         options: {
+//             refetchQueries: [{ query: QueryAllEvents }],
+//             update: (proxy, { data: { createQuote } }) => {
+//                 const query = QueryAllEvents;
+//                 const data = proxy.readQuery({ query });
+//
+//                 data.listEvents.items.push(createQuote);
+//
+//                 proxy.writeQuery({ query, data });
+//             }
+//         },
+//         props: (props) => ({
+//             createQuote: (event) => {
+//                 return props.mutate({
+//                     variables: event,
+//                     optimisticResponse: () => ({
+//                         createQuote: {
+//                             ...event, id: uuid(), __typename: 'Event', comments: { __typename: 'CommentConnection', items: [] }
+//                         }
+//                     }),
+//                 })
+//             }
+//         })
+//     }
+// )(NewQuote);

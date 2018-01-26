@@ -55,7 +55,7 @@ export default class Home extends Component {
         return (
             <div>
                 <MottoBookHeader />
-                <Grid centered style={{ marginTop: '1em' }}>
+                <Grid centered style={{ marginTop: '3em' }}>
 
                         <div ref={this.handleContextRef}>
                             <Segment>

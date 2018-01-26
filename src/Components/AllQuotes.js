@@ -9,6 +9,8 @@ import moment from "moment";
 import {Card,Icon, Image, Button } from 'semantic-ui-react'
 import xmlToJSON from 'xmltojson'
 import 'whatwg-fetch'
+import gql from 'graphql-tag'
+import QuoteCard from './QuoteCard'
 
 class AllQuotes extends Component {
     constructor(props){
@@ -31,6 +33,12 @@ class AllQuotes extends Component {
         }
     }
 
+    // componentWillReceiveProps(nextProps) {
+    //     if (this.props.location.key !== nextProps.location.key) {
+    //         this.props.quotes.refetch()
+    //     }
+    // }
+
     componentDidMount = () => {
         let request = {};
         request.headers = { 'Accept': 'text/html,application/xhtml+xml,application/xml'}
@@ -45,13 +53,15 @@ class AllQuotes extends Component {
             let allItems = result['ListBucketResult'][0]['Contents'];
             let images = []
 
-            allItems.forEach(function(item){
-                let filename = item['Key'][0]['_text'];
-                let url = request.url+filename
-                images.push(url)
-            })
+            console.log("length", length);
 
-            self.setState({'images': images});
+            // allItems.forEach(function(item){
+            //     let filename = item['Key'][0]['_text'];
+            //     let url = request.url+filename
+            //     images.push(url)
+            // })
+            //
+            // self.setState({'images': images});
 
 
         }).catch(function(ex) {
@@ -59,74 +69,19 @@ class AllQuotes extends Component {
         });
     }
 
-    getRandomImage = () =>{
-        let length = this.state.images.length
-        let randomNumber = Math.floor(Math.random() * Math.floor(length))
-        return this.state.images[randomNumber];
-
-    }
-
-    renderQuote = (quote) => (
-        <div className="card" >
-            <Card style={{ width: '500px' }}>
-                <Card.Content>
-                    <Card.Header>
-                        {quote.content}
-                    </Card.Header>
-                    <Card.Description>
-                        {quote.author}
-                    </Card.Description>
-                    <Image src={this.getRandomImage()} />
-                    <Card.Description className={'black'}>
-                        {quote.authorOccupation}
-                    </Card.Description>
-                    <Card.Description>
-                        Born: {quote.authorBirthday}, {quote.authorBirthplace}
-                    </Card.Description>
-
-                </Card.Content>
-
-                <Card.Content extra>
-                    <a>
-                        <Icon name='like outline' />
-                        {quote.likes}
-                    </a>
-
-                    <a style={{ marginLeft: '2em' }}>
-                        <Icon name='dislike outline' />
-                        {quote.dislikes}
-                    </a>
-
-                    <a style={{ marginLeft: '2em' }}>
-                        <Icon name='heart outline' />
-                        Add to my MottoBook
-                    </a>
-
-                    <a style={{ marginLeft: '2em' }}>
-                        <Icon name='comments' />
-                        Comments
-                    </a>
-
-                    <a style={{ marginLeft: '2em' }}>
-                        <Icon name='share' />
-                        Share
-                    </a>
-                </Card.Content>
-
-            </Card>
-            <br/>
-        </div>
-    );
-
-
-
     render() {
-        const { events, nextToken } = this.props;
-
+        console.log("allQuoteQuery", this.props.allQuotesQuery);
         return (
             <div>
-                {[].concat(events).sort((a, b) => a.createdDate.localeCompare(b.createdDate)).map(this.renderQuote)}
+                {this.props.allQuotesQuery.allQuotes && this.props.allQuotesQuery.allQuotes.map(quote => (
+                    <QuoteCard
+                        key = {quote.id}
+                        quote = {quote}
+                        refresh={() => this.props.allQuotesQuery.refetch()}
+                        getRandomImage = {this.getRandomImage}
+                    />
 
+                ))}
                 <Button primary onClick={this.props.loadOlderMessages}>
                     Load More Quotes
                 </Button>
@@ -137,12 +92,41 @@ class AllQuotes extends Component {
 
 }
 
+const ALL_QUOTES_QUERY = gql`
+    query allQuotesQuery{
+        allQuotes{
+            id
+            authorQuote
+            authorBirthday
+            authorBirthplace
+            authorBirthname
+            authorOccupation
+            author
+            likes
+            dislikes
+            imageUrl
+        }
+    }
+`
+
+const ListPageWithQuery = graphql(ALL_QUOTES_QUERY, {
+    name: 'allQuotesQuery',
+    options: {
+        fetchPolicy: 'network-only',
+    },
+})(AllQuotes)
+
+export default ListPageWithQuery
+
+
+/*
+
 export default compose(
     graphql(
         QueryAllQuotes,
         {
             options: {
-                fetchPolicy: 'cache-and-network',
+                fetchPolicy: 'network-only',
             },
             props: ({ data: { allQuote = { items: [] }, fetchMore } }) => ({
                 events: allQuote.items,
@@ -185,33 +169,6 @@ export default compose(
             })
         }
     ),
-    graphql(
-        MutationDeleteEvent,
-        {
-            options: {
-                fetchPolicy: 'cache-and-network',
-                refetchQueries: [{ query: QueryAllQuotes }],
-                update: (proxy, { data: { deleteEvent } }) => {
-                    const query = QueryAllQuotes;
-                    const data = proxy.readQuery({ query });
 
-                    data.listEvents.items = data.listEvents.items.filter(event => event.id !== deleteEvent.id);
-
-                    proxy.writeQuery({ query, data });
-                }
-            },
-            props: (props) => ({
-                deleteEvent: (event) => {
-                    return props.mutate({
-                        variables: { id: event.id },
-                        optimisticResponse: () => ({
-                            deleteEvent: {
-                                ...event, __typename: 'Event', comments: { __typename: 'CommentConnection', items: [] }
-                            }
-                        }),
-                    });
-                }
-            })
-        }
-    )
 )(AllQuotes);
+*/
