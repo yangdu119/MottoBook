@@ -17,9 +17,17 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import ReactDOM from 'react-dom'
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-113147944-1'); //Unique Google Analytics tracking number
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+function fireTracking() {
+    ReactGA.pageview(window.location.hash);
+}
+
 const App = () => (
     <ApolloProvider client={client}>
-        <Router>
+        <Router onUpdate={fireTracking} history={hashHistory}>
             <div>
                 <Route exact path='/' component={Home} />
                 <Route path="/aboutus" component={AboutUs} />
