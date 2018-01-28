@@ -27,7 +27,7 @@ function fireTracking() {
 
 const App = () => (
     <ApolloProvider client={client}>
-        <Router onUpdate={fireTracking} history={hashHistory}>
+        <Router onUpdate={fireTracking}>
             <div>
                 <Route exact path='/' component={Home} />
                 <Route path="/aboutus" component={AboutUs} />
