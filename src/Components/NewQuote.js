@@ -66,7 +66,7 @@ class NewQuote extends Component {
 
         return (
             <div>
-                <MottoBookHeader />
+                <MottoBookHeader auth={this.props.auth}/>
                 <br /><br /><br />
             <div className="ui container raised very padded segment">
 
@@ -100,7 +100,7 @@ class NewQuote extends Component {
                     <div className="ui buttons">
                         <Link to="/" className="ui button">Cancel</Link>
                         <div className="or"></div>
-                        <button className="ui positive button" onClick={this.handleSave}>Save</button>
+                        <button className="ui primary button" onClick={this.handleSave}>Save</button>
                     </div>
                 </div>
 

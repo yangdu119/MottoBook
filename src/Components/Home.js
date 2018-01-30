@@ -16,45 +16,18 @@ import AllQuotes from './AllQuotes';
 
 const Placeholder = () => <Image src='/assets/images/wireframe/paragraph.png' />
 
-// const Home = () => (
-//
-//     <div>
-//         <MottoBookHeader />
-//
-//         <div className="ui grid container" style={{ marginTop: '1em' }}>
-//
-//             <div className="three wide column" >
-//                 <MenuExampleVerticalPointing />
-//             </div>
-//             <div className="eight wide column">
-//                 <div className={"ui"} >
-//                     <AllQuotes />
-//
-//                 </div>
-//             </div>
-//             <div class="five wide column">
-//                 <FeedExampleBasic />
-//             </div>
-//
-//         </div>
-//
-//
-//         <MottoBookFooter />
-//
-//     </div>
-// );
-
 export default class Home extends Component {
     state = {}
 
     handleContextRef = contextRef => this.setState({ contextRef })
 
     render() {
+
         const { contextRef } = this.state
 
         return (
             <div>
-                <MottoBookHeader />
+                <MottoBookHeader auth={this.props.auth} {...this.props} />
                 <Grid centered style={{ marginTop: '3em' }}>
 
                         <div ref={this.handleContextRef}>
