@@ -38,10 +38,10 @@ export default class QuoteCard extends React.Component {
                         <Card.Description>
                             {this.props.quote.author}
                         </Card.Description>
-                        <Image src={this.props.quote.imageUrl} />
                         <Card.Description className={'black'}>
                             {this.props.quote.authorOccupation}
                         </Card.Description>
+                        <Image src={this.props.quote.imageUrl} />
                         <Card.Description>
                             Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
                         </Card.Description>

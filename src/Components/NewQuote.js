@@ -32,6 +32,18 @@ class NewQuote extends Component {
         }
     };
 
+    componentWillMount() {
+        this.setState({ profile: {} });
+        const { userProfile, getProfile } = this.props.auth;
+        if (!userProfile) {
+            getProfile((err, profile) => {
+                this.setState({ profile });
+            });
+        } else {
+            this.setState({ profile: userProfile });
+        }
+    }
+
     handleChange(field, { target: { value } }) {
         const { quote } = this.state;
 
@@ -48,6 +60,7 @@ class NewQuote extends Component {
         e.stopPropagation();
         e.preventDefault();
 
+
         const { quote } = this.state;
         const author = quote.author
         const authorBirthday = quote.authorBirthday
@@ -55,7 +68,10 @@ class NewQuote extends Component {
         const authorOccupation = quote.authorOccupation
         const authorQuote = quote.authorQuote
 
-        await this.props.createQuoteMutation({variables: {author, authorBirthday, authorBirthplace, authorOccupation, authorQuote}})
+        const { profile } = this.state;
+        const userEmail = profile.email
+
+        await this.props.createQuoteMutation({variables: {author, authorBirthday, authorBirthplace, authorOccupation, authorQuote, userEmail}})
 
         this.props.history.replace('/');
 
@@ -116,7 +132,7 @@ class NewQuote extends Component {
 
 const CREATE_QUOTE_MUTATION = gql`
     mutation CreateQuoteMutation($author: String!, $authorBirthday: String!, 
-    $authorBirthplace: String!, $authorOccupation: String!, $authorQuote: String!){
+    $authorBirthplace: String!, $authorOccupation: String!, $authorQuote: String!, $userEmail: String!){
         createQuote(
             author: $author,
             authorBirthday: $authorBirthday,
@@ -126,7 +142,8 @@ const CREATE_QUOTE_MUTATION = gql`
             authorBirthname: $author,
             likes: 0,
             dislikes: 0,
-            imageUrl: ""
+            imageUrl: "",
+            userEmail: $userEmail
             
         ){
             id

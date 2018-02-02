@@ -11,6 +11,11 @@ service: serverless-quoteImage
 # The `provider` block defines where your service will be deployed
 provider:
   name: aws
+  iamRoleStatements:
+      -  Effect: "Allow"
+         Action:
+           - "dynamodb:GetItem"
+         Resource: "arn:aws:dynamodb:us-west-2:071294546883:table/QuoteImages"
   runtime: nodejs6.10
 
 # The `functions` block defines what code to deploy
