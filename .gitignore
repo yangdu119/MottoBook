@@ -27,3 +27,6 @@ yarn-error.log*
 awsmobilejs/.awsmobile/backend-build
 awsmobilejs/\#current-backend-info
 .idea
+
+#Auth0 variable file
+/src/Auth/auth0-variables.js
