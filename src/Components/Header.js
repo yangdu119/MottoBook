@@ -20,7 +20,15 @@ class MottoBookHeader extends Component {
 
         return(
             <Menu fixed='top' inverted className={'ui blue'}>
-                <Menu.Item style={{ marginLeft: '6em' }} header as='a' href='/'>MottoBook</Menu.Item>
+
+                <Menu.Item>
+
+                </Menu.Item>
+                <Menu.Item style={{ marginLeft: '6em' }} header as='a' href='/'>
+                    <img src="mottobook.svg" alt="MottoBook"/>
+
+                    MottoBook
+                </Menu.Item>
 
                 <SearchBar />
 
