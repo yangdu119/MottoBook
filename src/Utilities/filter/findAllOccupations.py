@@ -14,7 +14,7 @@ with open('authors_golden.json') as json_data:
 	count =0
 	#print author_data
 	for author, value in author_data.iteritems():
-		print author
+		#print author
 		#print value
 		#print value['occupation']
 
@@ -23,13 +23,13 @@ with open('authors_golden.json') as json_data:
 		jobs = joblist.split(',')
 		formatJobs = [job.strip().lower() for job in jobs]
 		for job in formatJobs:
-			print job
+			#print job
 			if job in occupations:
 				occupations[job] = occupations[job] +1
 			else:
 				occupations[job] = 1
 
-		print '---------'
+		#print '---------'
 		#print joblist
 		# for job in joblist:
 		# 	if job not in occupations:

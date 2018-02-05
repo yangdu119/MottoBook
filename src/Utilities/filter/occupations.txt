@@ -1,0 +1,415 @@
+/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 /Users/yang/aws/appsync/MottoBook/src/Utilities/filter/findAllOccupations.py
+: 1
+(the trump organization): 1
+activist for female education: 1
+actress (1948–1989): 1
+advisor of chandragupta maurya: 1
+aeronautical engineer: 1
+alternative medicine advocate: 1
+analyst: 1
+and cco of the oprah winfrey network (2011–present): 1
+and ceo of apple inc.: 1
+and columnist: 1
+and investor: 1
+and philanthropist: 1
+apinter: 1
+army general: 1
+art critic: 1
+associate justice of the supreme court of the united states: 1
+astrobiologist: 1
+astronaut: 1
+author and co-founder of the seventh-day adventist church: 1
+author of life's little instruction book: 1
+author of scouting for boys: 1
+aviation pioneer: 1
+aviator: 1
+bandleader: 1
+baseball catcher: 1
+basketball player: 1
+bible teacher: 1
+biologist: 1
+book publisher: 1
+botanist: 1
+boxer: 1
+british army officer: 1
+buddhist monk: 1
+business investor with tribeca grill: 1
+business magnate: 1
+carmelite nun: 1
+catholic friar: 1
+catholic theologian: 1
+celebrity chef: 1
+central figure in the transition from natural philosophy to modern science: 1
+ceramicist: 1
+chairman & ceo of general electric (1981–2001): 1
+chairwoman: 1
+chairwoman and ceo of harpo productions (1986–present): 1
+chef: 1
+chemist: 1
+chief disciple of indian: 1
+chinese teacher: 1
+christian: 1
+civil servant: 1
+civil war nurse: 1
+co-founder: 1
+co-founder of facebook: 1
+co-founder of the microsoft corp: 1
+coach of football basketball and baseball: 1
+cognitive scientist: 1
+college basketball player: 1
+comedic actor: 1
+comic book creator: 1
+commander of the confederate states army: 1
+computer programmer: 1
+cultural critic: 1
+dark romantic: 1
+deacon: 1
+designer: 1
+development critic: 1
+diarist: 1
+doctor of the church: 1
+dominican friar: 1
+draftsman: 1
+draughtsman: 1
+drawer: 1
+dressmaker: 1
+dutch reformed minister: 1
+educator and author: 1
+electrical engineer: 1
+emperor of the roman empire: 1
+environmental activst: 1
+epistemologist: 1
+evangelical christian evangelist: 1
+evolutionary biologist: 1
+executive: 1
+explorer: 1
+farmer: 1
+feminist: 1
+field marshal of the philippine army: 1
+film: 1
+film studio executive: 1
+first african american to play in major league baseball: 1
+first person to walk on the moon: 1
+first wife of charles prince of wales: 1
+five star general: 1
+football quarterback: 1
+footballer: 1
+former blogger for bbc urdu and student: 1
+former chrysler chairman: 1
+former ford president: 1
+founder and ceo of next: 1
+founder and executive chairman of alibaba group: 1
+founder of ford motor company: 1
+founder of modern nursing: 1
+founder of psychoanalysis: 1
+founder of the academy in athens: 1
+founder of virgin group: 1
+founder of walmart and sam's club: 1
+founding father of the people's republic of china: 1
+founding fathers of the united states: 1
+four-star general in the united states army: 1
+fox news channel contributor: 1
+friar: 1
+futurist: 1
+general: 1
+general secretary of the communist party of the soviet union: 1
+governor of taxas: 1
+guitarist: 1
+head coach at univeristy of california at los angeles: 1
+hiker: 1
+hip hop recording artist: 1
+hollywood actor: 1
+host of the oprah winfrey show (1986–2011): 1
+humanitarian (1988–1992): 1
+idealist philosopher: 1
+indian hindu monk: 1
+insurance officer: 1
+internet entrepreneur: 1
+internet personality: 1
+islamic scholar: 1
+italian renaissance polymath: 1
+itinerant traveler: 1
+jazz trumpeter: 1
+jesuit priest: 1
+jewish preacher: 1
+juggler: 1
+king of the ancient greek kingdom of macedon: 1
+labor leader: 1
+language theorist: 1
+latin writer: 1
+layer: 1
+leader of the labour party: 1
+leader of the national fascist party: 1
+lexicographer: 1
+librarian: 1
+licensed master social worker: 1
+lieutenant junior grade usn[1]: 1
+linguist: 1
+literary of the medieval period: 1
+literary translator: 1
+logician: 1
+longshoreman: 1
+management-expert: 1
+manager: 1
+maritime explorer: 1
+martial artist: 1
+member of the british royal family: 1
+memoirist: 1
+middle and long-distance runner: 1
+military engineer: 1
+military general and tactician: 1
+military leader: 1
+milliner: 1
+missionary: 1
+mixed martial artist: 1
+moral philosopher: 1
+multi-instrumentalist: 1
+music video director: 1
+mystic: 1
+natural philosopher: 1
+neurosurgeon: 1
+nobel laureate: 1
+non-fiction writer: 1
+oceanographer: 1
+oil industry business magnate and philanthropist: 1
+one of the four founding professors of johns hopkins hospital: 1
+ordained southern baptist minister: 1
+organist: 1
+paleontologist: 1
+pan-africanist: 1
+persian poet: 1
+physician and educator: 1
+poet laureate (1850-1892): 1
+polemicist: 1
+political cartoonist: 1
+political commentator: 1
+political philosopher: 1
+political satirist: 1
+politican: 1
+post-impressionist painter: 1
+preacher: 1
+president of cuba: 1
+president of india: 1
+president of the russian federation: 1
+priest: 1
+primary investor and ceo of pixar: 1
+primatologist: 1
+prime minister of italy: 1
+prime minister of the united kingdom and leader of the conservative party: 1
+professional baseball second baseman: 1
+professional baseball shortstop: 1
+professional bodybuilder: 1
+professional golfer: 1
+professional wrestling manager: 1
+professor of animal science at colorado state university: 1
+professor of biochemistry: 1
+professor of physics at the university of california berkeley: 1
+protestant clergyman: 1
+psychoanalyst: 1
+queen of england and ireland: 1
+queen of the united kingdom: 1
+radio and television star: 1
+radio dj: 1
+radio host: 1
+radio personality: 1
+radio producer: 1
+radio talk show host: 1
+real estate developer: 1
+record executive: 1
+religious and literary critic: 1
+religious author: 1
+research professor: 1
+restaurateur: 1
+revolutionary: 1
+revolutionary and political leader: 1
+revolutionary socialist: 1
+rock guitarist: 1
+roman catholic nun: 1
+roman catholic saint: 1
+science popularizer: 1
+senior officer of the united states army: 1
+short story author: 1
+short-story writer: 1
+social activist: 1
+social theorist: 1
+social thinker: 1
+socialite: 1
+song composer: 1
+sound designer: 1
+spanist mystic: 1
+stage: 1
+stage designer: 1
+stoicism philosopher: 1
+storyteller: 1
+sufi mystic: 1
+surveyor: 1
+syndicated columnist: 1
+talk show host: 1
+tax resister: 1
+technology and retail entrepreneur and investor: 1
+televangelist: 1
+television and radio host: 1
+television host/producer: 1
+theatre director: 1
+theoretical physicst: 1
+track athlete: 1
+translator: 1
+trappist monk: 1
+travel writer: 1
+tv producer: 1
+u.s. founding father: 1
+un messenger of peace: 1
+union army general: 1
+union leader: 1
+united states secretary of the army: 1
+united states secretary of the treasury: 1
+ventuer capitalist: 1
+vice president of the united states: 1
+violinist: 1
+war correspondent: 1
+watercolourist: 1
+wife of the president of the united states: 1
+winner of 1976 nobel memorial prize in economic sciences: 1 - science and engineering
+women's rights activist: 1 - politics
+writer and journalist for ms. and new york magazines[3]: 1 - writer
+writer and lyricist: 1 - writer
+writer of the renaissance period: 1 - writer
+anglican cleric: 2 - Religion and Spirituality
+animator: 2 - Arts
+anthropologist: 2 - science and engineering
+architect: 2- science and engineering
+astronomer: 2 - science and engineering
+astrophysicist: 2 - science and engineering
+biographer: 2 - writer
+catholic priest: 2 - religion and spirituality
+ceo: 2 - business
+chairman: 2 - business
+consultant: 2 - business
+cosmologist: 2 - science and engineering
+educator: 2 - sceince and engineering
+environmentalist: 2 - scence and engineering
+ethologist: 2 - science and engineeriing
+filmmaker: 2 - entertainment
+first lady of the united states: 2 - politics
+humanist: 2 - science and engineering
+management consultant: 2 - business
+mechanical engineer: 2 - science and engineering
+minister: 2 - politics
+neurologist: 2 - science and engineering
+one of the founding fathers of the united states: 2 - politics
+peace activist: 2 - politics
+philologist: 2 - science and engineering
+political scientist: 2 - politics
+polymath: 2 - science and engineering
+printmaker: 2 - arts
+professional boxer: 2 - sports
+professional speaker: 2 - business
+professional wrestler: 2 - sports
+psychiatrist: 2 - science and engieering
+psychologist: 2 - science and engineering
+salesman: 2 - business
+satirist: 2 - writer
+scholar: 2 - Writer
+sculptor: 2 - arts
+senator: 2 - politics
+social reformer: 2 - politics
+sociologist: 2 - science and engineering
+spiritual leader: 2 - relision and spirituality
+statistician: 2 - Science and Engineering
+suffragist: 2 - politics
+teacher: 2 - Science and Engineering
+television presenter: 2 - entertainment
+television producer: 2 - entertainment
+thelogian: 2 - Religion and Spirituality
+visual artist: 2 - Arts
+abolitionist: 3 - politics
+broadcaster: 3 - writer
+businesswoman: 3 - business
+columnist: 3 - writer
+communist revolutionary: 3 - politics
+dramatist: 3 - writer
+football player: 3 - sports
+geologist: 3 - Sicnece
+humorist: 3 - Arts
+investor: 3 - business
+jurist: 3 - politics
+orator: 3 - business
+photographer: 3 - entertainment
+prime minister of the united kingdom: 3 - politics
+professional basketball player: 3 - sports
+religious leader: 3 - religion and spirituality
+science communicator: 3 - science and engineering
+scientist: 3 - science and engineering
+television host: 3 - entertainment
+television personality: 3 - entertainment
+theoretical physicist: 3 - science and engineering
+united states secretary of state: 3 - politics
+united states senator: 3 - politics
+voice actor: 3 - entertainment
+academic: 4 - Science and engineering
+coach: 4 - Sports
+engineer: 4 - Science
+fashion designer: 4 - Business
+humanitarian: 4 - Science
+literary critic: 4 - Writer
+pastor: 4 - Religion and Spirituality
+public speaker: 4 - Business
+publisher: 4 - writer
+speaker: 4 - Business
+civil rights activist: 5 - writer
+critic: 5 - writer
+dancer: 5 - entertainment
+economist: 5 - science
+film producer: 5 - entertainment
+naturalist: 5 - science
+physician: 5 - Science
+physicist: 5 - Science
+political theorist: 5 - politics
+singer-songwriter: 5 - Entertainment
+social critic: 5 - Writer
+soldier: 5 - Military
+composer: 6 - Entertainment
+diplomat: 6 - Politician
+inventor: 6 - Science
+lecturer: 6 - Writer
+mathematician: 6 - Science
+model: 6 --?
+philanthropist: 6 -- ?
+political activist: 6 - Politician
+lawyer: 7 - Politician
+motivational speaker: 7 - Business
+painter: 7 - Arts
+professor: 7 - Writer
+statesman: 7- Politician
+editor: 8 - Writer
+theologian: 8 - Religion and Spirituality
+artist: 9 - Arts
+historian: 9 - writer
+stand-up comedian: 9 - Entertainment
+businessman: 10 - Business
+screenwriter: 10 - writer
+short story writer: 10 - Writer
+entrepreneur: 11 - Business
+record producer: 12 - entertainment
+activist: 13 - politician
+playwright: 15 - entertainment
+politician: 16 - politician
+rapper: 16 - entertainment
+director: 17 - entertainment
+comedian: 18 - entertainment
+journalist: 18 - writer
+actress: 19 - entertainment
+musician: 20 - entertainment
+president of the united states: 20 - politician
+essayist: 21 - writer
+producer: 24 - entertainment
+songwriter: 31 - entertainment
+singer: 36 - entertainment
+novelist: 38 - writer
+philosopher: 44 - philosopher
+actor: 50 - entertainment
+poet: 51 - writer
+author: 61 - writer
+writer: 64 - writer
+
+Process finished with exit code 0

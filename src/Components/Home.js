@@ -8,7 +8,7 @@ import { Container, Divider, Dropdown,
 import QuoteCard from './Card'
 import InputExampleFluid from './InputExampleFluid'
 import FeedExampleBasic from './Feed'
-import MenuExampleVerticalPointing from './VerticalMenu'
+import AccordionExampleMenu from './VerticalMenu'
 
 import MottoBookHeader from './Header'
 import MottoBookFooter from './Footer'
@@ -38,7 +38,7 @@ export default class Home extends Component {
                                 <Grid.Column width={3}>
                                 <Rail position='left'>
                                     <Sticky context={contextRef} offset={70}>
-                                        <MenuExampleVerticalPointing />
+                                        <AccordionExampleMenu />
                                     </Sticky>
                                 </Rail>
                                 </Grid.Column>
