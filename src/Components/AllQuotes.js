@@ -18,7 +18,8 @@ class AllQuotes extends Component {
     constructor(props){
         super(props);
         this.state = {
-            filterValue: 'clear'
+            filterValue: 'clear',
+            authorName: '',
         }
     }
 
@@ -54,12 +55,35 @@ class AllQuotes extends Component {
     componentWillReceiveProps(nextProps) {
         console.log("will receive props",nextProps)
 
-        if (nextProps.radioSelected !== this.state.filterValue) {
+        // if (nextProps.authorName !== ""){
+        //     this.setState({
+        //         authorName: nextProps.authorName,
+        //         filterValue: 'clear',
+        //     });
+        //     this.props.authorSearch.refetch({
+        //         authorName: nextProps.authorName
+        //     })
+        // }else{
+        //     //(nextProps.radioSelected !== this.state.filterValue) {
+        //     console.log('handleFilterChange', nextProps.radioSelected);
+        //     this.setState({filterValue: nextProps.radioSelected});
+        //     this.props.filterCount.refetch({
+        //         filter: nextProps.radioSelected,
+        //         authorName: ''
+        //     });
+        //     console.log("")
+        //     this.props.filter.refetch({
+        //         filter: nextProps.radioSelected
+        //     });
+        // }
+
+        if(nextProps.radioSelected !== this.state.filterValue) {
             console.log('handleFilterChange', nextProps.radioSelected);
             this.setState({filterValue: nextProps.radioSelected});
-            this.props.filterCount.refetch({
-                filter: nextProps.radioSelected
-            });
+            // this.props.filterCount.refetch({
+            //     filter: nextProps.radioSelected,
+            //     authorName: ''
+            // });
             console.log("")
             this.props.filter.refetch({
                 filter: nextProps.radioSelected
@@ -72,12 +96,13 @@ class AllQuotes extends Component {
     render() {
         console.log('allQuotes props', this.props);
         const isFilterClear = this.state.filterValue === 'clear';
+        const isAuthorSearchClear = this.state.authorName === '';
         console.log("this.state.filterValue", this.state.filterValue)
         console.log('isFilterClear', isFilterClear);
         return (
             <div>
                 {
-                    isFilterClear ?
+                    isFilterClear?
                         this.props.data.allQuotes && this.props.data.allQuotes.map(quote => (
                             <QuoteCard
                                 key={quote.id}
@@ -132,6 +157,26 @@ const ALL_FILTER_QUERY = gql`
     query allFilterQuery($first: Int!, $skip: Int!, $filter: String!){
         allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
             authorCategory_contains: $filter
+        }){
+            id
+            authorQuote
+            authorBirthday
+            authorBirthplace
+            authorBirthname
+            authorOccupation
+            author
+            likes
+            dislikes
+            imageUrl
+            createdAt
+        }
+    }
+`
+
+const ALL_AuthorSearch_QUERY = gql`
+    query authorSearchQuery($first: Int!, $skip: Int!, $authorName: String!){
+        allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
+            author_contains: $authorName
         }){
             id
             authorQuote
@@ -221,6 +266,38 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
     })
 })
 
+const allAuthorSearchGraphql = graphql(ALL_AuthorSearch_QUERY, {
+    name: 'authorSearch',
+    options: {
+        variables: {
+            skip: 0,
+            first: QUOTES_PER_PAGE,
+            authorName: 'none',
+        },
+        fetchPolicy: 'network-only',
+    },
+    props: ({authorSearch}) => ({
+        authorSearch,
+        loadAuthorSearchQuotes: (filterdata) => {
+            //console.log("click load filter quotes");
+            return authorSearch.fetchMore({
+                variables: {
+                    skip: authorSearch.allQuotes.length,
+                    authorName: filterdata,
+                },
+                updateQuery:(previousResult, {fetchMoreResult}) => {
+                    if(!fetchMoreResult) {
+                        return previousResult
+                    }
+                    return Object.assign({}, previousResult, {
+                        allQuotes: [...previousResult.allQuotes, ...fetchMoreResult.allQuotes]
+                    })
+                }
+            })
+        }
+    })
+})
+
 const filterCountGraphql = graphql(FILTER_COUNT_QUERY, {
     name: 'filterCount',
     options: {
@@ -239,6 +316,7 @@ const filterCountGraphql = graphql(FILTER_COUNT_QUERY, {
 export default compose(
     allQuotesGraphql,
     allFilterGraphql,
-    filterCountGraphql
+    //filterCountGraphql,
+    //allAuthorSearchGraphql
 
 )(AllQuotes)

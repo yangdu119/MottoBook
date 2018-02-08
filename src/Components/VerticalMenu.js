@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { Accordion, Form, Menu } from 'semantic-ui-react'
 
-const ColorForm = (
-    <Form.Group grouped>
-    <Form.Input placeholder='Author name...' />
-        <br/>
-    <Form.Button primary>Submit </Form.Button>
-    </Form.Group>
+const ColorForm = (props) => {
+    return (
+        <Form.Group grouped>
+            <Form.Input placeholder='Author name...' onChange={props.handleNameChange}/>
+            <br/>
+            <Form.Button primary onClick={props.onAuthorNameSubmit}>Submit </Form.Button>
+        </Form.Group>
 
-)
+    )
+}
 
 
 const OccupationForm = (props) => {
@@ -36,6 +38,7 @@ export default class VerticalMenu extends Component {
     state = {
         activeIndex: 0,
         radioValue: 'clear',
+        authorName: '',
     }
 
     handleClick = (e, titleProps) => {
@@ -53,7 +56,20 @@ export default class VerticalMenu extends Component {
             radioValue: titleProps.value
         })
         this.props.onCategoryClick(titleProps)
+    }
 
+    handleAuthorNameSubmit = (e, name) =>{
+        //this.props.authorNameSearch(this.state.authorName)
+
+    }
+
+    handleNameChange = (e, name) => {
+        //console.log('changename', name.value)
+
+        this.setState({
+            authorName: name.value
+        })
+        //this.props.authorNameSearch(name.value)
     }
 
     render() {
@@ -72,15 +88,15 @@ export default class VerticalMenu extends Component {
                     <Accordion.Content active={activeIndex === 0} content={<OccupationForm onItemClick={this.handleItemClick} value={this.state.radioValue}/>} />
                 </Menu.Item>
 
-                <Menu.Item>
-                    <Accordion.Title
-                        active={activeIndex === 1}
-                        content='Author name contains'
-                        index={1}
-                        onClick={this.handleClick}
-                    />
-                    <Accordion.Content active={activeIndex === 1} content={ColorForm} />
-                </Menu.Item>
+                {/*<Menu.Item>*/}
+                    {/*<Accordion.Title*/}
+                        {/*active={activeIndex === 1}*/}
+                        {/*content='Author name contains'*/}
+                        {/*index={1}*/}
+                        {/*onClick={this.handleClick}*/}
+                    {/*/>*/}
+                    {/*<Accordion.Content active={activeIndex === 1} content={<ColorForm onAuthorNameSubmit={this.handleAuthorNameSubmit} handleNameChange={this.handleNameChange}/>} />*/}
+                {/*</Menu.Item>*/}
             </Accordion>
         )
     }

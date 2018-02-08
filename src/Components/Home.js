@@ -34,6 +34,16 @@ export default class Home extends Component {
         })
     }
 
+    // handleAuthorNameChange = (name) =>{
+    //     this.setState({
+    //         authorName: name
+    //     })
+    // }
+    //
+    // handleAuthorNameSubmit = () => {
+    //
+    // }
+
     render() {
 
         const { contextRef } = this.state
@@ -50,7 +60,7 @@ export default class Home extends Component {
                                 <Grid.Column width={3}>
                                 <Rail position='left'>
                                     <Sticky context={contextRef} offset={70}>
-                                        <VerticalMenu onCategoryClick={this.handleCategoryClick}/>
+                                        <VerticalMenu onCategoryClick={this.handleCategoryClick} authorNameSearch={this.handleAuthorNameChange} authorNameSubmit={this.handleAuthorNameSubmit}/>
                                     </Sticky>
                                 </Rail>
                                 </Grid.Column>
