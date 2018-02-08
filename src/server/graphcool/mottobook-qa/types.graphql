@@ -1,0 +1,86 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type Quote @model {
+  id: ID! @isUnique    # read-only (managed by Graphcool)
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+
+  text: String!
+  author: Author! @relation(name: "AuthorQuotes")
+
+  likes: Int!
+  dislikes: Int!
+  imageUrl: String!
+  addedBy: User! @relation(name: "UserAddQuotes")
+  isPublished: Boolean @defaultValue(value: "true")
+
+  likedBy: [User!]! @relation(name: "UserLikeQuotes")
+  dislikedBy: [User!]! @relation(name: "UserDislikeQuotes")
+
+  mottoBy: [User!]! @relation(name: "UserMottoQuotes")
+  events: [Event!]! @relation(name: "QuoteEvents")
+}
+
+type User @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  email: String!
+  givenname: String!
+  familyname: String!
+  nickname: String!
+  name: String!
+  picture: String!
+  gender: String!
+
+  addQuotes: [Quote!]! @relation(name: "UserAddQuotes")
+  comments: [Comment!]! @relation(name: "UserComments")
+  likeQuotes: [Quote!]! @relation(name: "UserLikeQuotes")
+  dislikeQuotes: [Quote!]! @relation(name: "UserDislikeQuotes")
+  mottoQuotes: [Quote!]! @relation(name: "UserMottoQuotes")
+
+  followingAuthor: [Author!]! @relation(name: "UserFollowAuthor")
+  followingUser: [User!]! @relation(name: "UserFollowUser")
+  followers: [User!]! @relation(name: "UserFollowers")
+
+  events: [Event!]! @relation(name: "UserEvents")
+}
+
+type Comment @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  text: String!
+  user: User! @relation(name: "UserComments")
+}
+
+type Author @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  name: String!
+  birthday: String!
+  birthname: String!
+  birthplace: String!
+  occupation: String!
+  quotes: [Quote!]! @relation(name: "AuthorQuotes")
+  category: String!
+
+  followers: [User!]! @relation(name: "UserFollowAuthor")
+}
+
+type Event @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+
+  type: String!
+  user: User! @relation(name: "UserEvents")
+  quote: Quote! @relation(name: "QuoteEvents")
+
+}
+

@@ -12,10 +12,12 @@ type Quote @model {
   authorBirthplace: String!
   authorOccupation: String!
   authorQuote: String!
+  authorCategory: String!
 
   likes: Int!
   dislikes: Int!
   imageUrl: String!
   userEmail: String!
 }
+
 

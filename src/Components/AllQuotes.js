@@ -50,45 +50,27 @@ class AllQuotes extends Component {
         this.props.loadFilterQuotes(this.state.filterValue);
     }
 
+    componentWillReceiveProps(nextProps) {
+        console.log("will receive props",nextProps)
+
+        if (nextProps.radioSelected !== this.state.filterValue) {
+            console.log('handleFilterChange', nextProps.radioSelected);
+            this.setState({filterValue: nextProps.radioSelected});
+            this.props.filter.refetch({
+                filter: nextProps.radioSelected
+            });
+        }
+
+
+    }
+
     render() {
-        console.log('props', this.props);
+        console.log('allQuotes props', this.props);
         const isFilterClear = this.state.filterValue === 'clear';
-        console.log('isFilterClear': isFilterClear);
+        console.log("this.state.filterValue", this.state.filterValue)
+        console.log('isFilterClear', isFilterClear);
         return (
             <div>
-                <Form>
-                    <Form.Field>
-                        Selected value: <b>{this.state.filterValue}</b>
-                    </Form.Field>
-                    <Form.Field>
-                        <Radio
-                            label='Filter quotes by occupation: Philosopher'
-                            name='radioGroup'
-                            value='philosopher'
-                            checked={this.state.filterValue === 'philosopher'}
-                            onChange={this.handleFilterChange}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <Radio
-                            label='Filter quotes by occupation: Author'
-                            name='radioGroup'
-                            value='author'
-                            checked={this.state.filterValue === 'author'}
-                            onChange={this.handleFilterChange}
-                        />
-                    </Form.Field>
-                    <Form.Field>
-                        <Radio
-                            label='Clear'
-                            name='radioGroup'
-                            value='clear'
-                            checked={this.state.filterValue === 'clear'}
-                            onChange={this.handleFilterChange}
-                        />
-                    </Form.Field>
-                </Form>
-                <br/>
                 {
                     isFilterClear ?
                         this.props.data.allQuotes && this.props.data.allQuotes.map(quote => (
@@ -144,7 +126,7 @@ const ALL_QUOTES_QUERY = gql`
 const ALL_FILTER_QUERY = gql`
     query allFilterQuery($first: Int!, $skip: Int!, $filter: String!){
         allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
-            authorOccupation_contains: $filter
+            authorCategory_contains: $filter
         }){
             id
             authorQuote
@@ -174,7 +156,7 @@ const allQuotesGraphql = graphql(ALL_QUOTES_QUERY, {
     props: ({data}) => ({
         data,
         loadMoreQuotes: () => {
-            console.log("click load more");
+            //console.log("click load more");
             return data.fetchMore({
                 variables: {
                     skip: data.allQuotes.length
@@ -205,7 +187,7 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
     props: ({filter}) => ({
         filter,
         loadFilterQuotes: (filterdata) => {
-            console.log("click load filter quotes");
+            //console.log("click load filter quotes");
             return filter.fetchMore({
                 variables: {
                     skip: filter.allQuotes.length,

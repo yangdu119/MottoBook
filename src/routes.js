@@ -56,7 +56,16 @@ export const makeMainRoutes = () => {
   );
 }
 
-const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjd20ym271l610102abyehnsy' })
+//mottobook-dev
+//const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjd20ym271l610102abyehnsy' })
+
+//MottoBookTest, current production
+const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjde1zc60042w01138sjksteg' })
+
+
+//mottobook-qa, current dev
+//const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjddd8ha42c3n0180sofoohbu' })
+
 const client = new ApolloClient({
     link: httpLink,
     cache: new InMemoryCache()

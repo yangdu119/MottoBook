@@ -8,7 +8,7 @@ import { Container, Divider, Dropdown,
 import QuoteCard from './Card'
 import InputExampleFluid from './InputExampleFluid'
 import FeedExampleBasic from './Feed'
-import AccordionExampleMenu from './VerticalMenu'
+import VerticalMenu from './VerticalMenu'
 
 import MottoBookHeader from './Header'
 import MottoBookFooter from './Footer'
@@ -17,14 +17,26 @@ import AllQuotes from './AllQuotes';
 const Placeholder = () => <Image src='/assets/images/wireframe/paragraph.png' />
 
 export default class Home extends Component {
-    state = {}
+    constructor() {
+        super();
+
+        this.state = {
+            radioSelected: 'clear',
+        }
+    }
 
     handleContextRef = contextRef => this.setState({ contextRef })
+
+    handleCategoryClick = (item) => {
+
+        this.setState({
+            radioSelected: item.value
+        })
+    }
 
     render() {
 
         const { contextRef } = this.state
-
         return (
             <div>
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
@@ -33,12 +45,12 @@ export default class Home extends Component {
                         <div ref={this.handleContextRef}>
                             <Segment>
                                 <Grid.Column width={8}>
-                                <AllQuotes />
+                                <AllQuotes {...this.state}/>
                                 </Grid.Column>
                                 <Grid.Column width={3}>
                                 <Rail position='left'>
                                     <Sticky context={contextRef} offset={70}>
-                                        <AccordionExampleMenu />
+                                        <VerticalMenu onCategoryClick={this.handleCategoryClick}/>
                                     </Sticky>
                                 </Rail>
                                 </Grid.Column>

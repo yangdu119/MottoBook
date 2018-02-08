@@ -1,0 +1,3138 @@
+{
+    "Samuel Johnson": {
+        "occupation": "Essayist, lexicographer, biographer, poet",
+        "category": "writer",
+        "birthplace": "Lichfield, Staffordshire, England, United Kingdom",
+        "birthday": "18 September 1709",
+        "birthname": ""
+    },
+    "Helena Bonham Carter": {
+        "occupation": "Actress",
+        "category": "entertaminment",
+        "birthplace": "Islington, London, England",
+        "birthday": " 26 May 1966 ",
+        "birthname": "Helena Bonham Carter"
+    },
+    "Chuck Palahniuk": {
+        "occupation": "Novelist, essayist",
+        "category": "writer",
+        "birthplace": "Pasco, Washington, United States",
+        "birthday": " February 21, 1962 ",
+        "birthname": "Charles Michael Palahniuk"
+    },
+    "Robert Baden-Powell": {
+        "occupation": "British Army officer, writer, author of Scouting for Boys",
+        "category": "military",
+        "birthplace": "Paddington, London, England",
+        "birthday": "22 February 1857 ",
+        "birthname": "Robert Stephenson Smyth Powell"
+    },
+    "Blaise Pascal": {
+        "occupation": "Mathematician, physicist, inventor, writer, Catholic theologian",
+        "category": "science",
+        "birthplace": "Auvergne, France",
+        "birthday": "19 June 1623",
+        "birthname": "Clermont-Ferrand"
+    },
+    "Neil deGrasse Tyson": {
+        "occupation": "Astrophysicist, author, science communicator",
+        "category": "science",
+        "birthplace": "Manhattan, New York City, U.S.",
+        "birthday": " October 5, 1958 ",
+        "birthname": ""
+    },
+    "Pele": {
+        "occupation": "Footballer, humanitarian",
+        "category": "sports",
+        "birthplace": "Minas Gerais, Brazil",
+        "birthday": " 23 October 1940 ",
+        "birthname": "Edson Arantes do Nascimento"
+    },
+    "Rosa Parks": {
+        "occupation": "Civil rights activist",
+        "category": "politics",
+        "birthplace": "Tuskegee, Alabama, U.S.",
+        "birthday": "February 4, 1913",
+        "birthname": "Rosa Louise McCauley"
+    },
+    "Emily Dickinson": {
+        "occupation": "Poet",
+        "category": "writer",
+        "birthplace": "Amherst, Massachusetts, U.S.",
+        "birthday": "December 10, 1830",
+        "birthname": "Emily Elizabeth Dickinson"
+    },
+    "Muhammad Ali": {
+        "occupation": "Professional boxer, activist",
+        "category": "sports",
+        "birthplace": "Louisville, Kentucky, U.S.",
+        "birthday": "January 17, 1942",
+        "birthname": "Cassius Marcellus Clay Jr."
+    },
+    "Baruch Spinoza": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Amsterdam, Dutch Republic",
+        "birthday": "24 November 1632",
+        "birthname": ""
+    },
+    "Jim Rohn": {
+        "occupation": "Entrepreneur, author, motivational speaker",
+        "category": "entrepreneur",
+        "birthplace": "Yakima, Washington, U.S.",
+        "birthday": "September 17, 1930",
+        "birthname": "Emanuel James Rohn"
+    },
+    "Harry S Truman": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Lamar, Missouri, U.S.",
+        "birthday": "May 8, 1884",
+        "birthname": ""
+    },
+    "Plato": {
+        "occupation": "Philosopher, founder of the Academy in Athens",
+        "category": "philosopher",
+        "birthplace": "Athens, Greece",
+        "birthday": "428/427 or 424/423 BC",
+        "birthname": ""
+    },
+    "Beyonce Knowles": {
+        "occupation": "Singer, songwriter, dancer, actress, record producer",
+        "category": "entertaminment",
+        "birthplace": "Houston, Texas, U.S.",
+        "birthday": " September 4, 1981 ",
+        "birthname": "Beyonc\u00e9 Giselle Knowles"
+    },
+    "Jesus Christ": {
+        "occupation": "Jewish preacher, religious leader",
+        "category": "religion",
+        "birthplace": "Judea, Roman Empire",
+        "birthday": "c.\u20094 BC",
+        "birthname": ""
+    },
+    "Nelson Mandela": {
+        "occupation": "Activist, Politician, Philanthropist, Lawyer",
+        "category": "politics",
+        "birthplace": "Mvezo, Cape Province, Union of South Africa",
+        "birthday": "18 July 1918",
+        "birthname": "Rolihlahla Mandela"
+    },
+    "Zig Ziglar": {
+        "occupation": "Salesman, motivational speaker, author",
+        "category": "business",
+        "birthplace": "Coffee County, Alabama, US",
+        "birthday": "November 6, 1926",
+        "birthname": ""
+    },
+    "Peter Drucker": {
+        "occupation": "Management consultant, educator and author",
+        "category": "writer",
+        "birthplace": "Kaasgraben, Vienna, Austria-Hungary",
+        "birthday": "November 19, 1909",
+        "birthname": "Peter Ferdinand Drucker"
+    },
+    "Ellen G. White": {
+        "occupation": "Author and co-founder of the Seventh-day Adventist Church",
+        "category": "religion",
+        "birthplace": "Gorham, Maine",
+        "birthday": "November 26, 1827",
+        "birthname": "Ellen Gould Harmon"
+    },
+    "Johann Wolfgang von Goethe": {
+        "occupation": "Poet, novelist, playwright, natural philosopher, diplomat, civil servant",
+        "category": "writer",
+        "birthplace": "Frankfurt, Free Imperial City of Frankfurt, Holy Roman Empire",
+        "birthday": "28 August 1749",
+        "birthname": ""
+    },
+    "Socrates": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Deme Alopece, Athens",
+        "birthday": "c. 470 BC",
+        "birthname": ""
+    },
+    "Ariana Grande": {
+        "occupation": "Singer, actress",
+        "category": "entertaminment",
+        "birthplace": "Boca Raton, Florida, U.S.",
+        "birthday": " June 26, 1993 ",
+        "birthname": "Ariana Grande-Butera"
+    },
+    "Lucille Ball": {
+        "occupation": "Actress, comedian, model, film studio executive, TV producer",
+        "category": "entertaminment",
+        "birthplace": "Jamestown, New York, U.S.",
+        "birthday": "August 6, 1911",
+        "birthname": "Lucille D\u00e9sir\u00e9e Ball"
+    },
+    "Sun Tzu": {
+        "occupation": "Military general and tactician",
+        "category": "military",
+        "birthplace": "Qi state",
+        "birthday": "544 BC ",
+        "birthname": ""
+    },
+    "Dalai Lama": {
+        "occupation": "Spiritual leader",
+        "category": "religion",
+        "birthplace": "Tibet, China",
+        "birthday": "February 22, 1940",
+        "birthname": ""
+    },
+    "T. D. Jakes": {
+        "occupation": "Pastor, author, filmmaker, talk show host",
+        "category": "religion",
+        "birthplace": "South Charleston, West Virginia, U.S.",
+        "birthday": " June 9, 1957 ",
+        "birthname": ""
+    },
+    "Woody Allen": {
+        "occupation": "Actor, writer, director, comedian, playwright, musician",
+        "category": "entertaminment",
+        "birthplace": "Brooklyn, New York, U.S.",
+        "birthday": " December 1, 1935 ",
+        "birthname": "Allan Stewart Konigsberg"
+    },
+    "Carl Jung": {
+        "occupation": "Psychiatrist, psychoanalyst",
+        "category": "science",
+        "birthplace": "Kesswil, Thurgau, Switzerland",
+        "birthday": "26 July 1875",
+        "birthname": "Carl Gustav Jung"
+    },
+    "Albert Einstein": {
+        "occupation": "Theoretical physicst",
+        "category": "science",
+        "birthplace": "Ulm, Kingdom of W\u00fcrttemberg, German Empire",
+        "birthday": "14 March 1879",
+        "birthname": ""
+    },
+    "Ruth Bader Ginsburg": {
+        "occupation": "Associate Justice of the Supreme Court of the United States",
+        "category": "politics",
+        "birthplace": "New York City, New York, U.S.",
+        "birthday": " March 15, 1933 ",
+        "birthname": "Joan Ruth Bader"
+    },
+    "Jack Welch": {
+        "occupation": "Chairman & CEO of General Electric (1981\u20132001)",
+        "category": "military",
+        "birthplace": "Peabody, Massachusetts, U.S.",
+        "birthday": " November 19, 1935 ",
+        "birthname": "John Francis Welch Jr."
+    },
+    "Robert E. Lee": {
+        "occupation": "Commander of the Confederate States Army",
+        "category": "military",
+        "birthplace": "Stratford Hall, Virginia, U.S.",
+        "birthday": "January 19, 1807",
+        "birthname": ""
+    },
+    "Jerry Seinfeld": {
+        "occupation": "Stand-up comedian, actor, writer, producer, director",
+        "category": "entertaminment",
+        "birthplace": "Brooklyn, New York, U.S.",
+        "birthday": " April 29, 1954 ",
+        "birthname": ""
+    },
+    "LeBron James": {
+        "occupation": "Professional basketball player",
+        "category": "sports",
+        "birthplace": "Akron, Ohio",
+        "birthday": " December 30, 1984 ",
+        "birthname": ""
+    },
+    "Pope John Paul II": {
+        "occupation": "Spiritual leader",
+        "category": "religion",
+        "birthplace": "Wadowice, Republic of Poland",
+        "birthday": "18 May 1920",
+        "birthname": ""
+    },
+    "Theodore Roosevelt": {
+        "occupation": "President of the United States, author, explorer, soldier, naturalist",
+        "category": "politics",
+        "birthplace": "New York City, New York, U.S.",
+        "birthday": "October 27, 1858",
+        "birthname": "Theodore Roosevelt Jr."
+    },
+    "Lee Iacocca": {
+        "occupation": "Businessman, Former Chrysler Chairman, Former Ford President",
+        "category": "business",
+        "birthplace": "Allentown, Pennsylvania, United States",
+        "birthday": " October 15, 1924 ",
+        "birthname": "Lido Anthony Iacocca"
+    },
+    "Ellen DeGeneres": {
+        "occupation": "Comedian, television host, actress, writer, producer",
+        "category": "entertaminment",
+        "birthplace": "Metairie, Louisiana, U.S.",
+        "birthday": " January 26, 1958 ",
+        "birthname": ""
+    },
+    "Margaret Thatcher": {
+        "occupation": "Prime Minister of the United Kingdom",
+        "category": "politics",
+        "birthplace": "Grantham, Lincolnshire, England",
+        "birthday": "13 October 1925",
+        "birthname": "Margaret Hilda Roberts"
+    },
+    "Langston Hughes": {
+        "occupation": "Poet, columnist, dramatist, essayist, novelist",
+        "category": "writer",
+        "birthplace": "Joplin, Missouri, United States",
+        "birthday": "February 1, 1902",
+        "birthname": "James Mercer Langston Hughes"
+    },
+    "William Blake": {
+        "occupation": "Poet, painter, printmaker",
+        "category": "writer",
+        "birthplace": "Soho, London, Great Britain",
+        "birthday": "28 November 1757",
+        "birthname": ""
+    },
+    "A. P. J. Abdul Kalam": {
+        "occupation": "President of India",
+        "category": "politics",
+        "birthplace": "Rameswaram, Ramnad District, Madras Presidency, British India",
+        "birthday": "15 October 1931",
+        "birthname": "Avul Pakir Jainulabdeen Abdul Kalam"
+    },
+    "Neil Gaiman": {
+        "occupation": "Author, comic book creator, screenwriter, voice actor",
+        "category": "writer",
+        "birthplace": "Portchester, Hampshire, England",
+        "birthday": " 10 November 1960 ",
+        "birthname": "Neil Richard Gaiman"
+    },
+    "Gordon Ramsay": {
+        "occupation": "Celebrity chef, restaurateur, television personality",
+        "category": "entertaminment",
+        "birthplace": "Johnstone, Renfrewshire, Scotland",
+        "birthday": " 8 November 1966 ",
+        "birthname": "Gordon James Ramsay"
+    },
+    "Mike Tyson": {
+        "occupation": "Professional boxer",
+        "category": "sports",
+        "birthplace": "Brownsville, Brooklyn, New York, U.S.",
+        "birthday": " June 30, 1966 ",
+        "birthname": ""
+    },
+    "Isaac Asimov": {
+        "occupation": "Writer, professor of biochemistry",
+        "category": "writer",
+        "birthplace": "Petrovichi, Klimovichi Uyezd\u00a0,",
+        "birthday": "Between October 4, 1919 and January 2, 1920",
+        "birthname": "Isaak Ozimov"
+    },
+    "Winston Churchill": {
+        "occupation": "Prime Minister of the United Kingdom",
+        "category": "politics",
+        "birthplace": "Woodstock, Oxfordshire, England",
+        "birthday": "30 November 1874",
+        "birthname": "Winston Leonard Spencer-Churchill"
+    },
+    "William Osler": {
+        "occupation": "Physician, one of the four founding professors of Johns Hopkins Hospital",
+        "category": "science",
+        "birthplace": "Bond Head, Canada West",
+        "birthday": "July 12, 1849",
+        "birthname": ""
+    },
+    "Michael Jackson": {
+        "occupation": "Singer, songwriter, dancer",
+        "category": "entertaminment",
+        "birthplace": "Gary, Indiana, U.S.",
+        "birthday": "August 29, 1958",
+        "birthname": "Michael Joseph Jackson"
+    },
+    "Michael Jordan": {
+        "occupation": "Professional basketball player, businessman",
+        "category": "sports",
+        "birthplace": "Brooklyn, New York",
+        "birthday": " February 17, 1963 ",
+        "birthname": ""
+    },
+    "Vladimir Lenin": {
+        "occupation": "Communist revolutionary, politician, political theorist",
+        "category": "politics",
+        "birthplace": "Simbirsk, Russian Empire",
+        "birthday": "22 April 1870",
+        "birthname": "Vladimir Ilyich Ulyanov"
+    },
+    "Thomas Paine": {
+        "occupation": "Political activist, philosopher, political theorist, revolutionary",
+        "category": "politics",
+        "birthplace": "Thetford, Norfolk, England",
+        "birthday": "February 9, 1737",
+        "birthname": "Thomas Pain"
+    },
+    "W. Edwards Deming": {
+        "occupation": "Engineer, statistician, professor, author, lecturer, management consultant",
+        "category": "science",
+        "birthplace": "Sioux City, Iowa",
+        "birthday": "October 14, 1900",
+        "birthname": ""
+    },
+    "Saint Augustine": {
+        "occupation": "Christian, thelogian, philosopher",
+        "category": "philosopher",
+        "birthplace": "Thagaste, Roman province of Africa ",
+        "birthday": "13 November 354",
+        "birthname": ""
+    },
+    "Charles Bukowski": {
+        "occupation": "Poet, novelist, short story writer, and columnist",
+        "category": "writer",
+        "birthplace": "Andernach, Rhineland-Palatinate, Weimar Republic Germany.",
+        "birthday": "August 16, 1920",
+        "birthname": "Heinrich Karl Bukowski"
+    },
+    "Dan Quayle": {
+        "occupation": "Vice President of the United States, lawyer",
+        "category": "politics",
+        "birthplace": "Indianapolis, Indiana, U.S.",
+        "birthday": " February 4, 1947 ",
+        "birthname": "James Danforth Quayle"
+    },
+    "Benito Mussolini": {
+        "occupation": "Leader of the National Fascist Party, Prime Minister of Italy",
+        "category": "politics",
+        "birthplace": "Predappio, Kingdom of Italy",
+        "birthday": "29 July 1883",
+        "birthname": "Benito Amilcare Andrea Mussolini"
+    },
+    "Franklin D. Roosevelt": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Hyde Park, New York, U.S.",
+        "birthday": "January 30, 1882",
+        "birthname": "Franklin Delano Roosevelt"
+    },
+    "Henry David Thoreau": {
+        "occupation": " essayist, poet, philosopher, abolitionist, naturalist, tax resister, development critic, surveyor, historian",
+        "category": "writer",
+        "birthplace": "Concord, Massachusetts, US",
+        "birthday": "July 12, 1817",
+        "birthname": ""
+    },
+    "Thomas Sowell": {
+        "occupation": "Economist, social theorist, political philosopher",
+        "category": "science",
+        "birthplace": "Gastonia, North Carolina, U.S.",
+        "birthday": " June 30, 1930 ",
+        "birthname": ""
+    },
+    "Lou Holtz": {
+        "occupation": "Football player, coach, analyst",
+        "category": "sports",
+        "birthplace": "Follansbee, West Virginia",
+        "birthday": " January 6, 1937 ",
+        "birthname": ""
+    },
+    "Eminem": {
+        "occupation": "Rapper, record producer, songwriter, actor",
+        "category": "entertaminment",
+        "birthplace": "St. Joseph, Missouri, U.S.",
+        "birthday": " October 17, 1972 ",
+        "birthname": "Marshall Bruce Mathers III"
+    },
+    "Theresa May": {
+        "occupation": "Prime Minister of the United Kingdom and Leader of the Conservative Party",
+        "category": "politics",
+        "birthplace": "Eastbourne, Sussex, England",
+        "birthday": " 1 October 1956 ",
+        "birthname": "Theresa Mary Brasier"
+    },
+    "Lao Tzu": {
+        "occupation": "Philosopher, writer",
+        "category": "philosopher",
+        "birthplace": "Zhou Dynasty",
+        "birthday": "6th\u20135th century BCE",
+        "birthname": ""
+    },
+    "Elon Musk": {
+        "occupation": "Entrepreneur, engineer, inventor, and investor",
+        "category": "entrepreneur",
+        "birthplace": "Pretoria, Transvaal , South Africa",
+        "birthday": " June 28, 1971 ",
+        "birthname": "Elon Reeve Musk"
+    },
+    "William Butler Yeats": {
+        "occupation": "Poet",
+        "category": "writer",
+        "birthplace": "Irish",
+        "birthday": "June 13, 1865",
+        "birthname": ""
+    },
+    "Ian Mckellen": {
+        "occupation": "Actor",
+        "category": "entertaminment",
+        "birthplace": "Burnley, Lancashire, England",
+        "birthday": " 25 May 1939 ",
+        "birthname": "Ian Murray McKellen"
+    },
+    "Arnold Palmer": {
+        "occupation": "Professional golfer",
+        "category": "sports",
+        "birthplace": "Latrobe, Pennsylvania, United States",
+        "birthday": "September 10, 1929",
+        "birthname": ""
+    },
+    "Jim Morrison": {
+        "occupation": "Singer, songwriter, poet",
+        "category": "entertaminment",
+        "birthplace": "Melbourne, Florida, U.S.",
+        "birthday": "December 8, 1943",
+        "birthname": ""
+    },
+    "James Joyce": {
+        "occupation": "Novelist, short story writer",
+        "category": "writer",
+        "birthplace": "Irish",
+        "birthday": "Febuary 2, 1882",
+        "birthname": ""
+    },
+    "Bernie Sanders": {
+        "occupation": "United States Senator",
+        "category": "politics",
+        "birthplace": "New York City, New York, U.S.",
+        "birthday": " September 8, 1941 ",
+        "birthname": "Bernard Sanders"
+    },
+    "Conor McGregor": {
+        "occupation": "Mixed martial artist, boxer",
+        "category": "sports",
+        "birthplace": "Crumlin, Dublin, Ireland",
+        "birthday": " 14 July 1988 ",
+        "birthname": "Conor Anthony McGregor"
+    },
+    "Cesar Chavez": {
+        "occupation": "Labor leader, Civil rights activist",
+        "category": "politics",
+        "birthplace": "Yuma, Arizona, U.S.",
+        "birthday": "March 31, 1927",
+        "birthname": "C\u00e9sar Estrada Ch\u00e1vez"
+    },
+    "Frank Lloyd Wright": {
+        "occupation": "Architect",
+        "category": "science",
+        "birthplace": "Richland Center, Wisconsin, U.S.",
+        "birthday": "June 8, 1867",
+        "birthname": "Frank Lincoln Wright"
+    },
+    "William Tecumseh Sherman": {
+        "occupation": "Union Army general",
+        "category": "military",
+        "birthplace": "Lancaster, Ohio",
+        "birthday": "February 8, 1820",
+        "birthname": ""
+    },
+    "Desmond Tutu": {
+        "occupation": "Anglican cleric, theologian",
+        "category": "religion",
+        "birthplace": "Klerksdorp, Western Transvaal, South Africa",
+        "birthday": " 7 October 1931 ",
+        "birthname": ""
+    },
+    "Soren Kierkegaard": {
+        "occupation": "Philosopher, theologian, poet, social critic, religious author",
+        "category": "philosopher",
+        "birthplace": "Copenhagen, Kingdom of Denmark",
+        "birthday": "5 May 1813",
+        "birthname": ""
+    },
+    "Johnny Depp": {
+        "occupation": "Actor, producer, musician",
+        "category": "entertaminment",
+        "birthplace": "Owensboro, Kentucky, U.S.",
+        "birthday": " June 9, 1963 ",
+        "birthname": "John Christopher Depp II"
+    },
+    "Frank Sinatra": {
+        "occupation": "Singer, actor, producer",
+        "category": "entertaminment",
+        "birthplace": "Hoboken, New Jersey, U.S.",
+        "birthday": "December 12, 1915",
+        "birthname": "Francis Albert Sinatra"
+    },
+    "Steve Prefontaine": {
+        "occupation": "Middle and long-distance runner",
+        "category": "sports",
+        "birthplace": "Coos Bay, Oregon",
+        "birthday": "January 25, 1951",
+        "birthname": ""
+    },
+    "Terry Pratchett": {
+        "occupation": "Novelist",
+        "category": "writer",
+        "birthplace": "Beaconsfield, Buckinghamshire, England",
+        "birthday": "28 April 1948",
+        "birthname": "Terence David John Pratchett"
+    },
+    "Malala Yousafzai": {
+        "occupation": "Activist for female education, former blogger for BBC Urdu and student",
+        "category": "politics",
+        "birthplace": "Mingora, Swat, Pakistan",
+        "birthday": " 12 July 1997 ",
+        "birthname": ""
+    },
+    "Coco Chanel": {
+        "occupation": "Milliner, dressmaker, fashion designer",
+        "category": "business",
+        "birthplace": "Saumur, Maine-et-Loire, France",
+        "birthday": "19 August 1883",
+        "birthname": "Gabrielle Chanel"
+    },
+    "Eleanor Roosevelt": {
+        "occupation": "Politician, diplomat, activist",
+        "category": "politics",
+        "birthplace": "New York City, U.S.",
+        "birthday": "October 11, 1884",
+        "birthname": "Anna Eleanor Roosevelt"
+    },
+    "Friedrich Nietzsche": {
+        "occupation": "Philosopher, cultural critic, composer, poet, philologist",
+        "category": "philosopher",
+        "birthplace": "R\u00f6cken, Saxony, Prussia",
+        "birthday": "15 October 1844",
+        "birthname": "Friedrich Wilhelm Nietzsche"
+    },
+    "Tyler, The Creator": {
+        "occupation": "rapper, record producer, music video director",
+        "category": "entertaminment",
+        "birthplace": "Ladera Heights, California, U.S.",
+        "birthday": " March 6, 1991 ",
+        "birthname": ""
+    },
+    "Dwayne Johnson": {
+        "occupation": "Actor, producer, professional wrestler",
+        "category": "entertaminment",
+        "birthplace": "Hayward, California, U.S.",
+        "birthday": " May 2, 1972 ",
+        "birthname": ""
+    },
+    "Leo Buscaglia": {
+        "occupation": "Motivational speaker, writer, professor",
+        "category": "business",
+        "birthplace": "Los Angeles, California, US",
+        "birthday": "March 31, 1924",
+        "birthname": ""
+    },
+    "Dante Alighieri": {
+        "occupation": "Statesman, poet, language theorist, political theorist",
+        "category": "politics",
+        "birthplace": "Florence, Republic of Florence",
+        "birthday": "c. 1265",
+        "birthname": ""
+    },
+    "Franz Kafka": {
+        "occupation": "Novelist, Short story writer, Insurance officer",
+        "category": "writer",
+        "birthplace": "Austria-Hungary",
+        "birthday": "Prague, Bohemia,",
+        "birthname": "3 July 1883"
+    },
+    "George S. Patton": {
+        "occupation": "Senior officer of the United States Army",
+        "category": "military",
+        "birthplace": "San Gabriel, California, U.S.",
+        "birthday": "November 11, 1885",
+        "birthname": ""
+    },
+    "Christopher McCandless": {
+        "occupation": "Hiker, itinerant traveler",
+        "category": "sports",
+        "birthplace": "El Segundo, California, U.S.",
+        "birthday": "February 12, 1968",
+        "birthname": "Christopher Johnson McCandless"
+    },
+    "Groucho Marx": {
+        "occupation": "Comedian, writer, stage, film, radio and television star",
+        "category": "entertaminment",
+        "birthplace": "Manhattan, New York, U.S.",
+        "birthday": "October 2, 1890",
+        "birthname": ""
+    },
+    "Jeremy Corbyn": {
+        "occupation": "Leader of the Labour Party",
+        "category": "politics",
+        "birthplace": "Chippenham, England, UK",
+        "birthday": " 26 May 1949 ",
+        "birthname": "Jeremy Bernard Corbyn"
+    },
+    "Taylor Swift": {
+        "occupation": "Singer-songwriter, actress",
+        "category": "writer",
+        "birthplace": "Reading, Pennsylvania, U.S.",
+        "birthday": " December 13, 1989 ",
+        "birthname": "Taylor Alison Swift"
+    },
+    "Kobe Bryant": {
+        "occupation": "Professional basketball player, businessman",
+        "category": "sports",
+        "birthplace": "Philadelphia, Pennsylvania",
+        "birthday": " August 23, 1978 ",
+        "birthname": ""
+    },
+    "Bill Nye": {
+        "occupation": "science communicator, television presenter, mechanical engineer",
+        "category": "science",
+        "birthplace": "Washington, D.C., U.S.",
+        "birthday": " November 27, 1955 ",
+        "birthname": "William Sanford Nye"
+    },
+    "James A. Baldwin": {
+        "occupation": "Football player, track athlete, coach of football basketball and baseball",
+        "category": "sports",
+        "birthplace": "Manchester, New Hampshire",
+        "birthday": "May 26, 1886",
+        "birthname": ""
+    },
+    "Deepak Chopra": {
+        "occupation": "Alternative medicine advocate, public speaker, writer",
+        "category": "writer",
+        "birthplace": "New Delhi, British India",
+        "birthday": " October 22, 1946 ",
+        "birthname": ""
+    },
+    "Nikola Tesla": {
+        "occupation": "Inventor, electrical engineer, mechanical engineer, physicist, futurist",
+        "category": "science",
+        "birthplace": "Smiljan, Austrian Empire ",
+        "birthday": "10 July 1856",
+        "birthname": ""
+    },
+    "William Shakespeare": {
+        "occupation": "Playwright, Poet, Actor",
+        "category": "writer",
+        "birthplace": "Warwickshire, England",
+        "birthday": "April 26, 1564",
+        "birthname": ""
+    },
+    "Miles Davis": {
+        "occupation": "Jazz trumpeter, bandleader, composer",
+        "category": "entertaminment",
+        "birthplace": "Alton, Illinois, U.S.",
+        "birthday": "May 26, 1926",
+        "birthname": ""
+    },
+    "Lauryn Hill": {
+        "occupation": "singer, songwriter, rapper, record producer, actress",
+        "category": "entertaminment",
+        "birthplace": "East Orange, New Jersey, U.S.",
+        "birthday": " May 26, 1975 ",
+        "birthname": ""
+    },
+    "Rainer Maria Rilke": {
+        "occupation": "Poet, novelist",
+        "category": "writer",
+        "birthplace": "Prague, Bohemia, Austria-Hungary",
+        "birthday": "4 December 1875",
+        "birthname": "Ren\u00e9 Karl Wilhelm Johann Josef Maria Rilke"
+    },
+    "Tariq Ramadan": {
+        "occupation": "Academic, philosopher, writer",
+        "category": "philosopher",
+        "birthplace": "Geneva, Switzerland",
+        "birthday": " 26 August 1962 ",
+        "birthname": ""
+    },
+    "Aldous Huxley": {
+        "occupation": "Writer, novelist",
+        "category": "writer",
+        "birthplace": "Godalming, England",
+        "birthday": "26 July 1894",
+        "birthname": "Aldous Leonard Huxley"
+    },
+    "Leonard Cohen": {
+        "occupation": "Poet, songwriter, singer, musician, novelist",
+        "category": "writer",
+        "birthplace": "Montreal, Quebec, Canada",
+        "birthday": "September 21, 1934",
+        "birthname": ""
+    },
+    "Swami Vivekananda": {
+        "occupation": "Indian Hindu monk, chief disciple of Indian ",
+        "category": "religion",
+        "birthplace": "Calcutta, Bengal Presidency, British India mystic Ramakrishna",
+        "birthday": "12 January 1863",
+        "birthname": "Narendranath Datta"
+    },
+    "Wayne Dyer": {
+        "occupation": "Teacher, author, Philosopher",
+        "category": "writer",
+        "birthplace": "Detroit, Michigan, US",
+        "birthday": "May 10, 1940",
+        "birthname": ""
+    },
+    "Richard M. Nixon": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Yorba Linda, California, U.S.",
+        "birthday": "January 9, 1913",
+        "birthname": "Richard Milhous Nixon"
+    },
+    "Jackie Kennedy": {
+        "occupation": "Wife of the President of the United States",
+        "category": "politics",
+        "birthplace": "Southampton, New York, U.S.",
+        "birthday": "July 28, 1929",
+        "birthname": "Jacqueline Lee Bouvier"
+    },
+    "Ray Bradbury": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "Waukegan, Illinois, U.S.",
+        "birthday": "August 22, 1920",
+        "birthname": "Ray Douglas Bradbury"
+    },
+    "Lucius Annaeus Seneca": {
+        "occupation": "Philosopher, statesman, dramatist",
+        "category": "philosopher",
+        "birthplace": "Cordoba, Hispania",
+        "birthday": "c. 4 BC",
+        "birthname": ""
+    },
+    "Clint Eastwood": {
+        "occupation": "Actor, director, producer, composer, musician, businessman, politician",
+        "category": "entertaminment",
+        "birthplace": "San Francisco, California, U.S.",
+        "birthday": " May 31, 1930 ",
+        "birthname": "Clinton Eastwood Jr."
+    },
+    "Emma Watson": {
+        "occupation": "Actress, model, activist",
+        "category": "entertaminment",
+        "birthplace": "Paris, France",
+        "birthday": " 15 April 1990 ",
+        "birthname": "Emma Charlotte Duerre Watson"
+    },
+    "Isaac Newton": {
+        "occupation": "Mathematician, astronomer, theologian, author, physicist",
+        "category": "science",
+        "birthplace": "Woolsthorpe, Lincolnshire, England",
+        "birthday": "4 January 1643 ",
+        "birthname": ""
+    },
+    "Eric Hoffer": {
+        "occupation": "Author, longshoreman",
+        "category": "writer",
+        "birthplace": "New York City, New York, U.S.",
+        "birthday": "July 25, 1898",
+        "birthname": ""
+    },
+    "Douglas MacArthur": {
+        "occupation": "Five star general, Field Marshal of the Philippine Army",
+        "category": "military",
+        "birthplace": "Little Rock, Arkansas, U.S.",
+        "birthday": "January 26, 1880",
+        "birthname": ""
+    },
+    "Antoine de Saint-Exupery": {
+        "occupation": "Aviator, writer",
+        "category": "writer",
+        "birthplace": "Lyon, France",
+        "birthday": "29 June 1900",
+        "birthname": "Antoine Marie Jean-Baptiste Roger"
+    },
+    "Phil McGraw": {
+        "occupation": "Television host",
+        "category": "entertaminment",
+        "birthplace": "Vinita, Oklahoma, U.S.",
+        "birthday": " September 1, 1950 ",
+        "birthname": "Phillip Calvin McGraw"
+    },
+    "Joyce Meyer": {
+        "occupation": "Bible teacher, author, speaker",
+        "category": "religion",
+        "birthplace": "St. Louis, Missouri, U.S.",
+        "birthday": " June 4, 1943 ",
+        "birthname": "Pauline Joyce Hutchison"
+    },
+    "Rihanna": {
+        "occupation": "Singer, songwriter, fashion designer, model, actress",
+        "category": "entertaminment",
+        "birthplace": "Saint Michael, Barbados",
+        "birthday": " February 20, 1988 ",
+        "birthname": "Robyn Rihanna Fenty"
+    },
+    "Mignon McLaughlin": {
+        "occupation": "Journalist, author",
+        "category": "writer",
+        "birthplace": "Baltimore, Maryland, U.S.",
+        "birthday": "June 6, 1913",
+        "birthname": ""
+    },
+    "Elvis Presley": {
+        "occupation": "Singer, musician, actor",
+        "category": "entertaminment",
+        "birthplace": "Tupelo, Mississippi, U.S.",
+        "birthday": "January 8, 1935",
+        "birthname": "Elvis Aaron Presley"
+    },
+    "Steve Martin": {
+        "occupation": "Actor, comedian, writer, producer, musician",
+        "category": "entertaminment",
+        "birthplace": "Waco, Texas, U.S.",
+        "birthday": " August 14, 1945 ",
+        "birthname": "Stephen Glenn Martin"
+    },
+    "T. S. Eliot": {
+        "occupation": "Poet, dramatist, literary critic, editor",
+        "category": "writer",
+        "birthplace": "St. Louis, Missouri, U.S.",
+        "birthday": "26 September 1888",
+        "birthname": "Thomas Stearns Eliot"
+    },
+    "George Bernard Shaw": {
+        "occupation": "Playwright, critic, polemicist, political activist",
+        "category": "politics",
+        "birthplace": "Portobello, Dublin, Ireland",
+        "birthday": "26 July 1856",
+        "birthname": ""
+    },
+    "Angela Davis": {
+        "occupation": "Educator, author, social activist",
+        "category": "writer",
+        "birthplace": "Birmingham, Alabama, U.S.",
+        "birthday": " January 26, 1944 ",
+        "birthname": "Angela Yvonne Davis"
+    },
+    "Elizabeth I": {
+        "occupation": "Queen of England and Ireland",
+        "category": "politics",
+        "birthplace": "Palace of Placentia, Greenwich, England",
+        "birthday": "7 September 1533",
+        "birthname": ""
+    },
+    "Pete Hegseth": {
+        "occupation": "Fox News Channel contributor",
+        "category": "politics",
+        "birthplace": "Minneapolis, Minnesota, U.S.",
+        "birthday": " June 6, 1980 ",
+        "birthname": "Peter Brian Hegseth"
+    },
+    "Benjamin Franklin": {
+        "occupation": "Founding Fathers of the United States",
+        "category": "politics",
+        "birthplace": "Boston, Massachusetts Bay, English America",
+        "birthday": "January 17, 1706",
+        "birthname": ""
+    },
+    "Jean-Michel Basquiat": {
+        "occupation": "Artist",
+        "category": "arts",
+        "birthplace": "Brooklyn, New York City, New York, U.S.",
+        "birthday": "December 22, 1960",
+        "birthname": ""
+    },
+    "Brene Brown": {
+        "occupation": "Storyteller, Research Professor, Author, Public Speaker, Licensed Master Social Worker",
+        "category": "writer",
+        "birthplace": "San Antonio, Texas, U.S.",
+        "birthday": " November 18, 1965 ",
+        "birthname": "Casandra Bren\u00e9 Brown"
+    },
+    "Christopher Columbus": {
+        "occupation": "Maritime explorer",
+        "category": "science",
+        "birthplace": "Genoa, Republic of Genoa",
+        "birthday": "Before 31 October 1451",
+        "birthname": ""
+    },
+    "Mother Teresa": {
+        "occupation": "Roman Catholic nun, missionary",
+        "category": "religion",
+        "birthplace": "\u00dcsk\u00fcp, Kosovo Vilayet, Ottoman Empire",
+        "birthday": "26 August 1910",
+        "birthname": "Anjez\u00eb Gonxhe Bojaxhiu"
+    },
+    "Bob Dylan": {
+        "occupation": "Singer-songwriter, artist, writer",
+        "category": "writer",
+        "birthplace": "Duluth, Minnesota, U.S.",
+        "birthday": " May 24, 1941 ",
+        "birthname": "Robert Allen Zimmerman"
+    },
+    "Walt Whitman": {
+        "occupation": "Poet, essayist, journalist, humanist",
+        "category": "writer",
+        "birthplace": "West Hills, New York, U.S.",
+        "birthday": "May 31, 1819",
+        "birthname": "Walter Whitman"
+    },
+    "Napoleon Hill": {
+        "occupation": "Author, Journalist, Salesman, Lecturer",
+        "category": "writer",
+        "birthplace": "Pound, Virginia",
+        "birthday": "October 26, 1883",
+        "birthname": ""
+    },
+    "Christopher Walken": {
+        "occupation": "Actor, dancer, business investor with Tribeca Grill",
+        "category": "entertaminment",
+        "birthplace": "Astoria, Queens, New York, U.S.",
+        "birthday": " March 31, 1943 ",
+        "birthname": "Ronald Walken"
+    },
+    "Amelia Earhart": {
+        "occupation": "Aviation pioneer, author",
+        "category": "writer",
+        "birthplace": "Atchison, Kansas, U.S.",
+        "birthday": "July 24, 1897",
+        "birthname": "Amelia Mary Earhart"
+    },
+    "Matthew McConaughey": {
+        "occupation": "Actor",
+        "category": "entertaminment",
+        "birthplace": "Uvalde, Texas, U.S.",
+        "birthday": " November 4, 1969 ",
+        "birthname": ""
+    },
+    "Marcus Tullius Cicero": {
+        "occupation": "statesman, lawyer, writer, orator",
+        "category": "politics",
+        "birthplace": "",
+        "birthday": "Arpinum, Roman Republic",
+        "birthname": "3 January 106 BC"
+    },
+    "Rene Descartes": {
+        "occupation": "Philosopher, mathematician, scientist",
+        "category": "philosopher",
+        "birthplace": "La Haye en Touraine, Kingdom of France",
+        "birthday": "31 March 1596",
+        "birthname": ""
+    },
+    "Paul Tsongas": {
+        "occupation": "United States Senator",
+        "category": "politics",
+        "birthplace": "Lowell, Massachusetts, U.S.",
+        "birthday": "February 14, 1941",
+        "birthname": "Paul Efthemios Tsongas"
+    },
+    "Sam Walton": {
+        "occupation": "Founder of Walmart and Sam's Club",
+        "category": "business",
+        "birthplace": "Kingfisher, Oklahoma, U.S.",
+        "birthday": "March 29, 1918",
+        "birthname": "Samuel Moore Walton"
+    },
+    "Jimmy Buffett": {
+        "occupation": "musician, songwriter, author, actor, businessman",
+        "category": "entertaminment",
+        "birthplace": "Pascagoula, Mississippi, U.S.",
+        "birthday": " December 25, 1946 ",
+        "birthname": ""
+    },
+    "Ulysses S. Grant": {
+        "occupation": "Soldier, politician",
+        "category": "military",
+        "birthplace": "Point Pleasant, Ohio, U.S.",
+        "birthday": "April 27, 1822",
+        "birthname": "Hiram Ulysses Grant"
+    },
+    "Marilyn Manson": {
+        "occupation": "Singer, songwriter, musician, composer, actor, painter, author",
+        "category": "entertaminment",
+        "birthplace": "Canton, Ohio, U.S.",
+        "birthday": " January 5, 1969 ",
+        "birthname": ""
+    },
+    "Norman Vincent Peale": {
+        "occupation": "Author, speaker,, Dutch Reformed minister",
+        "category": "writer",
+        "birthplace": "Bowersville, Ohio",
+        "birthday": "May 31, 1898",
+        "birthname": ""
+    },
+    "Jeff Bezos": {
+        "occupation": "Technology and retail entrepreneur and investor",
+        "category": "entrepreneur",
+        "birthplace": "Albuquerque, New Mexico, U.S.",
+        "birthday": " January 12, 1964 ",
+        "birthname": "Jeffrey Preston Jorgensen"
+    },
+    "John D. Rockefeller": {
+        "occupation": "Oil industry business magnate and philanthropist",
+        "category": "business",
+        "birthplace": "Richford, New York, U.S.",
+        "birthday": "July 8, 1839",
+        "birthname": "John Davison Rockefeller"
+    },
+    "George Lucas": {
+        "occupation": "Filmmaker, entrepreneur",
+        "category": "entrepreneur",
+        "birthplace": "Modesto, California, U.S.",
+        "birthday": " May 14, 1944 ",
+        "birthname": "George Walton Lucas Jr."
+    },
+    "Rabindranath Tagore": {
+        "occupation": "Writer, song composer, playwright, essayist, painter",
+        "category": "writer",
+        "birthplace": "Calcutta, British India",
+        "birthday": "7 May 1861",
+        "birthname": "Rabindranath Thakur"
+    },
+    "Hippocrates": {
+        "occupation": "Physician",
+        "category": "science",
+        "birthplace": "Kos, Ancient Greece",
+        "birthday": "c. 460 BC",
+        "birthname": ""
+    },
+    "Karl Pilkington": {
+        "occupation": "Television presenter, author, comedian, radio producer, actor, voice actor",
+        "category": "entertaminment",
+        "birthplace": "Manchester, England",
+        "birthday": " 23 September 1972 ",
+        "birthname": ""
+    },
+    "Dave Ramsey": {
+        "occupation": "Businessman, author, radio host",
+        "category": "business",
+        "birthplace": "Antioch, Tennessee, U.S.",
+        "birthday": " September 3, 1960 ",
+        "birthname": "David L. Ramsey III"
+    },
+    "Jane Austen": {
+        "occupation": "Novelist",
+        "category": "writer",
+        "birthplace": "Steventon Rectory, Hampshire, England",
+        "birthday": "16 December 1775",
+        "birthname": ""
+    },
+    "R. Buckminster Fuller": {
+        "occupation": "Designer, author, inventor",
+        "category": "writer",
+        "birthplace": "Milton, Massachusetts,",
+        "birthday": "July 12, 1895",
+        "birthname": "Richard Buckminster Fuller"
+    },
+    "Les Brown": {
+        "occupation": "Motivational speaker, author, radio DJ",
+        "category": "business",
+        "birthplace": "Miami, Florida",
+        "birthday": "Febuary 17, 1945",
+        "birthname": ""
+    },
+    "Mao Zedong": {
+        "occupation": "Communist revolutionary, poet, political theorist, founding father of the People's Republic of China",
+        "category": "writer",
+        "birthplace": "Shaoshan, Hunan, Qing Empire",
+        "birthday": "December 26, 1893",
+        "birthname": ""
+    },
+    "Johnny Cash": {
+        "occupation": "Singer-songwriter, guitarist, actor, author",
+        "category": "writer",
+        "birthplace": "Kingsland, Arkansas",
+        "birthday": "February 26, 1932",
+        "birthname": "J. R. Cash"
+    },
+    "Elie Wiesel": {
+        "occupation": "Author, professor, activist",
+        "category": "writer",
+        "birthplace": "Sighet, Kingdom of Romania",
+        "birthday": "September 30, 1928",
+        "birthname": "Eliezer Wiesel"
+    },
+    "Bruce Lee": {
+        "occupation": "Martial artist, philosopher, actor, director, screenwriter, producer",
+        "category": "arts",
+        "birthplace": "San Francisco, U.S.",
+        "birthday": "November 27, 1940",
+        "birthname": "Lee Jun-fan"
+    },
+    "Joel Osteen": {
+        "occupation": "Televangelist",
+        "category": "religion",
+        "birthplace": "Houston, Texas",
+        "birthday": " March 5, 1963 ",
+        "birthname": "Joel Scott Osteen"
+    },
+    "J. Robert Oppenheimer": {
+        "occupation": "Theoretical physicist, professor of physics at the University of California Berkeley",
+        "category": "science",
+        "birthplace": "New York City, New York",
+        "birthday": "April 22, 1904",
+        "birthname": ""
+    },
+    "Will Rogers": {
+        "occupation": "Comedic actor, Columnist, Radio personality",
+        "category": "entertaminment",
+        "birthplace": "Oologah, Cherokee Nation, Indian Territory ",
+        "birthday": "November 4, 1879",
+        "birthname": "William Penn Adair Rogers"
+    },
+    "Brian Tracy": {
+        "occupation": "CEO, chairman, motivational speaker, author",
+        "category": "business",
+        "birthplace": "Charlottetown, Prince Edward Island, Canada",
+        "birthday": " January 5, 1944 ",
+        "birthname": ""
+    },
+    "Doc Hastings": {
+        "occupation": "Politician",
+        "category": "politics",
+        "birthplace": "Spokane, Washington, U.S.",
+        "birthday": " February 7, 1941 ",
+        "birthname": "Richard Norman Hastings"
+    },
+    "Colin Powell": {
+        "occupation": "United States Secretary of State, four-star general in the United States Army",
+        "category": "military",
+        "birthplace": "New York City, New York, U.S.",
+        "birthday": " April 5, 1937 ",
+        "birthname": "Colin Luther Powell"
+    },
+    "Billy Graham": {
+        "occupation": "Evangelical Christian evangelist, ordained Southern Baptist minister",
+        "category": "religion",
+        "birthplace": "Charlotte, North Carolina, U.S.",
+        "birthday": " November 7, 1918 ",
+        "birthname": "William Franklin Graham Jr."
+    },
+    "Alan Watts": {
+        "occupation": "Philosopher, writer, speaker",
+        "category": "philosopher",
+        "birthplace": "Chislehurst, Kent, England",
+        "birthday": "6 January 1915",
+        "birthname": "Alan Wilson Watts"
+    },
+    "Samuel Beckett": {
+        "occupation": "Novelist, playwright, poet, theatre director, essayist, literary translator",
+        "category": "writer",
+        "birthplace": "Foxrock, Dublin, Ireland",
+        "birthday": "13 April 1906",
+        "birthname": "Samuel Barclay Beckett"
+    },
+    "Fyodor Dostoevsky": {
+        "occupation": "Military engineer, novelist, journalist",
+        "category": "military",
+        "birthplace": "Moscow, Russian Empire",
+        "birthday": "11 November 1821",
+        "birthname": "Fyodor Mikhailovich Dostoyevsky"
+    },
+    "H. P. Lovecraft": {
+        "occupation": "Short story writer, editor, novelist, poet",
+        "category": "writer",
+        "birthplace": "Providence, Rhode Island, US",
+        "birthday": "August 20, 1890",
+        "birthname": "Howard Phillips Lovecraft"
+    },
+    "Susan B. Anthony": {
+        "occupation": "Social reformer, women's rights activist",
+        "category": "politics",
+        "birthplace": "Adams, Massachusetts, U.S.",
+        "birthday": "February 15, 1820",
+        "birthname": "Susan Brownell Anthony"
+    },
+    "Julius Caesar": {
+        "occupation": "Politician, General",
+        "category": "politics",
+        "birthplace": "Rome",
+        "birthday": "13 July 100 BC",
+        "birthname": "Gaius Julius Caesar"
+    },
+    "Martin Luther King, Jr.": {
+        "occupation": "Minister, activist",
+        "category": "politics",
+        "birthplace": "Atlanta, Georgia, U.S.",
+        "birthday": "January 15, 1929",
+        "birthname": "Michael King Jr."
+    },
+    "Jeff Miller": {
+        "occupation": "Politician",
+        "category": "politics",
+        "birthplace": "St. Petersburg, Florida",
+        "birthday": "June 27, 1959",
+        "birthname": ""
+    },
+    "Kim Kardashian": {
+        "occupation": "Television personality, socialite, actress, businesswoman, model",
+        "category": "entertaminment",
+        "birthplace": "Los Angeles, California, U.S.",
+        "birthday": " October 21, 1980 ",
+        "birthname": "Kimberly Noel Kardashian"
+    },
+    "Will Smith": {
+        "occupation": "Actor, producer, rapper, songwriter, comedian",
+        "category": "entertaminment",
+        "birthplace": "Philadelphia, Pennsylvania, U.S.",
+        "birthday": " September 25, 1968 ",
+        "birthname": "Willard Carroll Smith Jr."
+    },
+    "Henny Youngman": {
+        "occupation": "Comedian, violinist",
+        "category": "entertaminment",
+        "birthplace": "London, England, UK",
+        "birthday": "16 March 1906",
+        "birthname": ""
+    },
+    "Queen Elizabeth II": {
+        "occupation": "Queen of the United Kingdom",
+        "category": "politics",
+        "birthplace": "Mayfair, London, England, United Kingdom",
+        "birthday": " 21 April 1926 ",
+        "birthname": ""
+    },
+    "Chris Rock": {
+        "occupation": "Comedian, actor, writer, producer, director",
+        "category": "entertaminment",
+        "birthplace": "Andrews, South Carolina, U.S.",
+        "birthday": " February 7, 1965 ",
+        "birthname": ""
+    },
+    "Thomas Merton": {
+        "occupation": "Trappist monk, author",
+        "category": "writer",
+        "birthplace": "Prades, Pyr\u00e9n\u00e9es-Orientales, France",
+        "birthday": "January 31, 1915",
+        "birthname": ""
+    },
+    "Ambrose Bierce": {
+        "occupation": "Soldier, Journalist, Writer",
+        "category": "military",
+        "birthplace": "Meigs County, Ohio, United States",
+        "birthday": "June 24, 1842",
+        "birthname": "Ambrose Gwinnett Bierce"
+    },
+    "F. Scott Fitzgerald": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "St. Paul, Minnesota, U.S.",
+        "birthday": "September 24, 1896",
+        "birthname": "Francis Scott Key Fitzgerald"
+    },
+    "Will Ferrell": {
+        "occupation": "Actor, comedian, producer, writer",
+        "category": "entertaminment",
+        "birthplace": "Irvine, California, U.S.",
+        "birthday": " July 16, 1967 ",
+        "birthname": "John William Ferrell"
+    },
+    "Walt Disney": {
+        "occupation": "Entrepreneur, animator, voice actor, film producer",
+        "category": "entrepreneur",
+        "birthplace": "Chicago, Illinois, U.S.",
+        "birthday": "December 5, 1901",
+        "birthname": "Walter Elias Disney"
+    },
+    "John Lennon": {
+        "occupation": "Singer, songwriter, musician, activist",
+        "category": "entertaminment",
+        "birthplace": "Liverpool, England",
+        "birthday": "9 October 1940",
+        "birthname": "John Winston Lennon"
+    },
+    "Steven Wright": {
+        "occupation": "Stand-up comedian, actor, writer, film producer",
+        "category": "entertaminment",
+        "birthplace": "Cambridge, Massachusetts, U.S.",
+        "birthday": " December 6, 1955 ",
+        "birthname": ""
+    },
+    "Anne Frank": {
+        "occupation": "Diarist",
+        "category": "writer",
+        "birthplace": "Frankfurt, Germany",
+        "birthday": "12 June 1929",
+        "birthname": "Annelies or Anneliese Marie Frank"
+    },
+    "Charlie Chaplin": {
+        "occupation": "Actor, director, composer, screenwriter, producer, editor",
+        "category": "entertaminment",
+        "birthplace": "16 April 1889",
+        "birthday": "Charles Spencer Chaplin",
+        "birthname": ""
+    },
+    "Snoop Dogg": {
+        "occupation": "Rapper, singer, songwriter, record producer, actor",
+        "category": "entertaminment",
+        "birthplace": "Long Beach, California, U.S.",
+        "birthday": " October 20, 1971 ",
+        "birthname": "Calvin Cordozar Broadus, Jr."
+    },
+    "Benjamin Disraeli": {
+        "occupation": "Prime Minister of the United Kingdom",
+        "category": "politics",
+        "birthplace": "Bloomsbury, Middlesex, England",
+        "birthday": "21 December 1804",
+        "birthname": ""
+    },
+    "Kanye West": {
+        "occupation": "Rapper, singer, songwriter, record producer, fashion designer, entrepreneur",
+        "category": "entertaminment",
+        "birthplace": "Atlanta, Georgia, U.S.",
+        "birthday": " June 8, 1977 ",
+        "birthname": "Kanye Omari West"
+    },
+    "J. Cole": {
+        "occupation": "Rapper, record producer, singer, songwriter",
+        "category": "entertaminment",
+        "birthplace": "Frankfurt, Hesse, West Germany",
+        "birthday": " January 28, 1985 ",
+        "birthname": "Jermaine Lamarr Cole"
+    },
+    "Bertrand Russell": {
+        "occupation": "Philosopher, logician, mathematician, historian, writer, social critic, political activist, Nobel laureate",
+        "category": "philosopher",
+        "birthplace": "Trellech, Monmouthshire, United Kingdom",
+        "birthday": "18 May 1872",
+        "birthname": "Bertrand Arthur William Russell"
+    },
+    "Sally Ride": {
+        "occupation": "Physicist",
+        "category": "science",
+        "birthplace": "Encino, Los Angeles, California, U.S.",
+        "birthday": "May 26, 1951",
+        "birthname": "Sally Kristen Ride"
+    },
+    "Ludwig Wittgenstein": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Vienna, Austria-Hungary",
+        "birthday": "26 April 1889",
+        "birthname": "Ludwig Josef Johann Wittgenstein"
+    },
+    "Charles R. Swindoll": {
+        "occupation": "Pastor, author, educator",
+        "category": "religion",
+        "birthplace": "El Campo, Wharton County",
+        "birthday": " October 18, 1934 ",
+        "birthname": "Charles Rozell Swindoll"
+    },
+    "Heraclitus": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Ephesus, Ionia, Persian Empire",
+        "birthday": "c. 535 BC",
+        "birthname": ""
+    },
+    "Stevie Nicks": {
+        "occupation": "Singer-songwriter",
+        "category": "writer",
+        "birthplace": "Phoenix, Arizona, U.S.",
+        "birthday": " May 26, 1948 ",
+        "birthname": "Stephanie Lynn Nicks"
+    },
+    "Francis Bacon": {
+        "occupation": "Philosopher, statesman, scientist, jurist, orator, author",
+        "category": "philosopher",
+        "birthplace": "Strand, London, England",
+        "birthday": "22 January 1561",
+        "birthname": ""
+    },
+    "Ansel Adams": {
+        "occupation": "Photographer, environmentalist",
+        "category": "arts",
+        "birthplace": "San Francisco, California, US",
+        "birthday": "February 20, 1902",
+        "birthname": "Ansel Easton Adams"
+    },
+    "William James": {
+        "occupation": "Philosopher, psychologist",
+        "category": "philosopher",
+        "birthplace": "New York City, New York",
+        "birthday": "January 11, 1842",
+        "birthname": ""
+    },
+    "David Bowie": {
+        "occupation": "Singer, songwriter, actor",
+        "category": "entertaminment",
+        "birthplace": "Brixton, London, England",
+        "birthday": "8 January 1947",
+        "birthname": "David Robert Jones"
+    },
+    "Viktor E. Frankl": {
+        "occupation": "Neurologist, psychiatrist",
+        "category": "science",
+        "birthplace": "Leopoldstadt, Vienna, Austria",
+        "birthday": "26 March 1905",
+        "birthname": "Viktor Emil Frankl"
+    },
+    "Michelangelo": {
+        "occupation": "sculptor, apinter, architect, poet",
+        "category": "arts",
+        "birthplace": "Caprese near Arezzo, Republic of Florence ",
+        "birthday": "6 March 1475",
+        "birthname": "Michelangelo di Lodovico Buonarroti Simoni"
+    },
+    "Michelle Obama": {
+        "occupation": "layer, writer, First Lady of the United States",
+        "category": "writer",
+        "birthplace": "Chicago, Illinois, U.S.",
+        "birthday": " January 17, 1964 ",
+        "birthname": "Michelle LaVaughn Robinson"
+    },
+    "Margaret Mead": {
+        "occupation": "Anthropologist",
+        "category": "science",
+        "birthplace": "Philadelphia, Pennsylvania, USA",
+        "birthday": "December 16, 1901",
+        "birthname": ""
+    },
+    "Stephen Hawking": {
+        "occupation": "Theoretical physicist, cosmologist",
+        "category": "science",
+        "birthplace": "Oxford, England, United Kingdom",
+        "birthday": " 8 January 1942 ",
+        "birthname": "Stephen William Hawking"
+    },
+    "Alexander Pope": {
+        "occupation": "Poet",
+        "category": "writer",
+        "birthplace": "London, England",
+        "birthday": "21 May 1688",
+        "birthname": ""
+    },
+    "Bono": {
+        "occupation": "singer-songwriter, musician, ventuer capitalist, businessman, philanthropist",
+        "category": "writer",
+        "birthplace": "Dublin, Ireland",
+        "birthday": " 10 May 1960 ",
+        "birthname": ""
+    },
+    "Tom Brady": {
+        "occupation": "Football quarterback",
+        "category": "sports",
+        "birthplace": "San Mateo, California",
+        "birthday": "August 3, 1977",
+        "birthname": ""
+    },
+    "Rudyard Kipling": {
+        "occupation": "Short-story writer, novelist, poet, journalist",
+        "category": "writer",
+        "birthplace": "Bombay, Bombay Presidency, British India",
+        "birthday": "30 December 1865",
+        "birthname": "Joseph Rudyard Kipling"
+    },
+    "Isadora Duncan": {
+        "occupation": "dancer",
+        "category": "arts",
+        "birthplace": "San Francisco, California, United States",
+        "birthday": "May 26, 1877, or May 27, 1878",
+        "birthname": "Angela Isadora Duncan"
+    },
+    "Demetri Martin": {
+        "occupation": "Stand-up comedian, actor, artist, musician, director",
+        "category": "entertaminment",
+        "birthplace": "New York City, New York, U.S.",
+        "birthday": " May 25, 1973 ",
+        "birthname": ""
+    },
+    "J. K. Rowling": {
+        "occupation": "Novelist, film producer, television producer, screenwriter, philanthropist",
+        "category": "writer",
+        "birthplace": "Yate, Gloucestershire, England",
+        "birthday": " 31 July 1965 ",
+        "birthname": "Joanne Rowling"
+    },
+    "Clarence Darrow": {
+        "occupation": "Lawyer",
+        "category": "politics",
+        "birthplace": "Kinsman, Ohio",
+        "birthday": "April 18, 1857",
+        "birthname": "Clarence Seward Darrow"
+    },
+    "Jimi Hendrix": {
+        "occupation": "Rock guitarist, singer, songwriter",
+        "category": "entertaminment",
+        "birthplace": "Seattle, Washington, US",
+        "birthday": "November 27, 1942",
+        "birthname": ""
+    },
+    "Richard P. Feynman": {
+        "occupation": "Theoretical physicist",
+        "category": "science",
+        "birthplace": "Queens, New York, U.S.",
+        "birthday": "May 11, 1918",
+        "birthname": "Richard Phillips Feynman"
+    },
+    "Edward Abbey": {
+        "occupation": "Essayist, novelist",
+        "category": "writer",
+        "birthplace": "Indiana, Pennsylvania, U.S.",
+        "birthday": "January 29, 1927",
+        "birthname": ""
+    },
+    "Oscar Wilde": {
+        "occupation": "Author, poet, playwright",
+        "category": "writer",
+        "birthplace": "Dublin, Ireland",
+        "birthday": "16 October 1854",
+        "birthname": "Oscar Fingal O'Flahertie Wills Wilde"
+    },
+    "Chance The Rapper": {
+        "occupation": "rapper, singer, philanthropist",
+        "category": "entertaminment",
+        "birthplace": "Chicago, Illinois, U.S.",
+        "birthday": " April 16, 1993 ",
+        "birthname": ""
+    },
+    "Robert Kennedy": {
+        "occupation": "United States Senator",
+        "category": "politics",
+        "birthplace": "Brookline, Massachusetts, U.S.",
+        "birthday": "November 20, 1925",
+        "birthname": "Robert Francis Kennedy"
+    },
+    "Mark Twain": {
+        "occupation": "Writer, humorist, entrepreneur, publisher, lecturer",
+        "category": "writer",
+        "birthplace": "Florida, Missouri, U.S.",
+        "birthday": "November 30, 1835",
+        "birthname": "Samuel Langhorne Clemens"
+    },
+    "Nicki Minaj": {
+        "occupation": "Rapper, singer, songwriter, model, actress",
+        "category": "entertaminment",
+        "birthplace": "Saint James, Trinidad and Tobago",
+        "birthday": " December 8, 1982 ",
+        "birthname": "Onika Tanya Maraj"
+    },
+    "Anais Nin": {
+        "occupation": "Author",
+        "category": "writer",
+        "birthplace": "Neuilly-sur-Seine, France",
+        "birthday": "February 21, 1903",
+        "birthname": "Angela Ana\u00efs Juana Antolina Rosa Edelmira Nin y Culmell"
+    },
+    "Helen Keller": {
+        "occupation": "Author, political activist, lecturer",
+        "category": "writer",
+        "birthplace": "Tuscumbia, Alabama, U.S.",
+        "birthday": "June 27, 1880",
+        "birthname": "Helen Adams Keller"
+    },
+    "Derek Jeter": {
+        "occupation": "Professional baseball shortstop",
+        "category": "sports",
+        "birthplace": "Pequannock township, New Jersey",
+        "birthday": "June 26, 1974",
+        "birthname": ""
+    },
+    "Anne Lamott": {
+        "occupation": "Novelist, non-fiction writer, essayist, memoirist",
+        "category": "writer",
+        "birthplace": "San Francisco, California, United States",
+        "birthday": " April 10, 1954 ",
+        "birthname": ""
+    },
+    "Budda": {
+        "occupation": "Religious leader",
+        "category": "religion",
+        "birthplace": "Lumbini, Shakya Republic ",
+        "birthday": "c. 563 BCE or c. 480 BCE",
+        "birthname": ""
+    },
+    "Gloria Steinem": {
+        "occupation": "Writer and journalist for Ms. and New York magazines[3]",
+        "category": "writer",
+        "birthplace": "Toledo, Ohio, U.S.",
+        "birthday": " March 25, 1934 ",
+        "birthname": "Gloria Marie Steinem"
+    },
+    "John M. McHugh": {
+        "occupation": "United States Secretary of the Army",
+        "category": "military",
+        "birthplace": "Watertown, New York, U.S.",
+        "birthday": " September 29, 1948 ",
+        "birthname": "John Michael McHugh"
+    },
+    "Thomas Jefferson": {
+        "occupation": "President of the United States, one of the Founding Fathers of the United States",
+        "category": "politics",
+        "birthplace": "Shadwell, Virginia, British America",
+        "birthday": "April 13, 1743",
+        "birthname": ""
+    },
+    "J. R. R. Tolkien": {
+        "occupation": "Author, academic, philologist, poet",
+        "category": "writer",
+        "birthplace": "Bloemfontein, Orange Free State ",
+        "birthday": "3 January 1892",
+        "birthname": "John Ronald Reuel Tolkien"
+    },
+    "Orson Welles": {
+        "occupation": "Actor, director, writer, producer",
+        "category": "entertaminment",
+        "birthplace": "Kenosha, Wisconsin, U.S.",
+        "birthday": "May 6, 1915",
+        "birthname": "George Orson Welles"
+    },
+    "Yogi Berra": {
+        "occupation": "Baseball catcher, manager, coach",
+        "category": "sports",
+        "birthplace": "West caldwell, New Jersey",
+        "birthday": "May 12, 1925",
+        "birthname": ""
+    },
+    "Stephen Covey": {
+        "occupation": "Author, professional speaker, professor, consultant, management-expert",
+        "category": "writer",
+        "birthplace": "Salt Lake City, Utah, U.S.",
+        "birthday": "October 24, 1932",
+        "birthname": "Stephen Richards Covey"
+    },
+    "Immanuel Kant": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "K\u00f6nigsberg, Prussia ",
+        "birthday": "22 April 1724",
+        "birthname": ""
+    },
+    "Karl Marx": {
+        "occupation": "Philosopher, economist, historian, political theorist, sociologist, journalist, revolutionary socialist",
+        "category": "philosopher",
+        "birthplace": "Trier, Kingdom of Prussia",
+        "birthday": "5 May 1818",
+        "birthname": ""
+    },
+    "Robin Williams": {
+        "occupation": "Stand-up comedian, actor",
+        "category": "entertaminment",
+        "birthplace": "Chicago, Illinois, U.S.",
+        "birthday": "July 21, 1951",
+        "birthname": "Robin McLaurin Williams"
+    },
+    "Paulo Coelho": {
+        "occupation": "Novelist, writer and lyricist",
+        "category": "writer",
+        "birthplace": "Rio de Janeiro, Brazil",
+        "birthday": " August 24, 1947 ",
+        "birthname": ""
+    },
+    "John Locke": {
+        "occupation": "Philosopher, physician",
+        "category": "philosopher",
+        "birthplace": "Wrington, Somerset, England",
+        "birthday": "29 August 1632",
+        "birthname": ""
+    },
+    "Erma Bombeck": {
+        "occupation": "Humorist, syndicated columnist, writer",
+        "category": "arts",
+        "birthplace": "Bellbrook, Ohio, U.S.",
+        "birthday": "February 21, 1927",
+        "birthname": "Erma Louise Fiste"
+    },
+    "Meister Eckhart": {
+        "occupation": "Thelogian, philosopher, mystic",
+        "category": "philosopher",
+        "birthplace": "Near Gotha, Holy Roman Empire",
+        "birthday": "Around 1260",
+        "birthname": ""
+    },
+    "C. S. Lewis": {
+        "occupation": "Novelist, scholar, broadcaster",
+        "category": "writer",
+        "birthplace": "Belfast, Ireland",
+        "birthday": "29 November 1898",
+        "birthname": "Clive Staples Lewis"
+    },
+    "Sigmund Freud": {
+        "occupation": "Neurologist, founder of psychoanalysis",
+        "category": "science",
+        "birthplace": "Freiberg in M\u00e4hren, Moravia, Austrian Empire",
+        "birthday": "6 May 1856",
+        "birthname": "Sigismund Schlomo Freud"
+    },
+    "William S. Burroughs": {
+        "occupation": "Author",
+        "category": "writer",
+        "birthplace": "St. Louis, Missouri, United States",
+        "birthday": "February 5, 1914",
+        "birthname": "William Seward Burroughs II"
+    },
+    "Stephen King": {
+        "occupation": "Writer, actor, television producer, singer, musician",
+        "category": "writer",
+        "birthplace": "Portland, Maine",
+        "birthday": " September 21, 1947 ",
+        "birthname": "Stephen Edwin King"
+    },
+    "Jean Piaget": {
+        "occupation": "Psychologist, epistemologist",
+        "category": "science",
+        "birthplace": "Neuch\u00e2tel, Switzerland",
+        "birthday": "9 August 1896",
+        "birthname": "Jean William Fritz Piaget"
+    },
+    "Ben Shapiro": {
+        "occupation": "Political commentator, author, radio talk show host, lawyer",
+        "category": "politics",
+        "birthplace": "Los Angeles, California, U.S.",
+        "birthday": " January 15, 1984 ",
+        "birthname": "Benjamin Aaron Shapiro"
+    },
+    "Jack Ma": {
+        "occupation": "Founder and Executive Chairman of Alibaba Group",
+        "category": "business",
+        "birthplace": "Hangzhou, Zhejiang, China",
+        "birthday": " 10 September 1964 ",
+        "birthname": ""
+    },
+    "Noam Chomsky": {
+        "occupation": "Linguist, philosopher, cognitive scientist, historian, social critic",
+        "category": "philosopher",
+        "birthplace": "Philadelphia, Pennsylvania, U.S.",
+        "birthday": " December 7, 1928 ",
+        "birthname": "Avram Noam Chomsky"
+    },
+    "H. Jackson Brown, Jr.": {
+        "occupation": "author of life's little instruction book",
+        "category": "writer",
+        "birthplace": "Tennessee",
+        "birthday": "1940",
+        "birthname": ""
+    },
+    "Arnold Schwarzenegger": {
+        "occupation": "Professional bodybuilder, actor, producer, businessman, investor, author, philanthropist, activist, politican",
+        "category": "entertaminment",
+        "birthplace": "Thal, Styria, Austria",
+        "birthday": " July 30, 1947 ",
+        "birthname": "Arnold Alois Schwarzenegger"
+    },
+    "Oliver Wendell Holmes, Sr.": {
+        "occupation": "Physician, poet, polymath",
+        "category": "science",
+        "birthplace": "Cambridge, Massachusetts",
+        "birthday": "August 29, 1809",
+        "birthname": "Oliver Wendell Holmes"
+    },
+    "Dolly Parton": {
+        "occupation": "Singer, songwriter, multi-instrumentalist, record producer, actress, author, businesswoman, humanitarian",
+        "category": "entertaminment",
+        "birthplace": "Sevier County, Tennessee, U.S.",
+        "birthday": " January 19, 1946 ",
+        "birthname": "Dolly Rebecca Parton"
+    },
+    "Niccolo Machiavelli": {
+        "occupation": "diplomat, politician, historian, philosopher, humanist, writer of the Renaissance period",
+        "category": "politics",
+        "birthplace": "Florence, Republic of Florence ",
+        "birthday": "3 May 1469",
+        "birthname": ""
+    },
+    "Kurt Vonnegut": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "Indianapolis, Indiana, U.S.",
+        "birthday": "November 11, 1922",
+        "birthname": ""
+    },
+    "Pope Francis": {
+        "occupation": "Religious leader",
+        "category": "religion",
+        "birthplace": "Flores, Buenos Aires, Argentina",
+        "birthday": " 17 December 1936 ",
+        "birthname": ""
+    },
+    "Henry Ward Beecher": {
+        "occupation": "Protestant Clergyman, abolitionist",
+        "category": "religion",
+        "birthplace": "Litchfield, Connecticut, US",
+        "birthday": "June 24, 1813",
+        "birthname": ""
+    },
+    "Jim Valvano": {
+        "occupation": "College basketball player, coach, broadcaster",
+        "category": "sports",
+        "birthplace": "Queens, New York",
+        "birthday": "March 10, 1946",
+        "birthname": ""
+    },
+    "Vince Lombardi": {
+        "occupation": "Football player, coach, executive ",
+        "category": "sports",
+        "birthplace": "Brooklyn, New York",
+        "birthday": "June 11, 1913",
+        "birthname": ""
+    },
+    "Henry Ford": {
+        "occupation": "Founder of Ford Motor Company",
+        "category": "business",
+        "birthplace": "Greenfield Township, Michigan, US",
+        "birthday": "July 30, 1863",
+        "birthname": ""
+    },
+    "Abraham Lincoln": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "near Hodgenville, Kentucky, U.S.",
+        "birthday": "Sinking Spring Farm,",
+        "birthname": "February 12, 1809"
+    },
+    "Salvador Dali": {
+        "occupation": "Draftsman",
+        "category": "arts",
+        "birthplace": "Figueres, Catalonia, Spain",
+        "birthday": "11 May 1904",
+        "birthname": "Salvador Domingo Felipe Jacinto Dal\u00ed i Dom\u00e8nech"
+    },
+    "Kurt Cobain": {
+        "occupation": "Singer, songwriter, musician, visual artist",
+        "category": "entertaminment",
+        "birthplace": "Aberdeen, Washington, U.S.",
+        "birthday": "February 20, 1967",
+        "birthname": "Kurt Donald Cobain"
+    },
+    "Publilius Syrus": {
+        "occupation": "Latin writer",
+        "category": "writer",
+        "birthplace": "Syria",
+        "birthday": "85 BC",
+        "birthname": ""
+    },
+    "Mark Zuckerberg": {
+        "occupation": "Computer programmer, Internet entrepreneur, co-founder of Facebook",
+        "category": "entrepreneur",
+        "birthplace": "White Plains, New York, U.S.",
+        "birthday": " May 14, 1984 ",
+        "birthname": "Mark Elliot Zuckerberg"
+    },
+    "Roger Moore": {
+        "occupation": "Actor",
+        "category": "entertaminment",
+        "birthplace": "Stockwell, London, England",
+        "birthday": "14 October 1927",
+        "birthname": "Roger George Moore"
+    },
+    "Joseph Campbell": {
+        "occupation": "Scholar",
+        "category": "religion",
+        "birthplace": "White Plains, New York, United States",
+        "birthday": "March 26, 1904",
+        "birthname": "Joseph John Campbell"
+    },
+    "Vincent Van Gogh": {
+        "occupation": "Post-impressionist painter",
+        "category": "arts",
+        "birthplace": "Zundert, Netherlands",
+        "birthday": "30 March 1853",
+        "birthname": "Vincent Willem van Gogh"
+    },
+    "A. A. Milne": {
+        "occupation": "Novelist, playwright, poet",
+        "category": "writer",
+        "birthplace": "Kilburn, London, England",
+        "birthday": "18 January 1882",
+        "birthname": "Alan Alexander Milne"
+    },
+    "Warren Buffett": {
+        "occupation": "Investor, business magnate, and philanthropist",
+        "category": "business",
+        "birthplace": "Omaha, Nebraska, U.S.",
+        "birthday": " August 30, 1930 ",
+        "birthname": "Warren Edward Buffett"
+    },
+    "Andrew Jackson": {
+        "occupation": "President of the United States, soldier, statesman",
+        "category": "politics",
+        "birthplace": "Waxhaw Settlement between the Provinces of North Carolina and South Carolina, British America",
+        "birthday": "March 15, 1767",
+        "birthname": ""
+    },
+    "Marcel Proust": {
+        "occupation": "Novelist, essayist, critic",
+        "category": "writer",
+        "birthplace": "Auteuil, France",
+        "birthday": "10 July 1871",
+        "birthname": "Valentin Louis Georges Eug\u00e8ne Marcel Proust"
+    },
+    "Alexander Hamilton": {
+        "occupation": "United States Secretary of the Treasury",
+        "category": "politics",
+        "birthplace": "Charlestown, Nevis, British Leeward Islands",
+        "birthday": "January 11, 1755",
+        "birthname": ""
+    },
+    "Bruce Springsteen": {
+        "occupation": "Singer, songwriter, musician",
+        "category": "entertaminment",
+        "birthplace": "Long Branch, New Jersey, U.S.",
+        "birthday": " September 23, 1949 ",
+        "birthname": "Bruce Frederick Joseph Springsteen"
+    },
+    "Hunter S. Thompson": {
+        "occupation": "Journalist, author",
+        "category": "writer",
+        "birthplace": "Louisville, Kentucky, U.S.",
+        "birthday": "July 18, 1937",
+        "birthname": "Hunter Stockton Thompson"
+    },
+    "Kendrick Lamar": {
+        "occupation": "Rapper, songwriter",
+        "category": "entertaminment",
+        "birthplace": "Compton, California, U.S.",
+        "birthday": " June 17, 1987 ",
+        "birthname": "Kendrick Lamar Duckworth"
+    },
+    "Alexander the Great": {
+        "occupation": "King of the ancient Greek Kingdom of Macedon",
+        "category": "politics",
+        "birthplace": "Pella, Macedon, Ancient Greece",
+        "birthday": "20 or 21 July 356 BC",
+        "birthname": ""
+    },
+    "Adam Smith": {
+        "occupation": "Economist, philosopher, author, moral philosopher",
+        "category": "science",
+        "birthplace": "Kirkcaldy, Fife, Scotland",
+        "birthday": "16 June, 1723",
+        "birthname": ""
+    },
+    "Jim Carrey": {
+        "occupation": "Actor, stand-up comedian, screenwriter, film producer",
+        "category": "entertaminment",
+        "birthplace": "Newmarket, Ontario, Canada",
+        "birthday": " January 17, 1962 ",
+        "birthname": "James Eugene Carrey"
+    },
+    "Wendell Berry": {
+        "occupation": "Poet, farmer, writer, activist, academic",
+        "category": "writer",
+        "birthplace": "Henry County, Kentucky, U.S.",
+        "birthday": " August 5, 1934 ",
+        "birthname": ""
+    },
+    "George Santayana": {
+        "occupation": "Philosopher, essayist, poet, novelist",
+        "category": "philosopher",
+        "birthplace": "Madrid, Spain",
+        "birthday": "December 16, 1863",
+        "birthname": "Jorge Agust\u00edn Nicol\u00e1s Ruiz de Santayana y Borr\u00e1s"
+    },
+    "Pierre Teilhard de Chardin": {
+        "occupation": "Idealist philosopher, Jesuit priest, paleontologist, geologist",
+        "category": "philosopher",
+        "birthplace": "Orcines, Auvergne, France",
+        "birthday": "1 May 1881",
+        "birthname": ""
+    },
+    "Richard Dawkins": {
+        "occupation": "Ethologist, evolutionary biologist, author",
+        "category": "writer",
+        "birthplace": "Nairobi, British Kenya",
+        "birthday": " 26 March 1941 ",
+        "birthname": "Clinton Richard Dawkins"
+    },
+    "Audrey Hepburn": {
+        "occupation": "Actress (1948\u20131989), Humanitarian (1988\u20131992)",
+        "category": "entertaminment",
+        "birthplace": "Ixelles, Brussels, Belgium",
+        "birthday": "4 May 1929",
+        "birthname": "Audrey Kathleen Ruston"
+    },
+    "William Wordsworth": {
+        "occupation": "Poet",
+        "category": "writer",
+        "birthplace": "Cockermouth, Cumberland, England",
+        "birthday": "7 April 1770",
+        "birthname": ""
+    },
+    "Gary Vaynerchuk": {
+        "occupation": "Entrepreneur, author, speaker, internet personality",
+        "category": "entrepreneur",
+        "birthplace": "Babruysk, BSSR, Soviet Union",
+        "birthday": " November 14, 1975 ",
+        "birthname": ""
+    },
+    "Denzel Washington": {
+        "occupation": "Actor, director, producer",
+        "category": "entertaminment",
+        "birthplace": "Mount Vernon, New York, U.S.",
+        "birthday": " December 28, 1954 ",
+        "birthname": "Denzel Hayes Washington Jr."
+    },
+    "Ralph Waldo Emerson": {
+        "occupation": "essayist, lecturer, poet",
+        "category": "writer",
+        "birthplace": "Boston, Massachusetts, U.S.",
+        "birthday": "May 25, 1803",
+        "birthname": ""
+    },
+    "Marcus Garvey": {
+        "occupation": "Publisher, journalist",
+        "category": "writer",
+        "birthplace": "Saint Ann's Bay, Jamaica",
+        "birthday": "17 August 1887",
+        "birthname": "Marcus Mosiah Garvey Jr."
+    },
+    "Galileo Galilei": {
+        "occupation": "Polymath, central figure in the transition from natural philosophy to modern science",
+        "category": "arts",
+        "birthplace": "Pisa, Duchy of Florence",
+        "birthday": "15 February 1564",
+        "birthname": ""
+    },
+    "Lewis Carroll": {
+        "occupation": "Writer, mathematician, Anglican cleric, photographer, artist",
+        "category": "writer",
+        "birthplace": "Daresbury, Cheshire, England",
+        "birthday": "27 January 1832",
+        "birthname": "Charles Lutwidge Dodgson"
+    },
+    "Andy Warhol": {
+        "occupation": "artist, director, producer",
+        "category": "arts",
+        "birthplace": "Pittsburgh, Pennsylvania, U.S.",
+        "birthday": "August 6, 1928",
+        "birthname": "Andrew Warhola"
+    },
+    "Lyndon B. Johnson": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Stonewall, Texas, U.S.",
+        "birthday": "August 27, 1908",
+        "birthname": "Lyndon Baines Johnson"
+    },
+    "Chanakya": {
+        "occupation": "advisor of Chandragupta Maurya, teacher, philosopher, economist, jurist",
+        "category": "philosopher",
+        "birthplace": "India",
+        "birthday": "4 BCE",
+        "birthname": ""
+    },
+    "Edward G. Bulwer-Lytton": {
+        "occupation": "Novelist, poet, playwright, politician",
+        "category": "writer",
+        "birthplace": "England",
+        "birthday": "25 May, 1803",
+        "birthname": ""
+    },
+    "John Wooden": {
+        "occupation": "Basketball player, head coach at Univeristy of California at Los Angeles",
+        "category": "sports",
+        "birthplace": "Hall, Indiana",
+        "birthday": "October 14, 1910",
+        "birthname": ""
+    },
+    "Hillary Clinton": {
+        "occupation": "First lady of the United States, United States Secretary of State, Senator",
+        "category": "politics",
+        "birthplace": "Chicago, Illinois, U.S.",
+        "birthday": " October 26, 1947 ",
+        "birthname": "Hillary Diane Rodham"
+    },
+    "Douglas Adams": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "Cambridge, UK",
+        "birthday": "11 March 1952",
+        "birthname": ""
+    },
+    "Charles Spurgeon": {
+        "occupation": "Pastor, author",
+        "category": "religion",
+        "birthplace": "Kelvedon, Essex, England",
+        "birthday": "19 June 1834",
+        "birthname": ""
+    },
+    "Bill Gates": {
+        "occupation": "Co-founder of the Microsoft Corp, investor, author, philanthropist, humanitarian",
+        "category": "business",
+        "birthplace": "Seattle, Washington, US",
+        "birthday": " October 28, 1955 ",
+        "birthname": "William Henry Gates III"
+    },
+    "John Keats": {
+        "occupation": "Poet",
+        "category": "writer",
+        "birthplace": "Moorgate, London, England",
+        "birthday": "31 October 1795",
+        "birthname": ""
+    },
+    "James Thurber": {
+        "occupation": "Humorist",
+        "category": "arts",
+        "birthplace": "Columbus, Ohio, U.S.",
+        "birthday": "December 8, 1894",
+        "birthname": "James Grover Thurber"
+    },
+    "Albert Schweitzer": {
+        "occupation": "Theologian, organist, writer, humanitarian, philosopher, physician",
+        "category": "religion",
+        "birthplace": "Kaysersberg, Alsace-Lorraine, Germany ",
+        "birthday": "14 January 1875",
+        "birthname": ""
+    },
+    "Gilbert K. Chesterton": {
+        "occupation": "Journalist, novelist, essayist, poet",
+        "category": "writer",
+        "birthplace": "Kensington, London, England",
+        "birthday": "29 May 1874",
+        "birthname": "Gilbert Keith Chesterton"
+    },
+    "Thomas Aquinas": {
+        "occupation": "Dominican friar, Catholic priest, Doctor of the Church",
+        "category": "religion",
+        "birthplace": "Roccasecca, Kingdom of Sicily",
+        "birthday": "1225",
+        "birthname": ""
+    },
+    "Steven Spielberg": {
+        "occupation": "Director, producer, screenwriter",
+        "category": "entertaminment",
+        "birthplace": "Cincinnati, Ohio, U.S.",
+        "birthday": " December 18, 1946 ",
+        "birthname": ""
+    },
+    "Oprah Winfrey": {
+        "occupation": "Host of The Oprah Winfrey Show (1986\u20132011), Chairwoman and CEO of Harpo Productions (1986\u2013present), Chairwoman, CEO, and CCO of the Oprah Winfrey Network (2011\u2013present), Actress, Author",
+        "category": "entertaminment",
+        "birthplace": "Kosciusko, Mississippi, U.S.",
+        "birthday": " January 29, 1954 ",
+        "birthname": "Orpah Gail Winfrey"
+    },
+    "Virginia Woolf": {
+        "occupation": "Novelist, essayist, publisher, critic",
+        "category": "writer",
+        "birthplace": "Kensington, Middlesex, England",
+        "birthday": "25 January 1882",
+        "birthname": "Adeline Virginia Stephen"
+    },
+    "Nas": {
+        "occupation": "Hip hop recording artist, rapper, record producer, actor, entrepreneur",
+        "category": "arts",
+        "birthplace": "Crown Heights, Brooklyn, New York City, New York",
+        "birthday": " September 14, 1973 ",
+        "birthname": ""
+    },
+    "Charles Darwin": {
+        "occupation": "Naturalist, geologist, biologist",
+        "category": "science",
+        "birthplace": "The Mount, Shrewsbury, Shropshire, England",
+        "birthday": "12 February 1809",
+        "birthname": "Charles Robert Darwin"
+    },
+    "James Madison": {
+        "occupation": "President of the United States, U.S. Founding Father",
+        "category": "politics",
+        "birthplace": "Port Conway, Colony of Virginia, British America",
+        "birthday": "March 16, 1751",
+        "birthname": ""
+    },
+    "Edmund Burke": {
+        "occupation": "Writer, politician, journalist, philosopher",
+        "category": "writer",
+        "birthplace": "12 Arran Quay, Dublin, Ireland",
+        "birthday": "12 January 1729",
+        "birthname": ""
+    },
+    "Maya Angelou": {
+        "occupation": "Writer, poet, civil rights activist",
+        "category": "writer",
+        "birthplace": "St. Louis, Missouri, U.S.",
+        "birthday": "April 4, 1928",
+        "birthname": "Marguerite Annie Johnson"
+    },
+    "Bob Marley": {
+        "occupation": "Singer, songwriter, musician",
+        "category": "entertaminment",
+        "birthplace": "Nine Mile, Saint Ann Parish, Jamaica",
+        "birthday": "6 February 1945",
+        "birthname": "Robert Nesta Marley"
+    },
+    "Alice Walker": {
+        "occupation": "Novelist, short story writer, poet, political activist",
+        "category": "writer",
+        "birthplace": "Putnam County, Georgia, U.S.",
+        "birthday": " February 9, 1944 ",
+        "birthname": ""
+    },
+    "Princess Diana": {
+        "occupation": "Member of the British royal family, first wife of Charles Prince of Wales",
+        "category": "politics",
+        "birthplace": "Park House, Sandringham, Norfolk, England",
+        "birthday": "1 July 1961",
+        "birthname": "Diana Frances Spencer"
+    },
+    "Marie Curie": {
+        "occupation": "Physicist, chemist",
+        "category": "science",
+        "birthplace": "Warsaw, Kingdom of Poland, then part of Russian Empire",
+        "birthday": "7 November 1867",
+        "birthname": "Maria Salomea Sk\u0142odowska"
+    },
+    "Mike Myers": {
+        "occupation": "Actor, comedian, musician, writer, film producer, director",
+        "category": "entertaminment",
+        "birthplace": "Scarborough, Toronto, Ontario, Canada",
+        "birthday": " May 25, 1963 ",
+        "birthname": "Michael John Myers"
+    },
+    "Jacques Yves Cousteau": {
+        "occupation": "Oceanographer",
+        "category": "science",
+        "birthplace": "Saint-Andr\u00e9-de-Cubzac",
+        "birthday": "11 June 1910",
+        "birthname": "Jacques-Yves Cousteau"
+    },
+    "John F. Kennedy": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Brookline, Massachusetts, U.S.",
+        "birthday": "May 29, 1917",
+        "birthname": "John Fitzgerald Kennedy"
+    },
+    "W. E. B. Du Bois": {
+        "occupation": "Sociologist, historian, civil rights activist, Pan-Africanist, author, writer, editor",
+        "category": "politics",
+        "birthplace": "Great Barrington, Massachusetts, U.S.",
+        "birthday": "February 23, 1868",
+        "birthname": "William Edward Burghardt Du\u00a0Bois"
+    },
+    "Elbert Hubbard": {
+        "occupation": "Writer, publisher, artist, philosopher",
+        "category": "writer",
+        "birthplace": "Bloomington, Illinois, U.S.",
+        "birthday": "June 19, 1856",
+        "birthname": "Elbert Green Hubbard"
+    },
+    "Christopher Hitchens": {
+        "occupation": "author, columnist, essayist, orator, religious and literary critic, social critic, journalist",
+        "category": "writer",
+        "birthplace": "Portsmouth, Hampshire, England",
+        "birthday": "13 April 1949",
+        "birthname": "Christopher Eric Hitchens"
+    },
+    "Thomas Carlyle": {
+        "occupation": "Essayist, satirist, translator, historian, mathematician",
+        "category": "writer",
+        "birthplace": "Ecclefechan, Dumfriesshire, Scotland",
+        "birthday": "4 December 1795",
+        "birthname": ""
+    },
+    "Temple Grandin": {
+        "occupation": "Professor of animal science at Colorado State University, consultant",
+        "category": "science",
+        "birthplace": "Boston, Massachusetts, U.S.",
+        "birthday": " August 29, 1947 ",
+        "birthname": "Mary Temple Grandin"
+    },
+    "Ben Carson": {
+        "occupation": "Neurosurgeon, author, politician",
+        "category": "writer",
+        "birthplace": "Detroit, Michigan, U.S.",
+        "birthday": " September 18, 1951 ",
+        "birthname": "Benjamin Solomon Carson"
+    },
+    "Jackie Robinson": {
+        "occupation": "Professional baseball second baseman, first African American to play in Major League Baseball",
+        "category": "sports",
+        "birthplace": "Cairo, Georgia",
+        "birthday": "January 31, 1919",
+        "birthname": ""
+    },
+    "Victor Hugo": {
+        "occupation": "Writer, poet, journalist, drawer",
+        "category": "writer",
+        "birthplace": "Besan\u00e7on, Doubs, France",
+        "birthday": "26 February 1802",
+        "birthname": "Victor Marie Hugo"
+    },
+    "Calvin Coolidge": {
+        "occupation": "President of the United States, lawyer",
+        "category": "politics",
+        "birthplace": "Plymouth Notch, Vermont",
+        "birthday": "July 4, 1872",
+        "birthname": "John Calvin Coolidge Jr."
+    },
+    "Edgar Allan Poe": {
+        "occupation": "Writer, editor, literary critic",
+        "category": "writer",
+        "birthplace": "Boston, Massachusetts, U.S.",
+        "birthday": "January 19, 1809",
+        "birthname": "Edgar Poe"
+    },
+    "Mahatma Gandhi": {
+        "occupation": "Lawyer, Politician, Activist, Writer",
+        "category": "politics",
+        "birthplace": "Porbandar, Porbandar State, Kathiawar Agency, Bombay Presidency, British India",
+        "birthday": "2 October 1869",
+        "birthname": "Mohandas Karamchand Gandhi"
+    },
+    "Vladimir Putin": {
+        "occupation": "President of the Russian Federation",
+        "category": "politics",
+        "birthplace": "Leningrad, Russian SFSR, Soviet Union",
+        "birthday": " 7 October 1952 ",
+        "birthname": "Vladimir Vladimirovich Putin"
+    },
+    "Alfred Lord Tennyson": {
+        "occupation": "Poet Laureate (1850-1892)",
+        "category": "writer",
+        "birthplace": "Somersby, Lincolnshire, England",
+        "birthday": "6 August 1809",
+        "birthname": ""
+    },
+    "Tony Robbins": {
+        "occupation": "Entrepreneur, author, motivational speaker",
+        "category": "entrepreneur",
+        "birthplace": "North Hollywood, California, U.S.",
+        "birthday": " February 29, 1960 ",
+        "birthname": "Anthony J. Mahavoric"
+    },
+    "Eckhart Tolle": {
+        "occupation": "Writer, public speaker",
+        "category": "writer",
+        "birthplace": "L\u00fcnen, Germany",
+        "birthday": " February 16, 1948 ",
+        "birthname": "Ulrich Leonard T\u00f6lle"
+    },
+    "Kevin Hart": {
+        "occupation": "Comedian, actor, writer, producer",
+        "category": "entertaminment",
+        "birthplace": "Philadelphia, Pennsylvania, U.S.",
+        "birthday": " July 6, 1979 ",
+        "birthname": ""
+    },
+    "Georgia O'Keeffe": {
+        "occupation": "Artist",
+        "category": "arts",
+        "birthplace": "Town of Sun Prairie, Wisconsin, U.S.",
+        "birthday": "November 15, 1887",
+        "birthname": "Georgia Totto O'Keeffe"
+    },
+    "Ric Flair": {
+        "occupation": "Professional wrestling manager, professional wrestler",
+        "category": "sports",
+        "birthplace": "Memphis, Tennessee, U.S.",
+        "birthday": " February 25, 1949 ",
+        "birthname": ""
+    },
+    "Voltaire": {
+        "occupation": "Writer, philosopher, playwright, historian",
+        "category": "writer",
+        "birthplace": "Paris, Kingdom of France",
+        "birthday": "21 November 1694",
+        "birthname": "Fran\u00e7ois-Marie Arouet"
+    },
+    "Drake": {
+        "occupation": "Rapper, Singer, songwriter, record producer, actor, entrepreneur",
+        "category": "entertaminment",
+        "birthplace": "Toronto, Ontario, Canada",
+        "birthday": "October 24, 1986",
+        "birthname": "Aubrey Drake Graham"
+    },
+    "Marcus Aurelius": {
+        "occupation": "Emperor of the Roman Empire",
+        "category": "politics",
+        "birthplace": "Rome",
+        "birthday": "26 April 121",
+        "birthname": ""
+    },
+    "John Muir": {
+        "occupation": "Engineer, naturalist, philosopher, writer, botanist, geologist, environmentalist",
+        "category": "science",
+        "birthplace": "Dunbar, East Lothian, Scotland",
+        "birthday": "April 21, 1838",
+        "birthname": ""
+    },
+    "Barack Obama": {
+        "occupation": "President of the United States, Senator",
+        "category": "politics",
+        "birthplace": "Honolulu, Hawaii, U.S.",
+        "birthday": " August 4, 1961 ",
+        "birthname": "Barack Hussein Obama II"
+    },
+    "Jimmy Carter": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Plains, Georgia, U.S.",
+        "birthday": " October 1, 1924 ",
+        "birthname": "James Earl Carter Jr."
+    },
+    "Dale Carnegie": {
+        "occupation": "Writer, lecturer",
+        "category": "writer",
+        "birthplace": "Maryville, Missouri, U.S.",
+        "birthday": "November 24, 1888",
+        "birthname": "Dale Harbison Carnagey"
+    },
+    "Francis of Assisi": {
+        "occupation": "Catholic friar, deacon, preacher",
+        "category": "religion",
+        "birthplace": "Assisi, Duchy of Spoleto, Holy Roman Empire",
+        "birthday": "1181 or 1182",
+        "birthname": "Giovanni di Bernardone"
+    },
+    "Neil Armstrong": {
+        "occupation": "Astronaut, engineer, first person to walk on the Moon",
+        "category": "science",
+        "birthplace": "Near Wapakoneta, Ohio, U.S.",
+        "birthday": "August 5, 1930",
+        "birthname": "Neil Alden Armstrong"
+    },
+    "Jessica Simpson": {
+        "occupation": "Singer, actress, fashion designer, dancer, businesswoman",
+        "category": "entertaminment",
+        "birthplace": "Abilene, Texas, U.S.",
+        "birthday": " July 10, 1980 ",
+        "birthname": "Jessica Ann Simpson"
+    },
+    "Jean-Jacques Rousseau": {
+        "occupation": "Philosopher, writer, composer",
+        "category": "philosopher",
+        "birthplace": "Geneva, Republic of Geneva",
+        "birthday": "28 June 1712",
+        "birthname": ""
+    },
+    "Fidel Castro": {
+        "occupation": "President of Cuba, communist revolutionary, politician",
+        "category": "politics",
+        "birthplace": "Bir\u00e1n, Holguin Province, Cuba",
+        "birthday": "August 13, 1926",
+        "birthname": "Fidel Alejandro Castro Ruz"
+    },
+    "Julia Child": {
+        "occupation": "Chef, author, television personality",
+        "category": "writer",
+        "birthplace": "Pasadena, California, U.S.",
+        "birthday": "August 15, 1912",
+        "birthname": "Julia Carolyn McWilliams"
+    },
+    "Aristotle": {
+        "occupation": "Philosopher, scientist",
+        "category": "philosopher",
+        "birthplace": "Chalcidice,",
+        "birthday": "Stagira,",
+        "birthname": "384 BC"
+    },
+    "Richard Branson": {
+        "occupation": "Founder of Virgin Group",
+        "category": "business",
+        "birthplace": "Blackheath, London, England",
+        "birthday": " 18 July 1950 ",
+        "birthname": "Richard Charles Nicholas Branson"
+    },
+    "Milton Friedman": {
+        "occupation": "Economist, winner of 1976 Nobel Memorial Prize in Economic Sciences",
+        "category": "science",
+        "birthplace": "Brooklyn, New York, U.S.",
+        "birthday": "July 31, 1912",
+        "birthname": ""
+    },
+    "Lil Wayne": {
+        "occupation": "Rapper, singer, songwriter, record executive, entrepreneur",
+        "category": "entertaminment",
+        "birthplace": "New Orleans, Louisiana, U.S.",
+        "birthday": " September 27, 1982 ",
+        "birthname": "Dwayne Michael Carter, Jr."
+    },
+    "Rumi": {
+        "occupation": "Poet, jurist, Islamic scholar, theologian, Sufi mystic",
+        "category": "writer",
+        "birthplace": "Balkh, or Wakhsh, Khwarezmian Empire",
+        "birthday": "30 September 1207",
+        "birthname": ""
+    },
+    "Harriet Tubman": {
+        "occupation": "Civil War Nurse, Suffragist, Civil Rights activist",
+        "category": "politics",
+        "birthplace": "Dorchester County, Maryland, United States",
+        "birthday": "c. 1822",
+        "birthname": "Araminta Ross"
+    },
+    "e. e. cummings": {
+        "occupation": "Author",
+        "category": "writer",
+        "birthplace": "Cambridge, Massachusetts, U.S.",
+        "birthday": "October 14, 1894",
+        "birthname": "Edward Estlin Cummings"
+    },
+    "Carol Burnett": {
+        "occupation": "Actress, comedian, singer, writer",
+        "category": "entertaminment",
+        "birthplace": "San Antonio, Texas, U.S.",
+        "birthday": " April 26, 1933 ",
+        "birthname": "Carol Creighton Burnett"
+    },
+    "Chris Cornell": {
+        "occupation": "Musician, singer, songwriter",
+        "category": "entertaminment",
+        "birthplace": "Seattle, Washington, US",
+        "birthday": "July 20, 1964",
+        "birthname": "Christopher John Boyle"
+    },
+    "Henry Kissinger": {
+        "occupation": "Diplomat, political scientist, United States Secretary of State",
+        "category": "politics",
+        "birthplace": "F\u00fcrth, Bavaria, Germany",
+        "birthday": " May 27, 1923 ",
+        "birthname": "Heinz Alfred Kissinger"
+    },
+    "Richard Bach": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "Oak Park, Illinois. U.S.",
+        "birthday": " June 23, 1936 ",
+        "birthname": "Richard David Bach"
+    },
+    "Dr. Seuss": {
+        "occupation": "Writer, political cartoonist, animator, book publisher, artist, poet",
+        "category": "writer",
+        "birthplace": "Springfield, Massachusetts, U.S.",
+        "birthday": "March 2, 1904",
+        "birthname": "Theodor Seuss Geisel"
+    },
+    "Pablo Picasso": {
+        "occupation": "Painter, sculptor, printmaker, ceramicist, stage designer, poet, playwright",
+        "category": "arts",
+        "birthplace": "M\u00e1laga, Spain",
+        "birthday": "25 October 1881",
+        "birthname": "Pablo Diego Jos\u00e9 Francisco de Paula Juan Nepomuceno Mar\u00eda de los Remedios Cipriano de la Sant\u00edsima Trinidad Ruiz y Picasso"
+    },
+    "Mitch Hedberg": {
+        "occupation": "Stand-up comedian",
+        "category": "entertaminment",
+        "birthplace": "Saint Paul, Minnesota, United States",
+        "birthday": "February 24, 1968",
+        "birthname": "Mitchell Lee Hedberg"
+    },
+    "Epictetus": {
+        "occupation": "Stoicism philosopher",
+        "category": "philosopher",
+        "birthplace": "Hierapolis, Phrygia",
+        "birthday": "c. 55 AD",
+        "birthname": ""
+    },
+    "Ernest Hemingway": {
+        "occupation": "Novelist, short story writer, journalist",
+        "category": "writer",
+        "birthplace": "Oak Park, Illinois, U.S.",
+        "birthday": "July 21, 1899",
+        "birthname": ""
+    },
+    "Tupac Shakur": {
+        "occupation": "Rapper, poet, actor",
+        "category": "entertaminment",
+        "birthplace": "East Harlem, New York, U.S.",
+        "birthday": "June 16, 1971",
+        "birthname": "Lesane Parish Crooks"
+    },
+    "Dwight D. Eisenhower": {
+        "occupation": "President of the United States, army general",
+        "category": "politics",
+        "birthplace": "Denison, Texas, U.S.",
+        "birthday": "October 14, 1890",
+        "birthname": "David Dwight Eisenhower"
+    },
+    "Donald Trump": {
+        "occupation": "President of the United States, Real estate developer, (The Trump Organization), Television host/producer",
+        "category": "politics",
+        "birthplace": "New York City",
+        "birthday": " June 14, 1946 ",
+        "birthname": "Donald John Trump"
+    },
+    "Jack Kerouac": {
+        "occupation": "Poet, novelist",
+        "category": "writer",
+        "birthplace": "Lowell, Massachusetts, U.S.",
+        "birthday": "March 12, 1922",
+        "birthname": "Jean-Louis K\u00e9rouac"
+    },
+    "W. C. Fields": {
+        "occupation": "Actor, comedian, juggler, writer",
+        "category": "entertaminment",
+        "birthplace": "Darby, Pennsylvania, U.S.",
+        "birthday": "January 29, 1880",
+        "birthname": "William Claude Dukenfield"
+    },
+    "Leo Tolstoy": {
+        "occupation": "Novelist, short story writer, playwright, essayist",
+        "category": "writer",
+        "birthplace": "Yasnaya Polyana, Tula Governorate, Russian Empire",
+        "birthday": "September 9, 1828",
+        "birthname": "Lev Nikolayevich Tolstoy"
+    },
+    "John Adams": {
+        "occupation": "President of the United States",
+        "category": "politics",
+        "birthplace": "Braintree, Province of Massachusetts Bay, British America",
+        "birthday": "October 30, 1735",
+        "birthname": ""
+    },
+    "Prince": {
+        "occupation": "Singer, songwriter, record producer, actor, director",
+        "category": "entertaminment",
+        "birthplace": "Minneapolis, Minnesota",
+        "birthday": "June 7, 1958",
+        "birthname": ""
+    },
+    "Carl Sagan": {
+        "occupation": "Astronomer, cosmologist, astrophysicist, astrobiologist, author, science popularizer, science communicator",
+        "category": "science",
+        "birthplace": "Brooklyn, New York, U.S.",
+        "birthday": "November 9, 1934",
+        "birthname": "Carl Edward Sagan"
+    },
+    "Simon Sinek": {
+        "occupation": "Author, motivational speaker",
+        "category": "writer",
+        "birthplace": "Wimbledon, England",
+        "birthday": " October 9, 1973 ",
+        "birthname": ""
+    },
+    "Louis C. K.": {
+        "occupation": "Comedian, actor, writer, producer, director, editor",
+        "category": "entertaminment",
+        "birthplace": "Washington, D.C., U.S.",
+        "birthday": " September 12, 1967 ",
+        "birthname": ""
+    },
+    "Sylvia Plath": {
+        "occupation": "Poet, novelist, short story writer",
+        "category": "writer",
+        "birthplace": "Boston, Massachusetts, US",
+        "birthday": "October 27, 1932",
+        "birthname": ""
+    },
+    "Saint Teresa of Avila": {
+        "occupation": "Spanist mystic, Roman Catholic saint, Carmelite nun, author",
+        "category": "religion",
+        "birthplace": "Gotarrendura, \u00c1vila, Crown of Castile ",
+        "birthday": "28 March 1515",
+        "birthname": ""
+    },
+    "Lenny Kravitz": {
+        "occupation": "Singer, songwriter, actor, record producer",
+        "category": "entertaminment",
+        "birthplace": "Manhattan, New York City, New York, U.S.",
+        "birthday": " May 26, 1964 ",
+        "birthname": "Leonard Albert Kravitz"
+    },
+    "Arthur Schopenhauer": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Danzig, Germany ",
+        "birthday": "22 February 1788",
+        "birthname": ""
+    },
+    "Michel de Montaigne": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Ch\u00e2teau de Montaigne, Guyenne, Kingdom of France",
+        "birthday": "28 February 1533",
+        "birthname": "Michel de Montaigne"
+    },
+    "Frida Kahlo": {
+        "occupation": "Painter",
+        "category": "arts",
+        "birthplace": "Coyoac\u00e1n, Mexico City, Mexico",
+        "birthday": "July 6, 1907",
+        "birthname": "Magdalena Carmen Frida Kahlo y Calder\u00f3n"
+    },
+    "George Washington": {
+        "occupation": "President of the United States, one of the Founding Fathers of the United States, Soldier",
+        "category": "politics",
+        "birthplace": "Bridges Creek, Colony of Virginia, British America ",
+        "birthday": "February 22, 1732",
+        "birthname": ""
+    },
+    "Robert Louis Stevenson": {
+        "occupation": "Novelist, poet, travel writer",
+        "category": "writer",
+        "birthplace": "Edinburgh, Scotland",
+        "birthday": "13 November 1850",
+        "birthname": "Robert Lewis Balfour Stevenson"
+    },
+    "Mae West": {
+        "occupation": "Actress, singer, playwright, screenwriter, comedian",
+        "category": "entertaminment",
+        "birthplace": "Brooklyn, New York, United States",
+        "birthday": "August 17, 1893",
+        "birthname": "Mary Jane West"
+    },
+    "P. J. O'Rourke": {
+        "occupation": "Political satirist, journalist, writer",
+        "category": "politics",
+        "birthplace": "Toledo, Ohio, U.S.",
+        "birthday": " November 14, 1947 ",
+        "birthname": "Patrick Jake O'Rourke"
+    },
+    "Thich Nhat Hanh": {
+        "occupation": "Buddhist monk, peace activist",
+        "category": "politics",
+        "birthplace": "Hu\u1ebf, Th\u1eeba Thi\u00ean-Hu\u1ebf Province, Vietnam",
+        "birthday": " October 11, 1926 ",
+        "birthname": "Nguy\u1ec5n Xu\u00e2n B\u1ea3o"
+    },
+    "Robert Frost": {
+        "occupation": "Poet, playwright",
+        "category": "writer",
+        "birthplace": "San Francisco, California, US",
+        "birthday": "March 26, 1874",
+        "birthname": "Robert Lee Frost"
+    },
+    "Thomas Hobbes": {
+        "occupation": "Philosopher",
+        "category": "philosopher",
+        "birthplace": "Westport near Malmesbury, Wiltshire, England",
+        "birthday": "5 April 1588",
+        "birthname": ""
+    },
+    "Leonardo da Vinci": {
+        "occupation": "Italian Renaissance polymath",
+        "category": "arts",
+        "birthplace": "Vinci, Republic of Florence ",
+        "birthday": "15 April 1452",
+        "birthname": "Leonardo di ser Piero da Vinci"
+    },
+    "Rodney Dangerfield": {
+        "occupation": "Stand-up comedian, actor, producer, screenwriter",
+        "category": "entertaminment",
+        "birthplace": "Deer Park, New York, U.S.",
+        "birthday": "November 22, 1921",
+        "birthname": ""
+    },
+    "Jiddu Krishnamurti": {
+        "occupation": "public speaker, author, philosopher",
+        "category": "writer",
+        "birthplace": "Madanapalle, Andhra Pradesh, British India",
+        "birthday": "11 May 1895",
+        "birthname": ""
+    },
+    "Confucius": {
+        "occupation": "Chinese teacher, editor, politician, philosopher",
+        "category": "politics",
+        "birthplace": "Zou, Lu, Zhou ",
+        "birthday": "28 September 551 BC",
+        "birthname": ""
+    },
+    "Og Mandino": {
+        "occupation": "author",
+        "category": "writer",
+        "birthplace": "Framingham, Massachusetts, USA",
+        "birthday": "December 12, 1923",
+        "birthname": "Augustine Mandino II"
+    },
+    "John Ruskin": {
+        "occupation": "Writer, art critic, draughtsman, watercolourist, social thinker",
+        "category": "writer",
+        "birthplace": "54 Hunter Street, Brunswick Square, London",
+        "birthday": "8 February 1819",
+        "birthname": ""
+    },
+    "Yoko Ono": {
+        "occupation": "Artist, peace activist, singer, songwriter, feminist",
+        "category": "arts",
+        "birthplace": "Tokyo, Japan",
+        "birthday": " February 18, 1933 ",
+        "birthname": "Yoko Ono"
+    },
+    "David Lynch": {
+        "occupation": "Director, screenwriter, producer, painter, musician, sound designer, photographer, actor",
+        "category": "writer",
+        "birthplace": "Missoula, Montana, U.S.",
+        "birthday": " January 20, 1946 ",
+        "birthname": "David Keith Lynch"
+    },
+    "Joseph Stalin": {
+        "occupation": "Revolutionary and political leader, General Secretary of the Communist Party of the Soviet Union",
+        "category": "politics",
+        "birthplace": "Gori, Tiflis Governorate, Caucasus Viceroyalty, Russian Empire",
+        "birthday": "18 December 1878",
+        "birthname": "Ioseb Besarionis dze Jughashvili"
+    },
+    "Malcolm X": {
+        "occupation": "Minister, activist",
+        "category": "politics",
+        "birthplace": "Omaha, Nebraska",
+        "birthday": "May 19, 1925",
+        "birthname": "Malcolm Little"
+    },
+    "Woodrow Wilson": {
+        "occupation": "President of the United States, Statesman, academic",
+        "category": "politics",
+        "birthplace": "Staunton, Virginia, U.S.",
+        "birthday": "December 28, 1856",
+        "birthname": "Thomas Woodrow Wilson"
+    },
+    "Charles Dickens": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "Landport, Hampshire, England",
+        "birthday": "7 February 1812",
+        "birthname": "Charles John Huffam Dickens"
+    },
+    "Paul Walker": {
+        "occupation": "Actor",
+        "category": "entertaminment",
+        "birthplace": "Glendale, California",
+        "birthday": "September 12, 1973",
+        "birthname": "Paul William Walker IV"
+    },
+    "Saadi": {
+        "occupation": "Persian poet, literary of the medieval period",
+        "category": "writer",
+        "birthplace": "Shiraz, Iran",
+        "birthday": "1210",
+        "birthname": ""
+    },
+    "George W. Bush": {
+        "occupation": "President of the United States, Governor of Taxas",
+        "category": "politics",
+        "birthplace": "New Haven, Connecticut, U.S.",
+        "birthday": " July 6, 1946 ",
+        "birthname": "George Walker Bush"
+    },
+    "George Orwell": {
+        "occupation": "Novelist, essayist, journalist, critic",
+        "category": "writer",
+        "birthplace": "Motihari, Bengal Presidency, British India",
+        "birthday": "25 June 1903",
+        "birthname": "Eric Arthur Blair"
+    },
+    "Henry Wadsworth Longfellow": {
+        "occupation": "Poet, Professor",
+        "category": "writer",
+        "birthplace": "Portland, Maine, U.S.",
+        "birthday": "February 27, 1807",
+        "birthname": ""
+    },
+    "Thomas A. Edison": {
+        "occupation": "Inventor, businessman",
+        "category": "science",
+        "birthplace": "Milan, Ohio, U.S.",
+        "birthday": "February 11, 1847",
+        "birthname": "Thomas Alva Edison"
+    },
+    "Audre Lorde": {
+        "occupation": "Poet, writer, activist, essayist, librarian",
+        "category": "writer",
+        "birthplace": "New York City, New York, United States",
+        "birthday": "February 18, 1934",
+        "birthname": "Audrey Geraldine Lorde"
+    },
+    "Willie Nelson": {
+        "occupation": "musician, singer, songwriter, author, poet, actor, activist",
+        "category": "entertaminment",
+        "birthplace": "Abbott, Texas, U.S.",
+        "birthday": " April 29, 1933 ",
+        "birthname": ""
+    },
+    "Florence Nightingale": {
+        "occupation": "Social reformer, statistician, founder of modern nursing",
+        "category": "business",
+        "birthplace": "Florence, Grand Duchy of Tuscany",
+        "birthday": "12 May 1820",
+        "birthname": ""
+    },
+    "Steve Jobs": {
+        "occupation": "Co-founder, Chairman, and CEO of Apple Inc., Primary investor and CEO of Pixar, Founder and CEO of NeXT",
+        "category": "business",
+        "birthplace": "San Francisco, California, U.S.",
+        "birthday": "February 24, 1955",
+        "birthname": "Steven Paul Jobs"
+    },
+    "David Attenborough": {
+        "occupation": "Broadcaster, Naturalist",
+        "category": "science",
+        "birthplace": "Isleworth, London, England",
+        "birthday": " 8 May 1926 ",
+        "birthname": "David Frederick Attenborough"
+    },
+    "Robert A. Heinlein": {
+        "occupation": "Novelist, short story author, essayist, screenwriter, aeronautical engineer, lieutenant junior grade USN[1]",
+        "category": "writer",
+        "birthplace": "Butler, Missouri, United States",
+        "birthday": "July 7, 1907",
+        "birthname": "Robert Anson Heinlein"
+    },
+    "John C. Maxwell": {
+        "occupation": "Author, professional speaker, pastor",
+        "category": "writer",
+        "birthplace": "Garden City, Michigan, United States",
+        "birthday": " February 20, 1947 ",
+        "birthname": ""
+    },
+    "Ronald Reagan": {
+        "occupation": "President of the United States, Hollywood actor, union leader",
+        "category": "politics",
+        "birthplace": "Tampico, Illinois, U.S.",
+        "birthday": "February 6, 1911",
+        "birthname": "Ronald Wilson Reagan"
+    },
+    "Marilyn Monroe": {
+        "occupation": "Actress, model, singer",
+        "category": "entertaminment",
+        "birthplace": "Los Angeles, California, U.S.",
+        "birthday": "June 1, 1926",
+        "birthname": "Norma Jeane Mortenson"
+    },
+    "Maria Montessori": {
+        "occupation": "Physician and educator",
+        "category": "science",
+        "birthplace": "Chiaravalle, Marche, Italy",
+        "birthday": "August 31, 1870",
+        "birthname": "Maria Tecla Artemisia Montessori"
+    },
+    "Lord Byron": {
+        "occupation": "Poet, Politician",
+        "category": "writer",
+        "birthplace": "London, England",
+        "birthday": "22 January 1788",
+        "birthname": "George Gordon Byron"
+    },
+    "Ray William Johnson": {
+        "occupation": "Actor, comedian, producer, writer, director, rapper, singer, songwriter",
+        "category": "entertaminment",
+        "birthplace": "Oklahoma City, Oklahoma, United States",
+        "birthday": " August 14, 1981 ",
+        "birthname": ""
+    },
+    "Martin Luther": {
+        "occupation": "Friar, Priest, Theologian, Professor",
+        "category": "religion",
+        "birthplace": "Eisleben, Saxony, Holy Roman Empire",
+        "birthday": "10 November 1483",
+        "birthname": ""
+    },
+    "Jean-Paul Sartre": {
+        "occupation": "Philosopher, playwright, novelist, political activist, biographer, literary critic",
+        "category": "philosopher",
+        "birthplace": "Paris, France",
+        "birthday": "21 June 1905",
+        "birthname": "Jean-Paul Charles Aymard Sartre"
+    },
+    "John Wayne": {
+        "occupation": "Actor, director, producer",
+        "category": "entertaminment",
+        "birthplace": "Winterset, Iowa, U.S.",
+        "birthday": "May 26, 1907",
+        "birthname": "Marion Robert Morrison"
+    },
+    "Justin Bieber": {
+        "occupation": "Singer, songwriter",
+        "category": "entertaminment",
+        "birthplace": "London, Ontario, Canada",
+        "birthday": " March 1, 1994 ",
+        "birthname": "Justin Drew Bieber"
+    },
+    "Napoleon Bonaparte": {
+        "occupation": "Statesman, military leader",
+        "category": "politics",
+        "birthplace": "Ajaccio, Corsica, France",
+        "birthday": "15 August 1769",
+        "birthname": ""
+    },
+    "Bette Davis": {
+        "occupation": "Actress",
+        "category": "entertaminment",
+        "birthplace": "Lowell, Massachusetts, U.S.",
+        "birthday": "April 5, 1908",
+        "birthname": "Ruth Elizabeth Davis"
+    },
+    "Henry Rollins": {
+        "occupation": "Musician, actor, writer, television and radio host, comedian",
+        "category": "entertaminment",
+        "birthplace": "Washington, D.C., United States",
+        "birthday": " February 13, 1961 ",
+        "birthname": ""
+    },
+    "Joan Rivers": {
+        "occupation": "Stand-up comedian, actress, writer, producer, television host",
+        "category": "entertaminment",
+        "birthplace": "Brooklyn, New York, U.S.",
+        "birthday": "June 8, 1933",
+        "birthname": "Joan Alexandra Molinsky"
+    },
+    "Khalil Gibran": {
+        "occupation": "Poet, painter, writer, philosopher, theologian, visual artist",
+        "category": "writer",
+        "birthplace": "Bsharri, Mount Lebanon Mutasarrifate, Ottoman Syria",
+        "birthday": "January 6, 1883",
+        "birthname": "Jubran Khalil Jubran"
+    },
+    "Ayn Rand": {
+        "occupation": "Writer",
+        "category": "writer",
+        "birthplace": "St. Petersburg, Russian Empire",
+        "birthday": "February 2, 1905",
+        "birthname": "Alisa Zinov'yevna Rosenbaum"
+    },
+    "John Steinbeck": {
+        "occupation": "Novelist, short story writer, war correspondent",
+        "category": "writer",
+        "birthplace": "Salinas, California, U.S.",
+        "birthday": "February 27, 1902",
+        "birthname": "John Ernst Steinbeck, Jr."
+    },
+    "H. L. Mencken": {
+        "occupation": "Journalist, satirist, critic",
+        "category": "writer",
+        "birthplace": "Baltimore, Maryland, U.S.",
+        "birthday": "September 12, 1880",
+        "birthname": "Henry Louis Mencken"
+    },
+    "Jane Goodall": {
+        "occupation": "Primatologist, ethologist, anthropologist, UN Messenger of Peace",
+        "category": "science",
+        "birthplace": "London, England",
+        "birthday": " 3 April 1934 ",
+        "birthname": "Valerie Jane Morris-Goodall"
+    },
+    "Frederick Douglass": {
+        "occupation": "Abolitionist, suffragist, author, editor, diplomat",
+        "category": "writer",
+        "birthplace": "Talbot County, Maryland, U.S.",
+        "birthday": "c.\u00a0February 1818",
+        "birthname": "Frederick Augustus Washington Bailey"
+    },
+    "Albert Camus": {
+        "occupation": "Philosopher, author, journalist",
+        "category": "philosopher",
+        "birthplace": "Mondovi , French Algeria",
+        "birthday": "7 November 1913",
+        "birthname": ""
+    },
+    "Alexis de Tocqueville": {
+        "occupation": "Diplomat, political scientist, historian",
+        "category": "politics",
+        "birthplace": "Paris, French Empire",
+        "birthday": "29 August 1805",
+        "birthname": "Alexis Charles Henri Cl\u00e9rel de Tocqueville"
+    },
+    "Margaret Atwood": {
+        "occupation": "Poet, novelist, literary critic, essayist, inventor, environmental activst",
+        "category": "writer",
+        "birthplace": "Ottawa, Ontario, Canada",
+        "birthday": " 18 November 1939 ",
+        "birthname": "Margaret Eleanor Atwood"
+    },
+    "George Carlin": {
+        "occupation": "Stand-up comedian, actor, author, social critic",
+        "category": "entertaminment",
+        "birthplace": "Manhattan, New York, U.S.",
+        "birthday": "May 12, 1937",
+        "birthname": ""
+    },
+    "Nathaniel Hawthorne": {
+        "occupation": "Novelist, dark romantic, short story writer",
+        "category": "writer",
+        "birthplace": "Salem, Massachusetts, U.S.",
+        "birthday": "July 4, 1804",
+        "birthname": "Nathaniel Hathorne"
+    },
+    "Jay-Z": {
+        "occupation": "Rapper, businessman",
+        "category": "entertaminment",
+        "birthplace": "Brooklyn, New York, U.S.",
+        "birthday": " December 4, 1969 ",
+        "birthname": "Shawn Corey Carter"
+    },
+    "Henri Nouwen": {
+        "occupation": "Catholic priest, professor, writer, theologian",
+        "category": "religion",
+        "birthplace": "Nijkerk, Netherlands",
+        "birthday": "January 24, 1932",
+        "birthname": "Henri Jozef Machiel Nouwen"
+    }
+}

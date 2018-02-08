@@ -1,0 +1,18 @@
+type Quote @model {
+  id: ID! @isUnique    # read-only (managed by Graphcool)
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+
+  author: String!
+  authorBirthday: String!
+  authorBirthname: String!
+  authorBirthplace: String!
+  authorOccupation: String!
+  authorQuote: String!
+  authorCategory: String!
+
+  likes: Int!
+  dislikes: Int!
+  imageUrl: String!
+  userEmail: String!
+}

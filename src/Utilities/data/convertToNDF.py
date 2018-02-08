@@ -18,18 +18,19 @@ with open('quotes_pretty.json') as quotes_raw_data:
 	fileCount = 0
 	for quote in quotes:
 		author = quote["author"]
-		print 'author', author
+		#print 'author', author
 		authorQuote = quote['content']
 		authorOccupation = quote["authorOccupation"]
 		authorBirthplace = quote["authorBirthplace"]
 		authorBirthday = quote["authorBirthday"]
 		authorBirthname = quote["authorBirthname"]
+		authorCategory = quote["category"]
 		id = uuid.uuid4().hex[:25]
 		likes = 0
 		dislikes =0
 
 		randomNumber = randint(0,5022)
-		print randomNumber
+		#print randomNumber
 		imageUrl = images[randomNumber]
 
 		temp = {
@@ -40,6 +41,7 @@ with open('quotes_pretty.json') as quotes_raw_data:
 			"authorBirthname": authorBirthname,
 			"authorBirthplace": authorBirthplace,
 			"authorOccupation": authorOccupation,
+			"authorCategory": authorCategory,
 			"userEmail": "yangspirit@gmail.com",
 			"imageUrl": imageUrl,
 			"id": id,
@@ -52,14 +54,26 @@ with open('quotes_pretty.json') as quotes_raw_data:
 		items = items +1
 
 
-		if items == 1500:
+		if items == 3000:
 			fileCount = fileCount +1
 			json_data = json.dumps(output)
-			filename = "quotes" + str(fileCount)
+			output["values"] = []
+			filename = "00000" + str(fileCount)+".json"
 			fh = open(filename,'w')
 			fh.write(json_data)
 			fh.close()
 			items = 0
+
+	fileCount = fileCount +1
+	json_data = json.dumps(output)
+	output["values"] = []
+	filename = "00000" + str(fileCount)+".json"
+	fh = open(filename,'w')
+	fh.write(json_data)
+	fh.close()
+	items = 0
+
+
 
 
 

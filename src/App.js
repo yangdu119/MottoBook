@@ -39,7 +39,13 @@ const App = () => (
     </ApolloProvider>
 );
 
-const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjcud5d771y9e01508r4eio8f' })
+//graphcool dev (current production)
+//const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjcud5d771y9e01508r4eio8f' })
+
+//graphcool qa
+const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjddd8ha42c3n0180sofoohbu' })
+
+
 const client = new ApolloClient({
     link: httpLink,
     cache: new InMemoryCache()
