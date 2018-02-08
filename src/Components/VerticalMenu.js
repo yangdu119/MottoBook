@@ -15,6 +15,7 @@ const OccupationForm = (props) => {
     return (
         <Form>
             <Form.Group grouped>
+                <Form.Radio label='All occupation' name='clear' value='clear' checked={props.value==='clear'} onClick={props.onItemClick}/>
                 <Form.Radio label='Arts' name='arts' value='arts' checked={props.value==='arts'} onClick={props.onItemClick}/>
                 <Form.Radio label='Business' name='business' value='business' checked={props.value==='business'}  onClick={props.onItemClick}/>
                 <Form.Radio label='Entrepreneur' name='entrepreneur' value='entrepreneur' checked={props.value==='entrepreneur'} onClick={props.onItemClick}/>
@@ -34,7 +35,7 @@ const OccupationForm = (props) => {
 export default class VerticalMenu extends Component {
     state = {
         activeIndex: 0,
-        radioValue: '',
+        radioValue: 'clear',
     }
 
     handleClick = (e, titleProps) => {

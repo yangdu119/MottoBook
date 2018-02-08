@@ -13,6 +13,7 @@ import gql from 'graphql-tag'
 import QuoteCard from './QuoteCard'
 
 const QUOTES_PER_PAGE = 10;
+const RANDOM_SKIP_NUMBER = Math.floor(Math.random() * 150);
 class AllQuotes extends Component {
     constructor(props){
         super(props);
@@ -56,6 +57,10 @@ class AllQuotes extends Component {
         if (nextProps.radioSelected !== this.state.filterValue) {
             console.log('handleFilterChange', nextProps.radioSelected);
             this.setState({filterValue: nextProps.radioSelected});
+            this.props.filterCount.refetch({
+                filter: nextProps.radioSelected
+            });
+            console.log("")
             this.props.filter.refetch({
                 filter: nextProps.radioSelected
             });
@@ -143,12 +148,22 @@ const ALL_FILTER_QUERY = gql`
     }
 `
 
+const FILTER_COUNT_QUERY = gql`
+    query FilterCountQuery($filter: String!){
+        _allQuotesMeta( filter: {
+            authorCategory_contains: $filter
+        }){
+            count
+        }
+    }
+`
+
 
 const allQuotesGraphql = graphql(ALL_QUOTES_QUERY, {
     name: 'data',
     options: {
         variables: {
-            skip: 0,
+            skip: RANDOM_SKIP_NUMBER,
             first: QUOTES_PER_PAGE
         },
         fetchPolicy: 'network-only',
@@ -178,7 +193,7 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
     name: 'filter',
     options: {
         variables: {
-            skip: 0,
+            skip: RANDOM_SKIP_NUMBER,
             first: QUOTES_PER_PAGE,
             filter: 'none',
         },
@@ -206,10 +221,24 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
     })
 })
 
+const filterCountGraphql = graphql(FILTER_COUNT_QUERY, {
+    name: 'filterCount',
+    options: {
+        variables: {
+            filter: 'none',
+        },
+        fetchPolicy: 'network-only',
+    },
+    props: ({filterCount}) => ({
+        filterCount
+    })
+})
+
 
 
 export default compose(
     allQuotesGraphql,
-    allFilterGraphql
+    allFilterGraphql,
+    filterCountGraphql
 
 )(AllQuotes)
