@@ -25,7 +25,7 @@ class MottoBookHeader extends Component {
 
                 </Menu.Item>
                 <Menu.Item style={{ marginLeft: '6em' }} header as='a' href='/'>
-                    <img src="mottobook.svg" alt="MottoBook"/>
+                    <img src="/mottobook.svg" alt="MottoBook"/>
 
                     MottoBook
                 </Menu.Item>

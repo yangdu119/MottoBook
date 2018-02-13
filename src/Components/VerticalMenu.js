@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Accordion, Form, Menu } from 'semantic-ui-react'
+import { Accordion, Form, Menu, Icon } from 'semantic-ui-react'
+import history from '../history'
+import { Link } from 'react-router-dom'
 
 const ColorForm = (props) => {
     return (
@@ -17,7 +19,7 @@ const OccupationForm = (props) => {
     return (
         <Form>
             <Form.Group grouped>
-                <Form.Radio label='All occupation' name='clear' value='clear' checked={props.value==='clear'} onClick={props.onItemClick}/>
+                <Form.Radio label='All occupation' name='clear' value='clear' checked={props.value==='clear'} onClick={props.onItemClick}></Form.Radio>
                 <Form.Radio label='Arts' name='arts' value='arts' checked={props.value==='arts'} onClick={props.onItemClick}/>
                 <Form.Radio label='Business' name='business' value='business' checked={props.value==='business'}  onClick={props.onItemClick}/>
                 <Form.Radio label='Entrepreneur' name='entrepreneur' value='entrepreneur' checked={props.value==='entrepreneur'} onClick={props.onItemClick}/>
@@ -37,7 +39,6 @@ const OccupationForm = (props) => {
 export default class VerticalMenu extends Component {
     state = {
         activeIndex: 0,
-        radioValue: 'clear',
         authorName: '',
     }
 
@@ -55,7 +56,15 @@ export default class VerticalMenu extends Component {
         this.setState({
             radioValue: titleProps.value
         })
-        this.props.onCategoryClick(titleProps)
+        console.log("push to history", titleProps.value)
+        if (titleProps.value == 'clear'){
+            history.push(`/`);
+        }else{
+            history.push(`/occupationCategory/${titleProps.value}`);
+        }
+
+
+        //this.props.onCategoryClick(titleProps)
     }
 
     handleAuthorNameSubmit = (e, name) =>{
@@ -71,12 +80,27 @@ export default class VerticalMenu extends Component {
         })
         //this.props.authorNameSearch(name.value)
     }
+    componentDidMount() {
+        console.log('verticalMenu props', this.props)
+        this.setState({
+            radioValue: this.props.radioSelected
+        })
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log('verticalMenu will receive props', nextProps)
+        this.setState({
+            radioValue: nextProps.radioSelected
+        })
+    }
 
     render() {
         const { activeIndex } = this.state
-        console.log('radio value', this.state.radioValue);
+        const {activeItem} = this.state
+        //console.log('radio value', this.state.radioValue);
 
         return (
+            <div>
             <Accordion as={Menu} vertical style={{ textAlign: 'left' }}>
                 <Menu.Item>
                     <Accordion.Title
@@ -88,16 +112,12 @@ export default class VerticalMenu extends Component {
                     <Accordion.Content active={activeIndex === 0} content={<OccupationForm onItemClick={this.handleItemClick} value={this.state.radioValue}/>} />
                 </Menu.Item>
 
-                {/*<Menu.Item>*/}
-                    {/*<Accordion.Title*/}
-                        {/*active={activeIndex === 1}*/}
-                        {/*content='Author name contains'*/}
-                        {/*index={1}*/}
-                        {/*onClick={this.handleClick}*/}
-                    {/*/>*/}
-                    {/*<Accordion.Content active={activeIndex === 1} content={<ColorForm onAuthorNameSubmit={this.handleAuthorNameSubmit} handleNameChange={this.handleNameChange}/>} />*/}
+                {/*<Menu.Item name='browse' active={activeItem === 'browse'} onClick={this.handleItemClick}>*/}
+                    {/*<Icon name='grid layout' />*/}
+                    {/*Browse Authors*/}
                 {/*</Menu.Item>*/}
             </Accordion>
+            </div>
         )
     }
 }
