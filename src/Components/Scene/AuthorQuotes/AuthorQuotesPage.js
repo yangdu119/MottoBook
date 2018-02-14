@@ -42,20 +42,11 @@ export default class AuthorQuotesPage extends Component {
         const { contextRef } = this.state
         return (
             <div>
-
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
-                <h1>{this.props.match.params.name}</h1>
-                <Grid centered style={{ marginTop: '3em' }}>
-
-                    <div ref={this.handleContextRef}>
-                        <Segment>
-                            <Grid.Column width={8}>
-                                <AuthorQuotes {...this.state}/>
-                            </Grid.Column>
-
-                        </Segment>
-                    </div>
-
+                <Grid centered columns={3} style={{ marginTop: '3em' }}>
+                    <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
+                        <AuthorQuotes {...this.state}/>
+                    </Grid.Column>
                 </Grid>
             </div>
         )

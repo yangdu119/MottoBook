@@ -50,32 +50,19 @@ export default class Home extends Component {
         return (
             <div>
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
-                <Grid centered style={{ marginTop: '3em' }}>
-
-                        <div ref={this.handleContextRef}>
-                            <Segment>
-                                <Grid.Column width={8}>
-                                <AllQuotes {...this.state}/>
-                                </Grid.Column>
-                                <Grid.Column width={3}>
-                                <Rail position='left'>
-                                    <Sticky context={contextRef} offset={70}>
-                                        <VerticalMenu onCategoryClick={this.handleCategoryClick} authorNameSearch={this.handleAuthorNameChange} authorNameSubmit={this.handleAuthorNameSubmit}/>
-                                    </Sticky>
-                                </Rail>
-                                </Grid.Column>
-                                {/*<Grid.Column width={5}>*/}
-                                {/*<Rail position='right'>*/}
-                                    {/*<Sticky context={contextRef} offset={70}>*/}
-                                        {/*<FeedExampleBasic />*/}
-                                    {/*</Sticky>*/}
-                                {/*</Rail>*/}
-                                {/*</Grid.Column>*/}
-                            </Segment>
-                        </div>
-
+                <Grid centered columns={3} style={{ marginTop: '3em' }}>
+                        <Grid.Column computer={'3'} only={'computer'}>
+                            <VerticalMenu onCategoryClick={this.handleCategoryClick} />
+                        </Grid.Column>
+                        <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
+                            <AllQuotes {...this.state}/>
+                        </Grid.Column>
+                        {/*<Grid.Column computer={'3'} only={'computer'}>*/}
+                            {/*<FeedExampleBasic />*/}
+                        {/*</Grid.Column>*/}
                 </Grid>
             </div>
+
         )
     }
 }

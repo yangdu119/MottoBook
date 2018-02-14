@@ -8,7 +8,7 @@ export default class QuoteCard extends React.Component {
         const autorLink = `/author/${this.props.quote.author}`
         return (
             <div className="card" >
-                <Card style={{ width: '500px' }}>
+                <Card fluid>
                     <Card.Content>
                         <Card.Header>
                             {this.props.quote.authorQuote}
