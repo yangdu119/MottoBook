@@ -30,7 +30,7 @@ class AuthorQuotes extends Component {
         console.log('AuthorQuotes will receive props', this.props)
 
         //handle page load
-        if (!this.props.filter.allQuotes){
+        if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
             this.props.filter.refetch({
                 filter: nextProps.authorName
             });
@@ -39,12 +39,16 @@ class AuthorQuotes extends Component {
         this.setState({authorName: nextProps.authorName});
     }
     componentDidMount(){
-        console.log('FilterQuotes componentdidMount props', this.props)
+        console.log('AuthorQuotes componentdidMount props', this.props)
+        //handle page load
+        if (!this.props.filter.allQuotes){
+            this.props.filter.refetch({
+                filter: this.state.authorName
+            });
+        }
     }
 
     render() {
-        console.log("FilterQuotes this.state", this.state)
-        console.log('FilterQuotes this props', this.props)
         return (
             <div>
                 {
@@ -98,7 +102,7 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
             first: QUOTES_PER_PAGE,
             filter: 'none',
         },
-        fetchPolicy: 'network-only',
+        fetchPolicy: 'cache-and-network',
     },
     props: ({filter}) => ({
         filter,

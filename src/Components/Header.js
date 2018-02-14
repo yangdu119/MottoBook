@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 import {Menu, Button} from 'semantic-ui-react'
 import SearchBar from './SearchBar'
+import { Link } from 'react-router-dom'
 
 class MottoBookHeader extends Component {
     login() {
@@ -60,6 +61,15 @@ class MottoBookHeader extends Component {
                                         style={{ cursor: 'pointer' }}
                                         onClick={this.login.bind(this)}
                                     >Login</a>
+                                </Menu.Item>
+                            </div>
+                        )
+                    }
+                    {
+                        (
+                            <div>
+                                <Menu.Item className='item'>
+                                    <Link to="/aboutus">About Us</Link>
                                 </Menu.Item>
                             </div>
                         )

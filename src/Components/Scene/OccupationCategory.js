@@ -62,18 +62,17 @@ export default class OccupationCategory extends Component {
                                     </Sticky>
                                 </Rail>
                             </Grid.Column>
-                            <Grid.Column width={5}>
-                                <Rail position='right'>
-                                    <Sticky context={contextRef} offset={70}>
-                                        <FeedExampleBasic />
-                                    </Sticky>
-                                </Rail>
-                            </Grid.Column>
+                            {/*<Grid.Column width={5}>*/}
+                                {/*<Rail position='right'>*/}
+                                    {/*<Sticky context={contextRef} offset={70}>*/}
+                                        {/*<FeedExampleBasic />*/}
+                                    {/*</Sticky>*/}
+                                {/*</Rail>*/}
+                            {/*</Grid.Column>*/}
                         </Segment>
                     </div>
 
                 </Grid>
-                <MottoBookFooter />
             </div>
         )
     }

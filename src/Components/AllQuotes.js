@@ -85,7 +85,7 @@ const allQuotesGraphql = graphql(ALL_QUOTES_QUERY, {
             skip: RANDOM_SKIP_NUMBER,
             first: QUOTES_PER_PAGE
         },
-        fetchPolicy: 'network-only',
+        fetchPolicy: 'cache-and-network',
     },
     props: ({data}) => ({
         data,

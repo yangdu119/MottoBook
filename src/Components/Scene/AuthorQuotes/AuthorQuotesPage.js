@@ -57,7 +57,6 @@ export default class AuthorQuotesPage extends Component {
                     </div>
 
                 </Grid>
-                <MottoBookFooter />
             </div>
         )
     }

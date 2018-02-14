@@ -55,7 +55,7 @@ class FilterQuotes extends Component {
         console.log('FilterQuotes will receive props', this.props)
 
         //handle page load
-        if (!this.props.filter.allQuotes){
+        if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
             this.props.filter.refetch({
                 filter: nextProps.radioSelected
             });
@@ -133,7 +133,7 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
             first: QUOTES_PER_PAGE,
             filter: 'none',
         },
-        fetchPolicy: 'network-only',
+        fetchPolicy: 'cache-and-network',
     },
     props: ({filter}) => ({
         filter,
