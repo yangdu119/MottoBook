@@ -12,6 +12,7 @@ import Home from './Components/Home'
 import AboutUs from './Components/AboutUs'
 import NewQuote from './Components/NewQuote'
 import OccupationCategory from './Components/Scene/OccupationCategory'
+import AuthorQuotesPage from './Components/Scene/AuthorQuotes/AuthorQuotesPage'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
@@ -42,6 +43,7 @@ export const makeMainRoutes = () => {
               <Route path="/aboutus" render={(props) => <AboutUs auth={auth} {...props} />} />
               <Route path="/newQuote" render={(props) => <NewQuote auth={auth} {...props} />} />
                 <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
+                <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
               <Route path="/profile" render={(props) => (
                 !auth.isAuthenticated() ? (
                   <Redirect to="/"/>

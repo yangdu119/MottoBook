@@ -4,30 +4,8 @@ import {Card, Image, Icon} from 'semantic-ui-react'
 
 export default class QuoteCard extends React.Component {
 
-    // render() {
-    //     return (
-    //         <Link
-    //             className='bg-white ma3 box post flex flex-column no-underline br2'
-    //             to={`/post/${this.props.post.id}`}
-    //         >
-    //             <div
-    //                 className='image'
-    //                 style={{
-    //                     backgroundImage: `url(${this.props.post.imageUrl})`,
-    //                     backgroundSize: 'cover',
-    //                     backgroundPosition: 'center',
-    //                     paddingBottom: '100%',
-    //                 }}
-    //             />
-    //             <div className='flex items-center black-80 fw3 description'>
-    //                 {this.props.post.description}
-    //             </div>
-    //         </Link>
-    //     )
-    // }
-
-
     render() {
+        const autorLink = `/author/${this.props.quote.author}`
         return (
             <div className="card" >
                 <Card style={{ width: '500px' }}>
@@ -36,7 +14,7 @@ export default class QuoteCard extends React.Component {
                             {this.props.quote.authorQuote}
                         </Card.Header>
                         <Card.Description>
-                            {this.props.quote.author}
+                            <Link to={autorLink}>{this.props.quote.author}</Link>
                         </Card.Description>
                         <Card.Description className={'black'}>
                             {this.props.quote.authorOccupation}
