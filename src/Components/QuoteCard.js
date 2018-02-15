@@ -4,8 +4,13 @@ import {Card, Image, Icon} from 'semantic-ui-react'
 
 export default class QuoteCard extends React.Component {
 
+    processLink(authorName) {
+        authorName = authorName.replace(/ /g,"_");
+        return authorName
+    }
+
     render() {
-        const autorLink = `/author/${this.props.quote.author}`
+        const autorLink = `/author/${this.processLink(this.props.quote.author)}`
         return (
             <div className="card" >
                 <Card fluid>

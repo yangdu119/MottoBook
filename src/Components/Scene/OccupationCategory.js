@@ -57,6 +57,7 @@ export default class OccupationCategory extends Component {
                         {/*<FeedExampleBasic />*/}
                     {/*</Grid.Column>*/}
                 </Grid>
+                <MottoBookFooter />
 
             </div>
         )

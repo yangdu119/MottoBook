@@ -61,6 +61,7 @@ export default class Home extends Component {
                             {/*<FeedExampleBasic />*/}
                         {/*</Grid.Column>*/}
                 </Grid>
+                <MottoBookFooter />
             </div>
 
         )

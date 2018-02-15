@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom'
 
 class AllAuthorsPage extends Component {
 
+    processLink(authorName) {
+        authorName = authorName.replace(/ /g,"_");
+        return authorName
+    }
     render() {
         console.log('AllAuthorsPage',this.props);
         const { allAuthors: { loading, error, todos } } = this.props;
@@ -37,11 +41,12 @@ class AllAuthorsPage extends Component {
 
                                 <Table.Body>
                                     {
+
                                         this.props.allAuthors.allAuthors && this.props.allAuthors.allAuthors.map(
                                             author => (
                                                 <Table.Row>
                                                     <Table.Cell><Link
-                                                        to={`/author/${author.author}`}>{author.author}</Link></Table.Cell>
+                                                        to={`/author/${this.processLink(author.author)}`}>{author.author}</Link></Table.Cell>
                                                     <Table.Cell>{author.authorBirthday}</Table.Cell>
                                                     <Table.Cell>{author.authorBirthplace}</Table.Cell>
                                                     <Table.Cell>{author.authorOccupation}</Table.Cell>
@@ -53,6 +58,7 @@ class AllAuthorsPage extends Component {
                             </Table>
                         </Grid.Column>
                     </Grid>
+                    <MottoBookFooter />
                 </div>
             )
         }

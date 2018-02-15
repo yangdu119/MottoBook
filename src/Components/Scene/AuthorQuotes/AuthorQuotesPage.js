@@ -48,6 +48,7 @@ export default class AuthorQuotesPage extends Component {
                         <AuthorQuotes {...this.state}/>
                     </Grid.Column>
                 </Grid>
+                <MottoBookFooter />
             </div>
         )
     }
