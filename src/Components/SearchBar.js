@@ -10,13 +10,18 @@ export default class SearchBar extends React.Component {
         searchTerm: ""
     }
 
+    processLink(authorName) {
+        authorName = authorName.replace(/ /g,"_");
+        return authorName
+    }
+
     handleSubmit = (event) => {
         event.preventDefault();
         //console.log('search value:', this.state);
         this.setState({
             searchTerm: ""
         })
-        history.push(`/search/${this.state.searchTerm}`);
+        history.push(`/search/${this.processLink(this.state.searchTerm)}`);
     }
     handleChange = event => {
         //console.log('change value', event.target.value);
