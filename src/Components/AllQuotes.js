@@ -6,7 +6,7 @@ import QueryAllQuotes from "../GraphQL/QueryAllQuotes";
 import MutationDeleteEvent from "../GraphQL/MutationDeleteEvent";
 
 import moment from "moment";
-import {Card,Icon, Image, Button, Radio, Form} from 'semantic-ui-react'
+import {Card,Icon, Image, Button, Radio, Form, Dimmer, Loader} from 'semantic-ui-react'
 import xmlToJSON from 'xmltojson'
 import 'whatwg-fetch'
 import gql from 'graphql-tag'
@@ -30,28 +30,40 @@ class AllQuotes extends Component {
     }
 
     render() {
-        return (
-            <div>
-                {
-                    this.props.data.allQuotes && this.props.data.allQuotes.map(quote => (
-                        <QuoteCard
-                            key={quote.id}
-                            quote={quote}
-                        />))
+        const { data: { loading, error, todos } } = this.props;
+        if (loading) {
+            return (
+                <Dimmer active inverted>
+                    <Loader>Loading</Loader>
+                </Dimmer>
+            )
+        } else if (error) {
+            return <p>Error!</p>;
+        } else {
 
-                }
+            return (
+                <div>
+                    {
+                        this.props.data.allQuotes && this.props.data.allQuotes.map(quote => (
+                            <QuoteCard
+                                key={quote.id}
+                                quote={quote}
+                            />))
 
-                {
+                    }
 
-                    <Button primary onClick={this.props.loadMoreQuotes}>
-                        Load More Quotes
-                    </Button>
+                    {
 
-                }
+                        <Button primary onClick={this.props.loadMoreQuotes}>
+                            Load More Quotes
+                        </Button>
 
-            </div>
+                    }
 
-        );
+                </div>
+
+            );
+        }
     }
 
 }

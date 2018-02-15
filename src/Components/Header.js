@@ -54,7 +54,7 @@ class MottoBookHeader extends Component {
                     {
                         !isAuthenticated() && (
                             <div>
-                                <Menu.Item className='item'>
+                                <Menu.Item>
                                     <a
                                         style={{ cursor: 'pointer' }}
                                         onClick={this.login.bind(this)}
@@ -66,7 +66,7 @@ class MottoBookHeader extends Component {
                     {
                         (
                             <div>
-                                <Menu.Item className='item'>
+                                <Menu.Item>
                                     <Link to="/about">About</Link>
                                 </Menu.Item>
                             </div>

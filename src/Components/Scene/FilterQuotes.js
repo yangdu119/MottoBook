@@ -5,7 +5,7 @@ import queryString from 'query-string';
 import { graphql, compose } from "react-apollo";
 
 import moment from "moment";
-import {Card,Icon, Image, Button, Radio, Form} from 'semantic-ui-react'
+import {Card,Icon, Image, Button, Radio, Form, Loader, Dimmer} from 'semantic-ui-react'
 import xmlToJSON from 'xmltojson'
 import 'whatwg-fetch'
 import gql from 'graphql-tag'
@@ -80,27 +80,38 @@ class FilterQuotes extends Component {
         const isAuthorSearchClear = this.state.authorName === '';
         console.log("FilterQuotes this.state", this.state)
         console.log('FilterQuotes this props', this.props)
-        return (
-            <div>
-                {
-                    this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
-                        <QuoteCard
-                            key={quote.id}
-                            quote={quote}
-                        />))
-                }
+        const { filter: { loading, error, todos } } = this.props;
+        if (loading) {
+            return (
+                <Dimmer active inverted>
+                    <Loader>Loading</Loader>
+                </Dimmer>
+            )
+        } else if (error) {
+            return <p>Error!</p>;
+        } else {
+            return (
+                <div>
+                    {
+                        this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
+                            <QuoteCard
+                                key={quote.id}
+                                quote={quote}
+                            />))
+                    }
 
-                {
+                    {
 
-                    <Button primary onClick={this.filterLoadMore}>
-                        Load More Quotes
-                    </Button>
+                        <Button primary onClick={this.filterLoadMore}>
+                            Load More Quotes
+                        </Button>
 
-                }
+                    }
 
-            </div>
+                </div>
 
-        );
+            );
+        }
     }
 
 }

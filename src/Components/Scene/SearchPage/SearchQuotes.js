@@ -5,7 +5,7 @@ import queryString from 'query-string';
 import { graphql, compose } from "react-apollo";
 
 import moment from "moment";
-import {Card,Icon, Image, Button, Radio, Form} from 'semantic-ui-react'
+import {Card,Icon, Image, Button, Radio, Form, Dimmer, Loader} from 'semantic-ui-react'
 import xmlToJSON from 'xmltojson'
 import 'whatwg-fetch'
 import gql from 'graphql-tag'
@@ -50,26 +50,6 @@ class SearchQuotes extends Component {
         this.setState({authorName: nextProps.authorName});
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     console.log('SearchQuotes will receive props', nextProps)
-    //
-    //     //handle page load
-    //     if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
-    //         this.props.filter.refetch({
-    //             filter: nextProps.authorName
-    //         });
-    //     }
-    //
-    //     //handle filter value changed
-    //     if (nextProps.authorName != this.state.filter){
-    //         console.log('handle filter value changed:',nextProps.authorName)
-    //         this.props.filter.refetch({
-    //             filter: nextProps.authorName
-    //         });
-    //     }
-    //
-    //     this.setState({authorName: nextProps.authorName});
-    // }
     componentDidMount(){
         console.log('SearchQuotes componentdidMount props', this.props)
         //handle page load
@@ -81,27 +61,39 @@ class SearchQuotes extends Component {
     }
 
     render() {
-        return (
-            <div>
-                {
-                    this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
-                        <QuoteCard
-                            key={quote.id}
-                            quote={quote}
-                        />))
-                }
+        const { filter: { loading, error, todos } } = this.props;
+        if (loading) {
+            return (
+                <Dimmer active inverted>
+                    <Loader>Loading</Loader>
+                </Dimmer>
+            )
+        } else if (error) {
+            return <p>Error!</p>;
+        } else {
 
-                {
+            return (
+                <div>
+                    {
+                        this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
+                            <QuoteCard
+                                key={quote.id}
+                                quote={quote}
+                            />))
+                    }
 
-                    <Button primary onClick={this.filterLoadMore}>
-                        Load More Quotes
-                    </Button>
+                    {
 
-                }
+                        <Button primary onClick={this.filterLoadMore}>
+                            Load More Quotes
+                        </Button>
 
-            </div>
+                    }
 
-        );
+                </div>
+
+            );
+        }
     }
 
 }

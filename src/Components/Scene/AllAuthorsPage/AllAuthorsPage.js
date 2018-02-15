@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Image, Rail, Segment, Sticky, Table} from 'semantic-ui-react'
+import { Grid, Image, Rail, Segment, Sticky, Table, Dimmer, Loader} from 'semantic-ui-react'
 import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
 import gql from "graphql-tag";
@@ -10,41 +10,52 @@ class AllAuthorsPage extends Component {
 
     render() {
         console.log('AllAuthorsPage',this.props);
+        const { allAuthors: { loading, error, todos } } = this.props;
+        if (loading) {
+            return (
+                <Dimmer active inverted>
+                    <Loader>Loading</Loader>
+                </Dimmer>
+            )
+        } else if (error) {
+            return <p>Error!</p>;
+        } else {
+            return (
+                <div>
+                    <MottoBookHeader auth={this.props.auth} {...this.props} />
+                    <Grid centered columns={3} style={{marginTop: '3em'}}>
+                        <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
+                            <Table striped>
+                                <Table.Header>
+                                    <Table.Row>
+                                        <Table.HeaderCell>Author</Table.HeaderCell>
+                                        <Table.HeaderCell>Birthday</Table.HeaderCell>
+                                        <Table.HeaderCell>Birthplace</Table.HeaderCell>
+                                        <Table.HeaderCell>Occupation</Table.HeaderCell>
+                                    </Table.Row>
+                                </Table.Header>
 
-        return (
-            <div>
-                <MottoBookHeader auth={this.props.auth} {...this.props} />
-                <Grid centered columns={3} style={{ marginTop: '3em' }}>
-                    <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                        <Table celled>
-                            <Table.Header>
-                                <Table.Row>
-                                    <Table.HeaderCell>Author</Table.HeaderCell>
-                                    <Table.HeaderCell>Birthday</Table.HeaderCell>
-                                    <Table.HeaderCell>Birthplace</Table.HeaderCell>
-                                    <Table.HeaderCell>Occupation</Table.HeaderCell>
-                                </Table.Row>
-                            </Table.Header>
-
-                            <Table.Body>
-                                {
-                                    this.props.allAuthors.allAuthors && this.props.allAuthors.allAuthors.map(
-                                        author => (
-                                            <Table.Row>
-                                                <Table.Cell><Link to={`/author/${author.author}`}>{author.author}</Link></Table.Cell>
-                                                <Table.Cell>{author.authorBirthday}</Table.Cell>
-                                                <Table.Cell>{author.authorBirthplace}</Table.Cell>
-                                                <Table.Cell>{author.authorOccupation}</Table.Cell>
-                                            </Table.Row>
+                                <Table.Body>
+                                    {
+                                        this.props.allAuthors.allAuthors && this.props.allAuthors.allAuthors.map(
+                                            author => (
+                                                <Table.Row>
+                                                    <Table.Cell><Link
+                                                        to={`/author/${author.author}`}>{author.author}</Link></Table.Cell>
+                                                    <Table.Cell>{author.authorBirthday}</Table.Cell>
+                                                    <Table.Cell>{author.authorBirthplace}</Table.Cell>
+                                                    <Table.Cell>{author.authorOccupation}</Table.Cell>
+                                                </Table.Row>
+                                            )
                                         )
-                                    )
-                                }
-                            </Table.Body>
-                        </Table>
-                    </Grid.Column>
-                </Grid>
-            </div>
-        )
+                                    }
+                                </Table.Body>
+                            </Table>
+                        </Grid.Column>
+                    </Grid>
+                </div>
+            )
+        }
     }
 }
 
