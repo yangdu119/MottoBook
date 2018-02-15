@@ -24,7 +24,6 @@ class MottoBookHeader extends Component {
 
                 <Menu.Item header as='a' href='/'>
                     <img src="/mottobook2.svg" alt="MottoBook"/>
-
                     MottoBook
                 </Menu.Item>
 
