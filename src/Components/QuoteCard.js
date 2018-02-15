@@ -37,10 +37,10 @@ export default class QuoteCard extends React.Component {
                             {this.props.quote.dislikes}
                         </a>
 
-                        <a style={{ marginLeft: '2em' }}>
-                            <Icon name='heart outline' />
-                            Add to my MottoBook
-                        </a>
+                        {/*<a style={{ marginLeft: '2em' }}>*/}
+                            {/*<Icon name='heart outline' />*/}
+                            {/*Add to my MottoBook*/}
+                        {/*</a>*/}
 
                         <a style={{ marginLeft: '2em' }}>
                             <Icon name='comments' />

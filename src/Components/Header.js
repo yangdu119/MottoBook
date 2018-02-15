@@ -67,7 +67,7 @@ class MottoBookHeader extends Component {
                         (
                             <div>
                                 <Menu.Item className='item'>
-                                    <Link to="/aboutus">About Us</Link>
+                                    <Link to="/about">About</Link>
                                 </Menu.Item>
                             </div>
                         )

@@ -67,19 +67,10 @@ export default class VerticalMenu extends Component {
         //this.props.onCategoryClick(titleProps)
     }
 
-    handleAuthorNameSubmit = (e, name) =>{
-        //this.props.authorNameSearch(this.state.authorName)
-
+    handleBrowseAuthors = () => {
+        history.push(`/allAuthors`);
     }
 
-    handleNameChange = (e, name) => {
-        //console.log('changename', name.value)
-
-        this.setState({
-            authorName: name.value
-        })
-        //this.props.authorNameSearch(name.value)
-    }
     componentDidMount() {
         console.log('verticalMenu props', this.props)
         this.setState({
@@ -112,10 +103,10 @@ export default class VerticalMenu extends Component {
                     <Accordion.Content active={activeIndex === 0} content={<OccupationForm onItemClick={this.handleItemClick} value={this.state.radioValue}/>} />
                 </Menu.Item>
 
-                {/*<Menu.Item name='browse' active={activeItem === 'browse'} onClick={this.handleItemClick}>*/}
-                    {/*<Icon name='grid layout' />*/}
-                    {/*Browse Authors*/}
-                {/*</Menu.Item>*/}
+                <Menu.Item name='browse' active={activeItem === 'browse'} onClick={this.handleBrowseAuthors}>
+                    <Icon name='grid layout' />
+                    Browse Authors
+                </Menu.Item>
             </Accordion>
             </div>
         )
