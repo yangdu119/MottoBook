@@ -31,7 +31,9 @@ class MottoBookHeader extends Component {
                     MottoBook
                 </Menu.Item>
 
-                <SearchBar />
+                <Menu.Item>
+                    <SearchBar />
+                </Menu.Item>
 
                 <Menu.Menu position='right' style={{ marginRight: '6em' }}>
                     {

@@ -2,7 +2,6 @@ import React from 'react';
 import { Router as Router, Route, Redirect } from 'react-router-dom'
 
 import App from './App-Auth0';
-//import Home from './Home/Home';
 import Profile from './Profile/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
@@ -13,6 +12,7 @@ import AboutUs from './Components/AboutUs'
 import NewQuote from './Components/NewQuote'
 import OccupationCategory from './Components/Scene/OccupationCategory'
 import AuthorQuotesPage from './Components/Scene/AuthorQuotes/AuthorQuotesPage'
+import SearchPage from './Components/Scene/SearchPage/SearchPage'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
@@ -44,6 +44,7 @@ export const makeMainRoutes = () => {
               <Route path="/newQuote" render={(props) => <NewQuote auth={auth} {...props} />} />
                 <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
+                <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
               <Route path="/profile" render={(props) => (
                 !auth.isAuthenticated() ? (
                   <Redirect to="/"/>

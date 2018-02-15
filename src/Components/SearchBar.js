@@ -1,53 +1,40 @@
-import _ from 'lodash'
-import faker from 'faker'
-import React, { Component } from 'react'
-import { Search, Grid, Header } from 'semantic-ui-react'
+import React from 'react'
+import { Input, Form} from 'semantic-ui-react'
+import history from '../history'
 
-const source = _.times(5, () => ({
-    title: faker.company.companyName(),
-    description: faker.company.catchPhrase(),
-    image: faker.internet.avatar(),
-    price: faker.finance.amount(0, 100, 2, '$'),
-}))
-
-export default class SearchBar extends Component {
-    componentWillMount() {
-        this.resetComponent()
+export default class SearchBar extends React.Component {
+    constructor(){
+        super()
+    }
+    state = {
+        searchTerm: ""
     }
 
-    resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
-
-    handleResultSelect = (e, { result }) => this.setState({ value: result.title })
-
-    handleSearchChange = (e, { value }) => {
-        this.setState({ isLoading: true, value })
-
-        setTimeout(() => {
-            if (this.state.value.length < 1) return this.resetComponent()
-
-            const re = new RegExp(_.escapeRegExp(this.state.value), 'i')
-            const isMatch = result => re.test(result.title)
-
-            this.setState({
-                isLoading: false,
-                results: _.filter(source, isMatch),
-            })
-        }, 500)
+    handleSubmit = (event) => {
+        event.preventDefault();
+        //console.log('search value:', this.state);
+        this.setState({
+            searchTerm: ""
+        })
+        history.push(`/search/${this.state.searchTerm}`);
+    }
+    handleChange = event => {
+        //console.log('change value', event.target.value);
+        this.setState({
+            searchTerm: event.target.value
+        })
     }
 
     render() {
-        const { isLoading, value, results } = this.state
-
-        return (
-            <Search
-                fluid={true}
-                loading={isLoading}
-                onResultSelect={this.handleResultSelect}
-                onSearchChange={this.handleSearchChange}
-                results={results}
-                value={value}
-                {...this.props}
-            />
+        return(
+            <Form onSubmit={this.handleSubmit}>
+                <Form.Input
+                    icon={{name: 'search', circular: true, link: true}}
+                    placeholder='Search...'
+                    onChange = {this.handleChange}
+                />
+            </Form>
         )
     }
 }
+
