@@ -22,9 +22,6 @@ class MottoBookHeader extends Component {
         return(
             <Menu fixed='top' inverted className={'ui blue'}>
 
-                <Menu.Item>
-
-                </Menu.Item>
                 <Menu.Item header as='a' href='/'>
                     <img src="/mottobook2.svg" alt="MottoBook"/>
 
