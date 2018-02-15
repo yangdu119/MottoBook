@@ -18,7 +18,7 @@ const MottoBookFooter = () =>(
                 <List horizontal inverted divided link>
                     <List.Item as='a' href='/'>Home</List.Item>
                     <List.Item as='a' href='/about'>About</List.Item>
-                    <List.Item as='a' href='/sitemap'>Site Map</List.Item>
+                    <List.Item as='a' href='/sitemap.xml'>Site Map</List.Item>
                     <List.Item as='a' href='/allAuthors'>All Authors</List.Item>
                 </List>
             </Container>
