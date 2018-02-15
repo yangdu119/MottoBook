@@ -25,7 +25,7 @@ class MottoBookHeader extends Component {
                 <Menu.Item>
 
                 </Menu.Item>
-                <Menu.Item style={{ marginLeft: '6em' }} header as='a' href='/'>
+                <Menu.Item header as='a' href='/'>
                     <img src="/mottobook2.svg" alt="MottoBook"/>
 
                     MottoBook
@@ -35,7 +35,7 @@ class MottoBookHeader extends Component {
                     <SearchBar />
                 </Menu.Item>
 
-                <Menu.Menu position='right' style={{ marginRight: '6em' }}>
+                <Menu.Menu position='right'>
                     {
                         isAuthenticated() && (
                             <Menu.Item className='item'>
