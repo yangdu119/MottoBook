@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { v4 as uuid } from "uuid";
 import { graphql } from "react-apollo";
-import QueryAllEvents from "../GraphQL/QueryAllEvents";
 
 import DatePicker from 'react-datepicker';
 import moment from 'moment';

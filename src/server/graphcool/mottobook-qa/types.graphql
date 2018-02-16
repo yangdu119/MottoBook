@@ -15,8 +15,8 @@ type Quote @model {
   addedBy: User! @relation(name: "UserAddQuotes")
   isPublished: Boolean @defaultValue(value: "true")
 
-  likedBy: [User!]! @relation(name: "UserLikeQuotes")
-  dislikedBy: [User!]! @relation(name: "UserDislikeQuotes")
+  likedBy: [User!] @relation(name: "UserLikeQuotes")
+  dislikedBy: [User!] @relation(name: "UserDislikeQuotes")
 
   mottoBy: [User!]! @relation(name: "UserMottoQuotes")
   events: [Event!]! @relation(name: "QuoteEvents")
@@ -39,7 +39,6 @@ type User @model {
   comments: [Comment!]! @relation(name: "UserComments")
   likeQuotes: [Quote!]! @relation(name: "UserLikeQuotes")
   dislikeQuotes: [Quote!]! @relation(name: "UserDislikeQuotes")
-  mottoQuotes: [Quote!]! @relation(name: "UserMottoQuotes")
 
   followingAuthor: [Author!]! @relation(name: "UserFollowAuthor")
   followingUser: [User!]! @relation(name: "UserFollowUser")

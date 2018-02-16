@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { graphql, compose } from "react-apollo";
-import QueryAllQuotes from "../GraphQL/QueryAllQuotes";
-import MutationDeleteEvent from "../GraphQL/MutationDeleteEvent";
-
 import moment from "moment";
 import {Card,Icon, Image, Button, Radio, Form, Dimmer, Loader} from 'semantic-ui-react'
 import xmlToJSON from 'xmltojson'

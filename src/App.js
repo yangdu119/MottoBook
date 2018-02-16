@@ -4,10 +4,6 @@ import "semantic-ui-css/semantic.min.css";
 import 'react-datepicker/dist/react-datepicker.css';
 
 // import './App.css';
-import AllEvents from './Components/AllEvents';
-
-import NewEvent from './Components/NewEvent';
-import ViewEvent from './Components/ViewEvent';
 import AboutUs from './Components/AboutUs'
 import Home from './Components/Home'
 import NewQuote from './Components/NewQuote'

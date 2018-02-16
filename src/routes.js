@@ -19,6 +19,7 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import ReactGA from 'react-ga';
 import AllAuthorsPage from "./Components/Scene/AllAuthorsPage/AllAuthorsPage";
+import NotFound from './Components/Scene/NotFound'
 ReactGA.initialize('UA-113147944-1'); //Unique Google Analytics tracking number
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -47,6 +48,7 @@ export const makeMainRoutes = () => {
                 <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
                 <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
+                <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
               <Route path="/profile" render={(props) => (
                 !auth.isAuthenticated() ? (
                   <Redirect to="/"/>
