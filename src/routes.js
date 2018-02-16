@@ -2,7 +2,7 @@ import React from 'react';
 import { Router as Router, Route, Redirect } from 'react-router-dom'
 
 import App from './App-Auth0';
-import Profile from './Profile/Profile';
+import Profile from './Components/Scene/Profile/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';

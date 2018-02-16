@@ -45,7 +45,7 @@ export default class AuthorQuotesPage extends Component {
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
                 <Grid centered columns={3} style={{ marginTop: '3em' }}>
                     <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                        <AuthorQuotes {...this.state}/>
+                        <AuthorQuotes {...this.state} auth={this.props.auth}/>
                     </Grid.Column>
                 </Grid>
                 <MottoBookFooter />

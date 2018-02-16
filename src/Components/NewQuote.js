@@ -33,6 +33,11 @@ class NewQuote extends Component {
     };
 
     componentWillMount() {
+        const { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated()){
+            this.props.auth.login();
+            console.log('navigate to login page')
+        }
         this.setState({ profile: {} });
         const { userProfile, getProfile } = this.props.auth;
         if (!userProfile) {

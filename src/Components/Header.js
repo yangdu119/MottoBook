@@ -33,55 +33,55 @@ class MottoBookHeader extends Component {
 
                 <Menu.Menu position='right'>
                     {
-                        isAuthenticated() && (
-                            <Menu.Item className='item'>
-                                <a href="/newquote">New Quote</a>
-                            </Menu.Item>
-                        )
+
+                        <Menu.Item className='item'>
+                            <a href="/newquote">New Quote</a>
+                        </Menu.Item>
+
                     }
                     {
                         isAuthenticated() && (
-                            <div>
+
                                 <Menu.Item className='item'>
                                     <a
                                         style={{ cursor: 'pointer' }}
                                         onClick={this.goTo.bind(this, 'profile')}
                                     >Profile</a>
                                 </Menu.Item>
-                            </div>
+
                         )
                     }
                     {
                         !isAuthenticated() && (
-                            <div>
+
                                 <Menu.Item>
                                     <a
                                         style={{ cursor: 'pointer' }}
                                         onClick={this.login.bind(this)}
                                     >Login</a>
                                 </Menu.Item>
-                            </div>
+
                         )
                     }
                     {
                         (
-                            <div>
-                                <Menu.Item>
-                                    <Link to="/about">About</Link>
-                                </Menu.Item>
-                            </div>
+
+                            <Menu.Item>
+                                <Link to="/about">About</Link>
+                            </Menu.Item>
+
                         )
                     }
                     {
                         isAuthenticated() && (
-                            <div>
+
                                 <Menu.Item className='item'>
                                     <a
                                         style={{ cursor: 'pointer' }}
                                         onClick={this.logout.bind(this)}
                                     >Log Out</a>
                                 </Menu.Item>
-                            </div>
+
                         )
                     }
 

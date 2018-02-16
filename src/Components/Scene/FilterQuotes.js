@@ -97,6 +97,7 @@ class FilterQuotes extends Component {
                             <QuoteCard
                                 key={quote.id}
                                 quote={quote}
+                                auth={this.props.auth}
                             />))
                     }
 

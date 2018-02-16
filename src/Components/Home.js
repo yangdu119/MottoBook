@@ -55,7 +55,7 @@ export default class Home extends Component {
                             <VerticalMenu onCategoryClick={this.handleCategoryClick} />
                         </Grid.Column>
                         <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                            <AllQuotes {...this.state}/>
+                            <AllQuotes {...this.state} auth={this.props.auth}/>
                         </Grid.Column>
                         {/*<Grid.Column computer={'3'} only={'computer'}>*/}
                             {/*<FeedExampleBasic />*/}

@@ -9,8 +9,37 @@ export default class QuoteCard extends React.Component {
         return authorName
     }
 
+    handleLike = () => {
+        console.log('like clicked', this.props.quote.id);
+        console.log('props', this.props)
+        const { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated()){
+            this.props.auth.login();
+            console.log('navigate to login page')
+        }
+    }
+
+    handleDislike = () => {
+        console.log('like clicked', this.props.quote.id);
+        console.log('props', this.props)
+        const { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated()){
+            this.props.auth.login();
+            console.log('navigate to login page')
+        }
+    }
+
+    handleComments = () => {
+        const { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated()){
+            this.props.auth.login();
+            console.log('navigate to login page')
+        }
+    }
+
     render() {
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
+
         return (
             <div className="card" >
                 <Card fluid>
@@ -32,22 +61,17 @@ export default class QuoteCard extends React.Component {
                     </Card.Content>
 
                     <Card.Content extra>
-                        <a>
+                        <a onClick={this.handleLike}>
                             <Icon name='like outline' />
                             {this.props.quote.likes}
                         </a>
 
-                        <a style={{ marginLeft: '2em' }}>
+                        <a style={{ marginLeft: '2em' }} onClick={this.handleDislike}>
                             <Icon name='dislike outline' />
                             {this.props.quote.dislikes}
                         </a>
 
-                        {/*<a style={{ marginLeft: '2em' }}>*/}
-                            {/*<Icon name='heart outline' />*/}
-                            {/*Add to my MottoBook*/}
-                        {/*</a>*/}
-
-                        <a style={{ marginLeft: '2em' }}>
+                        <a style={{ marginLeft: '2em' }} onClick={this.handleComments}>
                             <Icon name='comments' />
                             Comments
                         </a>

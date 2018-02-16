@@ -51,7 +51,7 @@ export default class OccupationCategory extends Component {
                         <VerticalMenu onCategoryClick={this.handleCategoryClick} radioSelected={this.state.radioSelected}/>
                     </Grid.Column>
                     <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                        <FilterQuotes {...this.state}/>
+                        <FilterQuotes {...this.state} auth={this.props.auth}/>
                     </Grid.Column>
                     {/*<Grid.Column computer={'3'} only={'computer'}>*/}
                         {/*<FeedExampleBasic />*/}

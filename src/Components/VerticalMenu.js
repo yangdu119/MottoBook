@@ -104,7 +104,7 @@ export default class VerticalMenu extends Component {
                 </Menu.Item>
 
                 <Menu.Item name='browse' active={activeItem === 'browse'} onClick={this.handleBrowseAuthors}>
-                    <Icon name='grid layout' />
+                    <Icon name='users' />
                     Browse Authors
                 </Menu.Item>
             </Accordion>
