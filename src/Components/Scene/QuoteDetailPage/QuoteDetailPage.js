@@ -14,10 +14,12 @@ export default class QuoteDetailPage extends Component {
 
     componentWillReceiveProps(nextProps) {
         let authorName = nextProps.match.params.authorName
-        console.log('SearchPage willReceiveProps: ',authorName)
-        this.setState({
-            authorName
-        })
+        if (authorName !=this.state.authorName) {
+            console.log('SearchPage willReceiveProps: ', authorName)
+            this.setState({
+                authorName
+            })
+        }
     }
     componentDidMount() {
         console.log('SearchPage componentDidMount props', this.props);

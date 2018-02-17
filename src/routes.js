@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router as Router, Route, Redirect } from 'react-router-dom'
+import { Router as Router, Route, Redirect, Switch} from 'react-router-dom'
 
 import App from './App-Auth0';
 import Profile from './Components/Scene/Profile/Profile';
@@ -39,7 +39,7 @@ export const makeMainRoutes = () => {
   return (
       <ApolloProvider client={client}>
         <Router history={history} onUpdate={fireTracking}>
-            <div>
+                <Switch>
               <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
               <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
               <Route path="/about" render={(props) => <AboutUs auth={auth} {...props} />} />
@@ -49,18 +49,18 @@ export const makeMainRoutes = () => {
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
                 <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
                 <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
-              <Route path="/profile" render={(props) => (
-                !auth.isAuthenticated() ? (
-                  <Redirect to="/"/>
-                ) : (
-                  <Profile auth={auth} {...props} />
-                )
-              )} />
-              <Route path="/callback" render={(props) => {
-                handleAuthentication(props);
-                return <Callback {...props} />
-              }}/>
-            </div>
+                  <Route path="/profile" render={(props) => (
+                    !auth.isAuthenticated() ? (
+                      <Redirect to="/"/>
+                    ) : (
+                      <Profile auth={auth} {...props} />
+                    )
+                  )} />
+                  <Route path="/callback" render={(props) => {
+                    handleAuthentication(props);
+                    return <Callback {...props} />
+                  }}/>
+                </Switch>
           </Router>
       </ApolloProvider>
   );

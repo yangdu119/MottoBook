@@ -26,10 +26,12 @@ export default class OccupationCategory extends Component {
 
     componentWillReceiveProps(nextProps) {
         let radioSelected = nextProps.match.params.category
-        console.log('occupation category radio selected: ',radioSelected)
-        this.setState({
-            radioSelected: radioSelected
-        })
+        if (radioSelected !=this.state.radioSelected) {
+            console.log('occupation category radio selected: ', radioSelected)
+            this.setState({
+                radioSelected: radioSelected
+            })
+        }
     }
     componentDidMount() {
         console.log('Occupation Category componentDidMount props', this.props);

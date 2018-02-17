@@ -11,22 +11,6 @@ export default class NotFound extends Component {
         super();
     }
 
-    componentWillReceiveProps(nextProps) {
-        let radioSelected = nextProps.match.params.category
-        console.log('occupation category radio selected: ',radioSelected)
-        this.setState({
-            radioSelected: radioSelected
-        })
-    }
-    componentDidMount() {
-        console.log('Occupation Category componentDidMount props', this.props);
-        let radioSelected = this.props.match.params.category
-        console.log('occupation category radio selected: ',radioSelected)
-        this.setState({
-            radioSelected: radioSelected
-        })
-    }
-
     render() {
         return (
             <div>

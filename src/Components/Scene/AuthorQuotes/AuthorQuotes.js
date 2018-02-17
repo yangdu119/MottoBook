@@ -16,6 +16,7 @@ class AuthorQuotes extends Component {
     constructor(props){
         super(props);
         this.state = {
+            authorName:''
         }
     }
 
@@ -26,30 +27,59 @@ class AuthorQuotes extends Component {
         this.props.loadFilterQuotes(this.state.authorName);
     }
 
+    // componentWillReceiveProps(nextProps) {
+    //     console.log('AuthorQuotes will receive props', nextProps)
+    //
+    //     if (nextProps.authorName !=this.state.authorName){
+    //         console.log('handle page load')
+    //         console.log('nextProps.authorName',nextProps.authorName)
+    //         console.log('this.state.authorName',this.state.authorName)
+    //         //handle page load
+    //         if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
+    //             console.log('refetch', nextProps.authorName)
+    //             this.props.filter.refetch({
+    //                 filter: nextProps.authorName
+    //             });
+    //         }
+    //         this.setState({authorName: nextProps.authorName});
+    //     }
+    //
+    // }
+
     componentWillReceiveProps(nextProps) {
-        console.log('AuthorQuotes will receive props', this.props)
+        console.log('SearchQuotes will receive props', nextProps)
 
         //handle page load
-        if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
+        if (!this.props.filter.allQuotes){
             this.props.filter.refetch({
                 filter: nextProps.authorName
             });
         }
 
-        this.setState({authorName: nextProps.authorName});
-    }
-    componentDidMount(){
-        console.log('AuthorQuotes componentdidMount props', this.props)
-        //handle page load
-        if (!this.props.filter.allQuotes){
+        //handle filter value changed
+        console.log('SearchQuotes will receive props', nextProps)
+        console.log('SearchQuotes will receive props this state authorName', this.state.authorName)
+        if (nextProps.authorName != this.state.authorName && this.state.authorName){
+            console.log('handle filter value changed:',nextProps.authorName)
             this.props.filter.refetch({
-                filter: this.state.authorName
+                filter: nextProps.authorName
             });
         }
+        this.setState({authorName: nextProps.authorName});
     }
+    // componentDidMount(){
+    //     console.log('AuthorQuotes componentdidMount props', this.props)
+    //     //handle page load
+    //     if (!this.props.filter.allQuotes){
+    //         this.props.filter.refetch({
+    //             filter: this.props.authorName
+    //         });
+    //     }
+    // }
 
     render() {
         const { filter: { loading, error, todos } } = this.props;
+        const foundQuotes = this.props.filter.allQuotes;
         if (loading) {
             return (
                 <Dimmer active inverted>
@@ -71,10 +101,15 @@ class AuthorQuotes extends Component {
                     }
 
                     {
-
+                        foundQuotes && foundQuotes.length>0 &&
                         <Button primary onClick={this.filterLoadMore}>
                             Load More Quotes
                         </Button>
+                    }
+
+                    {
+                        foundQuotes && foundQuotes.length==0 &&
+                        <p>No Quotes Found</p>
 
                     }
 
@@ -114,7 +149,7 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
             first: QUOTES_PER_PAGE,
             filter: 'none',
         },
-        fetchPolicy: 'cache-and-network',
+        fetchPolicy: 'network-only',
     },
     props: ({filter}) => ({
         filter,

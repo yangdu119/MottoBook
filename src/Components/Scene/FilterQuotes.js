@@ -55,7 +55,7 @@ class FilterQuotes extends Component {
         console.log('FilterQuotes will receive props', this.props)
 
         //handle page load
-        if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
+        if (!this.props.filter.allQuotes){
             this.props.filter.refetch({
                 filter: nextProps.radioSelected
             });

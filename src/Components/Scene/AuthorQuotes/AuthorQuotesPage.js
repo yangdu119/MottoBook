@@ -9,24 +9,19 @@ export default class AuthorQuotesPage extends Component {
         super();
 
         this.state = {
+            authorName: ''
         }
-    }
-
-    handleContextRef = contextRef => this.setState({ contextRef })
-
-    handleCategoryClick = (item) => {
-
-        this.setState({
-            radioSelected: item.value
-        })
     }
 
     componentWillReceiveProps(nextProps) {
         let authorName = nextProps.match.params.authorName
-        console.log('AuthorQuotesPage willReceiveProps: ',authorName)
-        this.setState({
-            radioSelected: authorName
-        })
+        if (nextProps.authorName !=this.state.authorName) {
+            console.log('authorQuotesPage set radioSelected')
+            console.log('AuthorQuotesPage willReceiveProps: ', authorName)
+            this.setState({
+                authorName: authorName
+            })
+        }
     }
     componentDidMount() {
         console.log('AuthorQuotesPage componentDidMount props', this.props);

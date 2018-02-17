@@ -30,17 +30,19 @@ class SearchQuotes extends Component {
         console.log('SearchQuotes will receive props', nextProps)
 
         //handle page load
-        if (!this.props.filter.allQuotes || !this.props.filter.allQuotes.length){
+
+        if (!this.props.filter.allQuotes ){
+            console.log('this.props.filter.allQuotes',this.props.filter.allQuotes)
             this.props.filter.refetch({
                 filter: nextProps.authorName
             });
         }
 
         //     //handle filter value changed
-        console.log('SearchQuotes will receive props', nextProps)
-        console.log('SearchQuotes will receive props this state authorName', this.state.authorName)
-            if (nextProps.authorName != this.state.authorName && this.state.authorName){
-                console.log('handle filter value changed:',nextProps.authorName)
+
+            if (nextProps.authorName != this.state.authorName){
+                console.log('SearchQuotes will receive props authorName', nextProps.authorName)
+                console.log('SearchQuotes this state authorname', this.state.authorName)
                 this.props.filter.refetch({
                     filter: nextProps.authorName
                 });
@@ -62,6 +64,7 @@ class SearchQuotes extends Component {
 
     render() {
         const { filter: { loading, error, todos } } = this.props;
+        const foundQuotes = this.props.filter.allQuotes;
         if (loading) {
             return (
                 <Dimmer active inverted>
@@ -83,10 +86,15 @@ class SearchQuotes extends Component {
                     }
 
                     {
-
+                        foundQuotes && foundQuotes.length>0 &&
                         <Button primary onClick={this.filterLoadMore}>
                             Load More Quotes
                         </Button>
+                    }
+
+                    {
+                        foundQuotes && foundQuotes.length==0 &&
+                        <p>No Quotes Found</p>
 
                     }
 
