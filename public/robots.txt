@@ -1,5 +1,0 @@
-# Rule 2
-User-agent: *
-Allow: /
-
-Sitemap: https://www.mottobook.com/sitemap.xml
