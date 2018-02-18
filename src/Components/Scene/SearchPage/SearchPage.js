@@ -38,7 +38,7 @@ export default class SearchPage extends Component {
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
                 <Grid centered columns={3} style={{ marginTop: '3em' }}>
                     <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                        <SearchQuotes {...this.state}/>
+                        <SearchQuotes {...this.state} {...this.props}/>
                     </Grid.Column>
                 </Grid>
                 <MottoBookFooter />
