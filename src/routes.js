@@ -39,7 +39,7 @@ export const makeMainRoutes = () => {
   return (
       <ApolloProvider client={client}>
         <Router history={history} onUpdate={fireTracking}>
-            <div>
+                <Switch>
               <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
               <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
               <Route path="/about" render={(props) => <AboutUs auth={auth} {...props} />} />
@@ -60,8 +60,8 @@ export const makeMainRoutes = () => {
                     handleAuthentication(props);
                     return <Callback {...props} />
                   }}/>
-                    {/*<Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />*/}
-            </div>
+                    <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
+                </Switch>
           </Router>
       </ApolloProvider>
   );
