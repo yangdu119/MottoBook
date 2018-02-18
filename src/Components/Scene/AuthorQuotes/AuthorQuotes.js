@@ -25,6 +25,27 @@ class AuthorQuotes extends Component {
                 filter: authorName
             });
         }
+
+
+        if (!this.props.filter.allQuotes){
+            this.props.filter.refetch({
+                filter: this.props.match.params.authorName
+            });
+        }
+    }
+
+    shouldComponentUpdate(nextProps, nextState){
+        if (nextProps.filter.allQuotes !== this.props.filter.allQuotes){
+            if (nextProps.filter.allQuotes.length > 0){
+                return true
+            }else{
+                return false;
+            }
+
+        }else{
+            return false;
+        }
+        console.log('shouldComponentUpdate, nextProps',nextProps)
     }
 
     componentDidMount(){
@@ -36,39 +57,7 @@ class AuthorQuotes extends Component {
             });
         }
     }
-    //
-    // componentWillReceiveProps(nextProps) {
-    //     console.log('AuthorQuotes will receive props', nextProps)
-    //
-    //     //handle page load
-    //     if (!this.props.filter.allQuotes){
-    //         this.props.filter.refetch({
-    //             filter: nextProps.authorName
-    //         });
-    //         this.setState({authorName: nextProps.authorName});
-    //     }
-    //
-    //     //handle filter value changed
-    //     console.log('SearchQuotes will receive props', nextProps)
-    //     console.log('SearchQuotes will receive props this state authorName', this.state.authorName)
-    //     if (nextProps.authorName !== this.state.authorName){
-    //         console.log('handle filter value changed:',nextProps.authorName)
-    //         this.props.filter.refetch({
-    //             filter: nextProps.authorName
-    //         });
-    //         this.setState({authorName: nextProps.authorName});
-    //     }
-    //
-    // }
-    // componentDidMount(){
-    //     console.log('AuthorQuotes componentdidMount props', this.props)
-    //     //handle page load
-    //     if (!this.props.filter.allQuotes){
-    //         this.props.filter.refetch({
-    //             filter: this.props.authorName
-    //         });
-    //     }
-    // }
+
 
     render() {
 
