@@ -103,7 +103,7 @@ class SearchQuotes extends Component {
 const ALL_AUTHOR_QUOTES_QUERY = gql`
     query allFilterQuery($first: Int!, $skip: Int!, $filter: String!){
         allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
-            OR:[{authorQuote_contains: $filter},{author_contains:$filter}]
+            OR:[{authorQuote_contains: $filter},{author_contains:$filter},{authorOccupation_contains:$filter}]
         }){
             id
             authorQuote

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Card, Image, Icon} from 'semantic-ui-react'
+import {Card, Image, Icon, List} from 'semantic-ui-react'
 
 export default class QuoteCard extends React.Component {
 
@@ -37,10 +37,16 @@ export default class QuoteCard extends React.Component {
         }
     }
 
+    processOccupationLink(occupation) {
+        return `/search/${occupation}`
+    }
+
     render() {
-        console.log('QuoteCard props', this.props);
+        //console.log('QuoteCard props', this.props);
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
         const quoteDetailLink = `/quote/${this.props.quote.id}`
+        const occupationList = this.props.quote.authorOccupation.split(",").map(Function.prototype.call, String.prototype.trim);
+        //console.log(occupationList);
 
         return (
             <div className="card" >
@@ -52,14 +58,23 @@ export default class QuoteCard extends React.Component {
                         <Card.Description>
                             <Link to={autorLink}>{this.props.quote.author}</Link>
                         </Card.Description>
-                        <Card.Description className={'black'}>
-                            {this.props.quote.authorOccupation}
-                        </Card.Description>
+
                         <Image src={this.props.quote.imageUrl} href={quoteDetailLink}/>
+
                         <Card.Description>
                             Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
                         </Card.Description>
 
+                        <Card.Description className={'black'}>
+                            <List horizontal divided>
+                                {occupationList.map(occu =>
+                                    <List.Item >
+                                        <Link to={`/search/${occu}`}>{occu}</Link>
+                                    </List.Item>
+                                )}
+                            </List>
+                            {/*{this.props.quote.authorOccupation}*/}
+                        </Card.Description>
                     </Card.Content>
 
                     <Card.Content extra>

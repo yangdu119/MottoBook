@@ -126,14 +126,14 @@
         "birthname": ""
     },
     "Peter Drucker": {
-        "occupation": "Management consultant, educator and author",
+        "occupation": "Management consultant, educator, author",
         "category": "writer",
         "birthplace": "Kaasgraben, Vienna, Austria-Hungary",
         "birthday": "November 19, 1909",
         "birthname": "Peter Ferdinand Drucker"
     },
     "Ellen G. White": {
-        "occupation": "Author and co-founder of the Seventh-day Adventist Church",
+        "occupation": "Author, co-founder of the Seventh-day Adventist Church",
         "category": "religion",
         "birthplace": "Gorham, Maine",
         "birthday": "November 26, 1827",
@@ -168,7 +168,7 @@
         "birthname": "Lucille D\u00e9sir\u00e9e Ball"
     },
     "Sun Tzu": {
-        "occupation": "Military general and tactician",
+        "occupation": "Military general, tactician",
         "category": "military",
         "birthplace": "Qi state",
         "birthday": "544 BC ",
@@ -217,7 +217,7 @@
         "birthname": "Joan Ruth Bader"
     },
     "Jack Welch": {
-        "occupation": "Chairman & CEO of General Electric (1981\u20132001)",
+        "occupation": "Chairman & CEO of General Electric",
         "category": "business",
         "birthplace": "Peabody, Massachusetts, U.S.",
         "birthday": " November 19, 1935 ",
@@ -385,7 +385,7 @@
         "birthname": ""
     },
     "Charles Bukowski": {
-        "occupation": "Poet, novelist, short story writer, and columnist",
+        "occupation": "Poet, novelist, short story writer, columnist",
         "category": "writer",
         "birthplace": "Andernach, Rhineland-Palatinate, Weimar Republic Germany.",
         "birthday": "August 16, 1920",
@@ -455,7 +455,7 @@
         "birthname": ""
     },
     "Elon Musk": {
-        "occupation": "Entrepreneur, engineer, inventor, and investor",
+        "occupation": "Entrepreneur, engineer, inventor, investor",
         "category": "entrepreneur",
         "birthplace": "Pretoria, Transvaal , South Africa",
         "birthday": " June 28, 1971 ",
@@ -651,7 +651,7 @@
         "birthname": "Christopher Johnson McCandless"
     },
     "Groucho Marx": {
-        "occupation": "Comedian, writer, stage, film, radio and television star",
+        "occupation": "Comedian, writer, stage, film, radio, television star",
         "category": "entertainment",
         "birthplace": "Manhattan, New York, U.S.",
         "birthday": "October 2, 1890",
@@ -686,7 +686,7 @@
         "birthname": "William Sanford Nye"
     },
     "James A. Baldwin": {
-        "occupation": "Football player, track athlete, coach of football basketball and baseball",
+        "occupation": "Football player, track athlete, coach",
         "category": "sports",
         "birthplace": "Manchester, New Hampshire",
         "birthday": "May 26, 1886",
@@ -1050,14 +1050,14 @@
         "birthname": ""
     },
     "Jeff Bezos": {
-        "occupation": "Technology and retail entrepreneur and investor",
+        "occupation": "Entrepreneur, investor, CEO of Amazon.com",
         "category": "entrepreneur",
         "birthplace": "Albuquerque, New Mexico, U.S.",
         "birthday": " January 12, 1964 ",
         "birthname": "Jeffrey Preston Jorgensen"
     },
     "John D. Rockefeller": {
-        "occupation": "Oil industry business magnate and philanthropist",
+        "occupation": "Oil industry business magnate, philanthropist",
         "category": "business",
         "birthplace": "Richford, New York, U.S.",
         "birthday": "July 8, 1839",
@@ -1631,7 +1631,7 @@
         "birthname": ""
     },
     "Gloria Steinem": {
-        "occupation": "Writer and journalist for Ms. and New York magazines[3]",
+        "occupation": "Writer, journalist",
         "category": "writer",
         "birthplace": "Toledo, Ohio, U.S.",
         "birthday": " March 25, 1934 ",
@@ -1701,7 +1701,7 @@
         "birthname": "Robin McLaurin Williams"
     },
     "Paulo Coelho": {
-        "occupation": "Novelist, writer and lyricist",
+        "occupation": "Novelist, writer, lyricist",
         "category": "writer",
         "birthplace": "Rio de Janeiro, Brazil",
         "birthday": " August 24, 1947 ",
@@ -1771,7 +1771,7 @@
         "birthname": "Benjamin Aaron Shapiro"
     },
     "Jack Ma": {
-        "occupation": "Founder and Executive Chairman of Alibaba Group",
+        "occupation": "Founder, Executive Chairman of Alibaba Group",
         "category": "business",
         "birthplace": "Hangzhou, Zhejiang, China",
         "birthday": " 10 September 1964 ",
@@ -1925,7 +1925,7 @@
         "birthname": "Alan Alexander Milne"
     },
     "Warren Buffett": {
-        "occupation": "Investor, business magnate, and philanthropist",
+        "occupation": "Investor, business magnate, philanthropist",
         "category": "business",
         "birthplace": "Omaha, Nebraska, U.S.",
         "birthday": " August 30, 1930 ",
@@ -2023,7 +2023,7 @@
         "birthname": "Clinton Richard Dawkins"
     },
     "Audrey Hepburn": {
-        "occupation": "Actress (1948\u20131989), Humanitarian (1988\u20131992)",
+        "occupation": "Actress, Humanitarian",
         "category": "entertainment",
         "birthplace": "Ixelles, Brussels, Belgium",
         "birthday": "4 May 1929",
@@ -2184,7 +2184,7 @@
         "birthname": ""
     },
     "Oprah Winfrey": {
-        "occupation": "Host of The Oprah Winfrey Show (1986\u20132011), Chairwoman and CEO of Harpo Productions (1986\u2013present), Chairwoman, CEO, and CCO of the Oprah Winfrey Network (2011\u2013present), Actress, Author",
+        "occupation": "Host of The Oprah Winfrey Show, Chairwoman, CEO of Harpo Productions, Actress, Author",
         "category": "entertainment",
         "birthplace": "Kosciusko, Mississippi, U.S.",
         "birthday": " January 29, 1954 ",
@@ -2296,7 +2296,7 @@
         "birthname": "Elbert Green Hubbard"
     },
     "Christopher Hitchens": {
-        "occupation": "author, columnist, essayist, orator, religious and literary critic, social critic, journalist",
+        "occupation": "author, columnist, essayist, orator, religious literary critic, social critic, journalist",
         "category": "writer",
         "birthplace": "Portsmouth, Hampshire, England",
         "birthday": "13 April 1949",
@@ -2926,7 +2926,7 @@
         "birthname": ""
     },
     "Steve Jobs": {
-        "occupation": "Entrepreneur, Co-founder, Chairman, and CEO of Apple Inc., Primary investor and CEO of Pixar, Founder and CEO of NeXT",
+        "occupation": "Entrepreneur, Co-founder, Chairman, CEO of Apple Inc., Primary investor and CEO of Pixar, Founder and CEO of NeXT",
         "category": "entrepreneur",
         "birthplace": "San Francisco, California, U.S.",
         "birthday": "February 24, 1955",
@@ -2968,7 +2968,7 @@
         "birthname": "Norma Jeane Mortenson"
     },
     "Maria Montessori": {
-        "occupation": "Physician and educator",
+        "occupation": "Physician, educator",
         "category": "science",
         "birthplace": "Chiaravalle, Marche, Italy",
         "birthday": "August 31, 1870",

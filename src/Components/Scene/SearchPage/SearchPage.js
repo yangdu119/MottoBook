@@ -5,16 +5,11 @@ import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
 
 export default class SearchPage extends Component {
-    constructor() {
-        super();
 
-        this.state = {
-        }
-    }
 
     componentWillReceiveProps(nextProps) {
         let authorName = nextProps.match.params.authorName
-        if (authorName !==this.state.authorName){
+        if (authorName !==this.props.match.params.authorName){
             console.log('SearchPage willReceiveProps: ',authorName)
             this.setState({
                 authorName
