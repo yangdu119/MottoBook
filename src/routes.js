@@ -49,7 +49,6 @@ export const makeMainRoutes = () => {
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
                 <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
                     <Route path="/quote/:quoteId" render={(props) => <QuoteDetailPage auth={auth} {...props} />} />
-                <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
                   <Route path="/profile" render={(props) => (
                     !auth.isAuthenticated() ? (
                       <Redirect to="/"/>
@@ -61,6 +60,7 @@ export const makeMainRoutes = () => {
                     handleAuthentication(props);
                     return <Callback {...props} />
                   }}/>
+                    <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
                 </Switch>
           </Router>
       </ApolloProvider>
