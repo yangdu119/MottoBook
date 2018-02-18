@@ -11,7 +11,6 @@ import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import ReactDOM from 'react-dom'
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-113147944-1'); //Unique Google Analytics tracking number

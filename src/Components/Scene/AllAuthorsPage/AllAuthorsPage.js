@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Image, Rail, Segment, Sticky, Table, Dimmer, Loader} from 'semantic-ui-react'
+import { Grid, Table, Dimmer, Loader} from 'semantic-ui-react'
 import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
 import gql from "graphql-tag";
@@ -14,7 +14,7 @@ class AllAuthorsPage extends Component {
     }
     render() {
         console.log('AllAuthorsPage',this.props);
-        const { allAuthors: { loading, error, todos } } = this.props;
+        const { allAuthors: { loading, error } } = this.props;
         if (loading) {
             return (
                 <Dimmer active inverted>

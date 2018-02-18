@@ -1,25 +1,12 @@
 import React, { Component } from 'react'
 import { Accordion, Form, Menu, Icon } from 'semantic-ui-react'
 import history from '../history'
-import { Link } from 'react-router-dom'
-
-const ColorForm = (props) => {
-    return (
-        <Form.Group grouped>
-            <Form.Input placeholder='Author name...' onChange={props.handleNameChange}/>
-            <br/>
-            <Form.Button primary onClick={props.onAuthorNameSubmit}>Submit </Form.Button>
-        </Form.Group>
-
-    )
-}
 
 
 const OccupationForm = (props) => {
     return (
         <Form>
             <Form.Group grouped>
-                <Form.Radio label='All occupation' name='clear' value='clear' checked={props.value==='clear'} onClick={props.onItemClick}></Form.Radio>
                 <Form.Radio label='Arts' name='arts' value='arts' checked={props.value==='arts'} onClick={props.onItemClick}/>
                 <Form.Radio label='Business' name='business' value='business' checked={props.value==='business'}  onClick={props.onItemClick}/>
                 <Form.Radio label='Entrepreneur' name='entrepreneur' value='entrepreneur' checked={props.value==='entrepreneur'} onClick={props.onItemClick}/>
@@ -57,7 +44,7 @@ export default class VerticalMenu extends Component {
             radioValue: titleProps.value
         })
         console.log("push to history", titleProps.value)
-        if (titleProps.value == 'clear'){
+        if (titleProps.value === 'clear'){
             history.push(`/`);
         }else{
             history.push(`/occupationCategory/${titleProps.value}`);

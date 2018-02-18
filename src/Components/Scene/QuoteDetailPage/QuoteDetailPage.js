@@ -1,47 +1,80 @@
 import React, { Component } from 'react'
-import { Grid, Image, Rail, Segment, Sticky } from 'semantic-ui-react'
-import SearchQuotes from './SearchQuotes'
+import { Grid } from 'semantic-ui-react'
 import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
+import QuoteCard from '../../QuoteCard'
+import {compose, graphql} from "react-apollo/index";
+import gql from "graphql-tag";
 
-export default class QuoteDetailPage extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-        }
-    }
+class QuoteDetailPage extends Component {
 
     componentWillReceiveProps(nextProps) {
-        let authorName = nextProps.match.params.authorName
-        if (authorName !=this.state.authorName) {
-            console.log('SearchPage willReceiveProps: ', authorName)
-            this.setState({
-                authorName
-            })
+        let quoteId = nextProps.match.params.quoteId
+        if (nextProps.match.params.quoteId !== this.props.match.params.quoteId){
+            this.props.quoteGql.refetch({
+                id: quoteId
+            });
         }
     }
-    componentDidMount() {
-        console.log('SearchPage componentDidMount props', this.props);
-        let authorName = this.props.match.params.authorName
-        console.log('authorName: ',authorName)
-        this.setState({
-            authorName
-        })
+
+    componentDidMount(){
+        //handle page load
+        if (!this.props.quoteGql.Quote){
+            this.props.quoteGql.refetch({
+                id: this.props.match.params.quoteId
+            });
+        }
     }
 
     render() {
-
-        const { contextRef } = this.state
+        const quote = this.props.quoteGql.Quote
+        console.log("this props", this.props);
         return (
             <div>
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
                 <Grid centered columns={3} style={{ marginTop: '3em' }}>
                     <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                        <SearchQuotes {...this.state}/>
+                        {
+                            quote &&
+                        <QuoteCard
+                            key={this.state.quoteId}
+                            quote={quote}
+                        />
+                        }
                     </Grid.Column>
                 </Grid>
+                <MottoBookFooter/>
             </div>
         )
     }
 }
+
+const QUOTE_QUERY = gql`
+    query quoteQuery($id: ID!){
+        Quote(id:$id){
+            id
+            authorQuote
+            authorBirthday
+            authorBirthplace
+            authorOccupation
+            author
+            likes
+            dislikes
+            imageUrl
+            createdAt
+        }
+    }
+`
+const quoteGraphql = graphql(QUOTE_QUERY, {
+    name: 'quoteGql',
+    options: {
+        variables: {
+            id: 'none'
+        },
+        fetchPolicy: 'cache-and-network',
+    }
+})
+
+export default compose(
+    quoteGraphql,
+)(QuoteDetailPage)

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Image, Rail, Segment, Sticky } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import SearchQuotes from './SearchQuotes'
 import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
@@ -14,7 +14,7 @@ export default class SearchPage extends Component {
 
     componentWillReceiveProps(nextProps) {
         let authorName = nextProps.match.params.authorName
-        if (authorName !=this.state.authorName){
+        if (authorName !==this.state.authorName){
             console.log('SearchPage willReceiveProps: ',authorName)
             this.setState({
                 authorName
@@ -33,8 +33,6 @@ export default class SearchPage extends Component {
     }
 
     render() {
-
-        const { contextRef } = this.state
         return (
             <div>
                 <MottoBookHeader auth={this.props.auth} {...this.props} />

@@ -38,7 +38,9 @@ export default class QuoteCard extends React.Component {
     }
 
     render() {
+        console.log('QuoteCard props', this.props);
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
+        const quoteDetailLink = `/quote/${this.props.quote.id}`
 
         return (
             <div className="card" >
@@ -53,7 +55,7 @@ export default class QuoteCard extends React.Component {
                         <Card.Description className={'black'}>
                             {this.props.quote.authorOccupation}
                         </Card.Description>
-                        <Image src={this.props.quote.imageUrl} />
+                        <Image src={this.props.quote.imageUrl} href={quoteDetailLink}/>
                         <Card.Description>
                             Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
                         </Card.Description>

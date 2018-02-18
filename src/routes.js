@@ -1,7 +1,6 @@
 import React from 'react';
-import { Router as Router, Route, Redirect, Switch} from 'react-router-dom'
+import { Router, Route, Redirect, Switch} from 'react-router-dom'
 
-import App from './App-Auth0';
 import Profile from './Components/Scene/Profile/Profile';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
@@ -20,6 +19,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import ReactGA from 'react-ga';
 import AllAuthorsPage from "./Components/Scene/AllAuthorsPage/AllAuthorsPage";
 import NotFound from './Components/Scene/NotFound'
+import QuoteDetailPage from './Components/Scene/QuoteDetailPage/QuoteDetailPage'
 ReactGA.initialize('UA-113147944-1'); //Unique Google Analytics tracking number
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -48,6 +48,7 @@ export const makeMainRoutes = () => {
                 <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
                 <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
+                    <Route path="/quote/:quoteId" render={(props) => <QuoteDetailPage auth={auth} {...props} />} />
                 <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
                   <Route path="/profile" render={(props) => (
                     !auth.isAuthenticated() ? (

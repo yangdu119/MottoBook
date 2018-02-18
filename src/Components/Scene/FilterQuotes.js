@@ -1,13 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import queryString from 'query-string';
-
 import { graphql, compose } from "react-apollo";
-
-import moment from "moment";
-import {Card,Icon, Image, Button, Radio, Form, Loader, Dimmer} from 'semantic-ui-react'
-import xmlToJSON from 'xmltojson'
-import 'whatwg-fetch'
+import { Button, Loader, Dimmer} from 'semantic-ui-react'
 import gql from 'graphql-tag'
 import QuoteCard from '../QuoteCard'
 
@@ -62,7 +55,7 @@ class FilterQuotes extends Component {
         }
 
         //handle filter value changed
-        if (nextProps.radioSelected != this.state.filterValue){
+        if (nextProps.radioSelected !== this.state.filterValue){
             this.props.filter.refetch({
                 filter: nextProps.radioSelected
             });
@@ -75,12 +68,7 @@ class FilterQuotes extends Component {
     }
 
     render() {
-
-        const isFilterClear = this.state.filterValue === 'clear';
-        const isAuthorSearchClear = this.state.authorName === '';
-        console.log("FilterQuotes this.state", this.state)
-        console.log('FilterQuotes this props', this.props)
-        const { filter: { loading, error, todos } } = this.props;
+        const { filter: { loading, error } } = this.props;
         if (loading) {
             return (
                 <Dimmer active inverted>

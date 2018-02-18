@@ -1,7 +1,5 @@
 import React from 'react';
-import {Menu, Button} from 'semantic-ui-react'
-import SearchBar from './SearchBar'
-import { Container, Divider, Dropdown, Grid, Header, Image, List, Segment, Card} from 'semantic-ui-react'
+import { Container, Divider, List, Segment} from 'semantic-ui-react'
 
 const MottoBookFooter = () =>(
     <div>

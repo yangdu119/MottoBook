@@ -1,20 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-
 import { graphql, compose } from "react-apollo";
-import moment from "moment";
-import {Card,Icon, Image, Button, Radio, Form, Dimmer, Loader} from 'semantic-ui-react'
-import xmlToJSON from 'xmltojson'
-import 'whatwg-fetch'
+import {Button, Dimmer, Loader} from 'semantic-ui-react'
 import gql from 'graphql-tag'
 import QuoteCard from './QuoteCard'
 
 const QUOTES_PER_PAGE = 10;
 const RANDOM_SKIP_NUMBER = Math.floor(Math.random() * 150);
 class AllQuotes extends Component {
-    constructor(props){
-        super(props);
-    }
 
     static defaultProps = {
         events: [],
@@ -27,7 +19,7 @@ class AllQuotes extends Component {
     }
 
     render() {
-        const { data: { loading, error, todos } } = this.props;
+        const { data: { loading, error } } = this.props;
         if (loading) {
             return (
                 <Dimmer active inverted>

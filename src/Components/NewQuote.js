@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
-import { v4 as uuid } from "uuid";
 import { graphql } from "react-apollo";
-
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
-
-import { nearest15min } from "../Utils";
-import DateTimePickerCustomInput from "./DateTimePickerCustomInput";
-
 import MottoBookHeader from './Header'
 import MottoBookFooter from './Footer'
 import gql from 'graphql-tag'

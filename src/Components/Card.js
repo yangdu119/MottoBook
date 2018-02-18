@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import React from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
 import faker from 'faker'

@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import queryString from 'query-string';
-
 import { graphql, compose } from "react-apollo";
-
-import moment from "moment";
-import {Card,Icon, Image, Button, Radio, Form, Dimmer, Loader} from 'semantic-ui-react'
-import xmlToJSON from 'xmltojson'
+import {Button, Dimmer, Loader} from 'semantic-ui-react'
 import 'whatwg-fetch'
 import gql from 'graphql-tag'
 import QuoteCard from '../../QuoteCard'
@@ -59,7 +53,7 @@ class AuthorQuotes extends Component {
         //handle filter value changed
         console.log('SearchQuotes will receive props', nextProps)
         console.log('SearchQuotes will receive props this state authorName', this.state.authorName)
-        if (nextProps.authorName != this.state.authorName && this.state.authorName){
+        if (nextProps.authorName !== this.state.authorName && this.state.authorName){
             console.log('handle filter value changed:',nextProps.authorName)
             this.props.filter.refetch({
                 filter: nextProps.authorName
@@ -78,7 +72,7 @@ class AuthorQuotes extends Component {
     // }
 
     render() {
-        const { filter: { loading, error, todos } } = this.props;
+        const { filter: { loading, error } } = this.props;
         const foundQuotes = this.props.filter.allQuotes;
         if (loading) {
             return (
@@ -108,7 +102,7 @@ class AuthorQuotes extends Component {
                     }
 
                     {
-                        foundQuotes && foundQuotes.length==0 &&
+                        foundQuotes && foundQuotes.length===0 &&
                         <p>No Quotes Found</p>
 
                     }

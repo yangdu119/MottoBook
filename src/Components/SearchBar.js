@@ -1,11 +1,9 @@
 import React from 'react'
-import { Input, Form} from 'semantic-ui-react'
+import {Form} from 'semantic-ui-react'
 import history from '../history'
 
 export default class SearchBar extends React.Component {
-    constructor(){
-        super()
-    }
+
     state = {
         searchTerm: ""
     }

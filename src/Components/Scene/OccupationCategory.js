@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Image, Rail, Segment, Sticky } from 'semantic-ui-react'
-import FeedExampleBasic from '../Feed'
+import { Grid } from 'semantic-ui-react'
 import VerticalMenu from '../VerticalMenu'
 import FilterQuotes from './FilterQuotes'
 import MottoBookHeader from '../Header'
@@ -14,9 +13,6 @@ export default class OccupationCategory extends Component {
             radioSelected: 'clear',
         }
     }
-
-    handleContextRef = contextRef => this.setState({ contextRef })
-
     handleCategoryClick = (item) => {
 
         this.setState({
@@ -26,7 +22,7 @@ export default class OccupationCategory extends Component {
 
     componentWillReceiveProps(nextProps) {
         let radioSelected = nextProps.match.params.category
-        if (radioSelected !=this.state.radioSelected) {
+        if (radioSelected !==this.state.radioSelected) {
             console.log('occupation category radio selected: ', radioSelected)
             this.setState({
                 radioSelected: radioSelected
@@ -43,8 +39,6 @@ export default class OccupationCategory extends Component {
     }
 
     render() {
-
-        const { contextRef } = this.state
         return (
             <div>
                 <MottoBookHeader auth={this.props.auth} {...this.props} />
