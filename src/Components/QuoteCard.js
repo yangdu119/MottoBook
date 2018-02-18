@@ -46,7 +46,7 @@ export default class QuoteCard extends React.Component {
             <div className="card" >
                 <Card fluid>
                     <Card.Content>
-                        <Card.Header>
+                        <Card.Header href={quoteDetailLink}>
                             {this.props.quote.authorQuote}
                         </Card.Header>
                         <Card.Description>

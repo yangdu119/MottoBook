@@ -37,8 +37,9 @@ class QuoteDetailPage extends Component {
                         {
                             quote &&
                         <QuoteCard
-                            key={this.state.quoteId}
+                            key={this.props.match.params.quoteId}
                             quote={quote}
+                            auth={this.props.auth}
                         />
                         }
                     </Grid.Column>
