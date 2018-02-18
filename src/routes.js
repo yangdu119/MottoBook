@@ -10,7 +10,7 @@ import Home from './Components/Home'
 import AboutUs from './Components/AboutUs'
 import NewQuote from './Components/NewQuote'
 import OccupationCategory from './Components/Scene/OccupationCategory'
-import AuthorQuotesPage from './Components/Scene/AuthorQuotes/AuthorQuotesPage'
+import AuthorQuotes from './Components/Scene/AuthorQuotes/AuthorQuotes'
 import SearchPage from './Components/Scene/SearchPage/SearchPage'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
@@ -39,14 +39,14 @@ export const makeMainRoutes = () => {
   return (
       <ApolloProvider client={client}>
         <Router history={history} onUpdate={fireTracking}>
-                <Switch>
+            <div>
               <Route exact path="/" render={(props) => <Home auth={auth} {...props} />} />
               <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
               <Route path="/about" render={(props) => <AboutUs auth={auth} {...props} />} />
               <Route path="/newQuote" render={(props) => <NewQuote auth={auth} {...props} />} />
                 <Route path="/allAuthors" render={(props) => <AllAuthorsPage auth={auth} {...props} />} />
                 <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
-                <Route path="/author/:authorName" render={(props) => <AuthorQuotesPage auth={auth} {...props} />} />
+                <Route path="/author/:authorName" render={(props) => <AuthorQuotes auth={auth} {...props} />} />
                 <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
                     <Route path="/quote/:quoteId" render={(props) => <QuoteDetailPage auth={auth} {...props} />} />
                   <Route path="/profile" render={(props) => (
@@ -60,8 +60,8 @@ export const makeMainRoutes = () => {
                     handleAuthentication(props);
                     return <Callback {...props} />
                   }}/>
-                    <Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />
-                </Switch>
+                    {/*<Route path="*" render={(props) => <NotFound auth={auth} {...props} />} />*/}
+            </div>
           </Router>
       </ApolloProvider>
   );

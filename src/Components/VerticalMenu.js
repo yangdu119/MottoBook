@@ -59,14 +59,12 @@ export default class VerticalMenu extends Component {
     }
 
     componentDidMount() {
-        console.log('verticalMenu props', this.props)
         this.setState({
             radioValue: this.props.radioSelected
         })
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('verticalMenu will receive props', nextProps)
         this.setState({
             radioValue: nextProps.radioSelected
         })

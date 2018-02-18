@@ -68,7 +68,7 @@ export default class QuoteCard extends React.Component {
                         <Card.Description className={'black'}>
                             <List horizontal divided>
                                 {occupationList.map(occu =>
-                                    <List.Item >
+                                    <List.Item key={occu.toString()}>
                                         <Link to={`/search/${occu}`}>{occu}</Link>
                                     </List.Item>
                                 )}

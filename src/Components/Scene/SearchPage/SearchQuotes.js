@@ -29,6 +29,7 @@ class SearchQuotes extends Component {
             this.props.filter.refetch({
                 filter: nextProps.authorName
             });
+            this.setState({authorName: nextProps.authorName});
         }
 
         //     //handle filter value changed
@@ -39,10 +40,9 @@ class SearchQuotes extends Component {
                 this.props.filter.refetch({
                     filter: nextProps.authorName
                 });
+
+                this.setState({authorName: nextProps.authorName});
             }
-
-
-        this.setState({authorName: nextProps.authorName});
     }
 
     componentDidMount(){
