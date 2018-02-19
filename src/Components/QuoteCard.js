@@ -59,12 +59,6 @@ export default class QuoteCard extends React.Component {
                             <Link to={autorLink}>{this.props.quote.author}</Link>
                         </Card.Description>
 
-                        <Image src={this.props.quote.imageUrl} href={quoteDetailLink}/>
-
-                        <Card.Description>
-                            Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
-                        </Card.Description>
-
                         <Card.Description className={'black'}>
                             <List horizontal divided>
                                 {occupationList.map(occu =>
@@ -73,8 +67,15 @@ export default class QuoteCard extends React.Component {
                                     </List.Item>
                                 )}
                             </List>
-                            {/*{this.props.quote.authorOccupation}*/}
                         </Card.Description>
+
+                        <Image src={this.props.quote.imageUrl} href={quoteDetailLink}/>
+
+                        <Card.Description>
+                            Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
+                        </Card.Description>
+
+
                     </Card.Content>
 
                     <Card.Content extra>
