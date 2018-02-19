@@ -31,7 +31,7 @@ export default class SearchBar extends React.Component {
         return(
             <Form onSubmit={this.handleSubmit}>
                 <Form.Input
-                    icon={{name: 'search', circular: true, link: true}}
+                    icon={{name: 'search', circular: true, link: true, onClick:this.handleSubmit}}
                     placeholder='Search...'
                     onChange = {this.handleChange}
                 />

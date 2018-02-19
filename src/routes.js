@@ -20,6 +20,7 @@ import ReactGA from 'react-ga';
 import AllAuthorsPage from "./Components/Scene/AllAuthorsPage/AllAuthorsPage";
 import NotFound from './Components/Scene/NotFound'
 import QuoteDetailPage from './Components/Scene/QuoteDetailPage/QuoteDetailPage'
+import NewSearchPage from './Components/Scene/SearchPage/NewSearchPage'
 ReactGA.initialize('UA-113147944-1'); //Unique Google Analytics tracking number
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -47,7 +48,7 @@ export const makeMainRoutes = () => {
                 <Route path="/allAuthors" render={(props) => <AllAuthorsPage auth={auth} {...props} />} />
                 <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotes auth={auth} {...props} />} />
-                <Route path="/search/:authorName" render={(props) => <SearchPage auth={auth} {...props} />} />
+                <Route path="/search/:authorName" render={(props) => <NewSearchPage auth={auth} {...props} />} />
                     <Route path="/quote/:quoteId" render={(props) => <QuoteDetailPage auth={auth} {...props} />} />
                   <Route path="/profile" render={(props) => (
                     !auth.isAuthenticated() ? (

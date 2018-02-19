@@ -8,7 +8,7 @@ import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
 
 const QUOTES_PER_PAGE = 10;
-class AuthorQuotes extends Component {
+class NewSearchPage extends Component {
 
     filterLoadMore = () => {
         this.props.loadFilterQuotes(this.props.match.params.authorName);
@@ -45,6 +45,7 @@ class AuthorQuotes extends Component {
         }else{
             return false;
         }
+        console.log('shouldComponentUpdate, nextProps',nextProps)
     }
 
     componentDidMount(){
@@ -65,64 +66,64 @@ class AuthorQuotes extends Component {
         if (loading) {
             return (
                 <div>
-                <MottoBookHeader auth={this.props.auth} {...this.props} />
-                <Grid centered columns={3} style={{ marginTop: '3em' }}>
-                <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                <Dimmer active inverted>
-                    <Loader>Loading</Loader>
-                </Dimmer>
-                </Grid.Column>
-                </Grid>
-                <MottoBookFooter />
+                    <MottoBookHeader auth={this.props.auth} {...this.props} />
+                    <Grid centered columns={3} style={{ marginTop: '3em' }}>
+                        <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
+                            <Dimmer active inverted>
+                                <Loader>Loading</Loader>
+                            </Dimmer>
+                        </Grid.Column>
+                    </Grid>
+                    <MottoBookFooter />
                 </div>
             )
         } else if (error) {
             return (
                 <div>
-                <MottoBookHeader auth={this.props.auth} {...this.props} />
-                <Grid centered columns={3} style={{ marginTop: '3em' }}>
-                <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                <p>Error!</p>
-                </Grid.Column>
-                </Grid>
-                <MottoBookFooter />
+                    <MottoBookHeader auth={this.props.auth} {...this.props} />
+                    <Grid centered columns={3} style={{ marginTop: '3em' }}>
+                        <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
+                            <p>Error!</p>
+                        </Grid.Column>
+                    </Grid>
+                    <MottoBookFooter />
                 </div>
             )
         } else {
             console.log('render this props', this.props)
             return (
-                    <div>
+                <div>
                     <MottoBookHeader auth={this.props.auth} {...this.props} />
                     <Grid centered columns={3} style={{ marginTop: '3em' }}>
-                    <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
-                        <div>
-                    {
-                        this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
-                        <QuoteCard
-                        key={quote.id}
-                        quote={quote}
-                        auth={this.props.auth}
-                        />))
-                    }
+                        <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
+                            <div>
+                                {
+                                    this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
+                                        <QuoteCard
+                                            key={quote.id}
+                                            quote={quote}
+                                            auth={this.props.auth}
+                                        />))
+                                }
 
-                    {
-                        foundQuotes && foundQuotes.length>0 &&
-                        <Button primary onClick={this.filterLoadMore}>
-                        Load More Quotes
-                        </Button>
-                    }
+                                {
+                                    foundQuotes && foundQuotes.length>0 &&
+                                    <Button primary onClick={this.filterLoadMore}>
+                                        Load More Quotes
+                                    </Button>
+                                }
 
-                    {
-                        foundQuotes && foundQuotes.length===0 &&
-                        <p>No Quotes Found</p>
+                                {
+                                    foundQuotes && foundQuotes.length===0 &&
+                                    <p>No Quotes Found</p>
 
-                    }
+                                }
 
-                        </div>
-                    </Grid.Column>
+                            </div>
+                        </Grid.Column>
                     </Grid>
                     <MottoBookFooter />
-                    </div>
+                </div>
 
 
 
@@ -135,7 +136,7 @@ class AuthorQuotes extends Component {
 const ALL_AUTHOR_QUOTES_QUERY = gql`
     query allFilterQuery($first: Int!, $skip: Int!, $filter: String!){
         allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
-            author_contains: $filter
+            OR:[{authorQuote_contains: $filter},{author_contains:$filter},{authorOccupation_contains:$filter}]
         }){
             id
             authorQuote
@@ -190,4 +191,4 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
 
 export default compose(
     allAuthorQuotesGraphql,
-)(AuthorQuotes)
+)(NewSearchPage)
