@@ -43,7 +43,8 @@ type User @model {
   nickname: String!
   name: String!
   picture: String!
-  gender: String!
+  sub: String! @isUnique
+  locale: String!
 
   likeQuotes: [Quote!]! @relation(name: "UserLikeQuotes")
   dislikeQuotes: [Quote!]! @relation(name: "UserDislikeQuotes")
