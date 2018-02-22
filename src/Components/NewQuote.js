@@ -150,32 +150,3 @@ const CREATE_QUOTE_MUTATION = gql`
 
 const CreatePageWithMutation = graphql(CREATE_QUOTE_MUTATION, {name: 'createQuoteMutation'})(NewQuote)
 export default withRouter(CreatePageWithMutation)
-//
-// export default graphql(
-//     MutationcreateQuote,
-//     {
-//         options: {
-//             refetchQueries: [{ query: QueryAllEvents }],
-//             update: (proxy, { data: { createQuote } }) => {
-//                 const query = QueryAllEvents;
-//                 const data = proxy.readQuery({ query });
-//
-//                 data.listEvents.items.push(createQuote);
-//
-//                 proxy.writeQuery({ query, data });
-//             }
-//         },
-//         props: (props) => ({
-//             createQuote: (event) => {
-//                 return props.mutate({
-//                     variables: event,
-//                     optimisticResponse: () => ({
-//                         createQuote: {
-//                             ...event, id: uuid(), __typename: 'Event', comments: { __typename: 'CommentConnection', items: [] }
-//                         }
-//                     }),
-//                 })
-//             }
-//         })
-//     }
-// )(NewQuote);

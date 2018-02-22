@@ -35,7 +35,7 @@ class MottoBookHeader extends Component {
                     {
 
                         <Menu.Item className='item'>
-                            <a href="/newquote">New Quote</a>
+                            <a href="/newquote">New Motto</a>
                         </Menu.Item>
 
                     }

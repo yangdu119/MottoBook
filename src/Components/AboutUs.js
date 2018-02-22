@@ -8,13 +8,13 @@ export default class AboutUs extends Component {
         <div>
             <MottoBookHeader auth={this.props.auth} {...this.props}/>
 
-            <div class="ui vertical stripe segment">
-                <div class="ui text container">
+            <div className="ui vertical stripe segment">
+                <div className="ui text container">
                     <br/>
                     <br/>
                     <br/>
                     <br/>
-                    <h3 class="ui header">Open Letter</h3>
+                    <h3 className="ui header">Open Letter</h3>
                     <p>
                         In the beginning was the word, and the word was with God and the word was God. (John 1:1).
                         I'm creating this website to collect all the wisdom words, all the inspired words.
