@@ -40,7 +40,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "cypress": "^2.0.2"
-  }
+  "devDependencies": {}
 }
