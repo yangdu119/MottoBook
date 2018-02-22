@@ -32,6 +32,7 @@ type Author @model {
     authorCategory: String!
 }
 
+
 type User @model {
   id: ID! @isUnique
   createdAt: DateTime!

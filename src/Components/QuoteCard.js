@@ -8,7 +8,6 @@ import { graphql, compose } from "react-apollo";
 
 class QuoteCard extends React.Component {
 
-
     processLink(authorName) {
         authorName = authorName.replace(/ /g,"_");
         return authorName
@@ -21,6 +20,10 @@ class QuoteCard extends React.Component {
             query getLikes{
               Quote(id: "${quoteId}"){
                 likes
+                likedBy{
+                    id
+                    name
+                }
               }
             }
         `
@@ -29,46 +32,119 @@ class QuoteCard extends React.Component {
             .then(result => {
                 const {data, errors, extensions} = result;
                 if (data){
-                    resolve(data.Quote.likes)
+                    resolve(data.Quote)
                 }
             })
     })
 
-    getQuoteDisLikes = (quoteId) => new Promise(function(resolve, reject){
+    getUserId = (sub) => new Promise(function(resolve, reject){
         const uri = graphqlEndPoint.graphqlEndPoint
         const apolloFetch = createApolloFetch({uri})
-        const getLikesQuery = `
-            query getLikes{
-              Quote(id: "${quoteId}"){
-                dislikes
+        const query = `
+            query{
+              User(sub: "${sub}"){
+                id
               }
             }
         `
 
-        apolloFetch({query:getLikesQuery})
+        apolloFetch({query})
             .then(result => {
                 const {data, errors, extensions} = result;
                 if (data){
-                    resolve(data.Quote.dislikes)
+                    resolve(data.User.id)
                 }
             })
+    })
+
+    // getQuoteDisLikes = (quoteId) => new Promise(function(resolve, reject){
+    //     const uri = graphqlEndPoint.graphqlEndPoint
+    //     const apolloFetch = createApolloFetch({uri})
+    //     const getLikesQuery = `
+    //         query getLikes{
+    //           Quote(id: "${quoteId}"){
+    //             dislikes
+    //             likedBy
+    //           }
+    //         }
+    //     `
+    //
+    //     apolloFetch({query:getLikesQuery})
+    //         .then(result => {
+    //             const {data, errors, extensions} = result;
+    //             if (data){
+    //                 console.log('data quote', data.Quote)
+    //                 resolve(data.Quote.dislikes)
+    //             }
+    //         })
+    // })
+
+    addQuoteToMyLikes = (quoteId, userId) => new Promise(function(resolve, reject){
+        const uri = graphqlEndPoint.graphqlEndPoint
+        const apolloFetch = createApolloFetch({uri})
+        const query = `
+            mutation {
+              addToUserLikeQuotes(
+                likedByUserId: "${userId}"
+                likeQuotesQuoteId: "${quoteId}"
+              ){
+                likedByUser{
+                  id
+                }
+                likeQuotesQuote{
+                  id
+                }
+              }
+            }
+        `
+
+        apolloFetch({query})
+            .then(result => {
+                const {data, errors, extensions} = result;
+                if (data){
+                    resolve(data)
+                }
+            })
+    })
+
+    getUserProfile = (that) => new Promise(function(resolve, reject){
+        const { userProfile, getProfile } = that.props.auth;
+        if (!userProfile) {
+            getProfile((err, profile) => {
+                resolve(profile)
+            });
+        } else {
+            resolve(userProfile)
+        }
+
     })
 
     async incrementLikes(quoteId){
-        const likes = await this.getQuoteLikes(quoteId)
-        this.props.updateLikes({
+        const {likes, likedBy} = await this.getQuoteLikes(quoteId)
+        console.log('likedBy', likedBy)
+        //get user profile
+        const {sub} = await this.getUserProfile(this);
+        const userId = await this.getUserId(sub)
+        await this.addQuoteToMyLikes(quoteId,userId);
+
+        if (likedBy.filter(e => e.id === userId).length ==0){
+            this.props.updateLikes({
                 quoteId: quoteId,
                 likes: likes+1
-        })
+            })
+        }else{
+            //tell user he already add the quote in his mottobook
+        }
+        //await this.addQuoteToMyLikes(quoteId,this.props.auth.)
     }
 
-    async incrementDisLikes(quoteId){
-        const disLikes = await this.getQuoteDisLikes(quoteId)
-        this.props.updateDisLikes({
-            quoteId: quoteId,
-            dislikes: disLikes+1
-        })
-    }
+    // async incrementDisLikes(quoteId){
+    //     const disLikes = await this.getQuoteDisLikes(quoteId)
+    //     this.props.updateDisLikes({
+    //         quoteId: quoteId,
+    //         dislikes: disLikes+1
+    //     })
+    // }
 
     handleLike = () => {
         const { isAuthenticated } = this.props.auth;
@@ -82,15 +158,15 @@ class QuoteCard extends React.Component {
         }
     }
 
-    handleDislike = () => {
-        const { isAuthenticated } = this.props.auth;
-        if (!isAuthenticated()){
-            this.props.auth.login();
-            console.log('navigate to login page')
-        }else{
-            this.incrementDisLikes(this.props.quote.id)
-        }
-    }
+    // handleDislike = () => {
+    //     const { isAuthenticated } = this.props.auth;
+    //     if (!isAuthenticated()){
+    //         this.props.auth.login();
+    //         console.log('navigate to login page')
+    //     }else{
+    //         this.incrementDisLikes(this.props.quote.id)
+    //     }
+    // }
 
     handleComments = () => {
         const { isAuthenticated } = this.props.auth;
@@ -129,11 +205,15 @@ class QuoteCard extends React.Component {
                                 )}
                             </List>
                         </Card.Description>
+                        <Card.Description>
+                            Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
+                        </Card.Description>
 
                         <Image src={this.props.quote.imageUrl} href={quoteDetailLink}/>
 
                         <Card.Description>
-                            Born: {this.props.quote.authorBirthday}, {this.props.quote.authorBirthplace}
+                            <Icon name='empty heart' />
+                            {this.props.quote.likes}
                         </Card.Description>
 
 
@@ -176,19 +256,19 @@ const updateLikes = gql`
             }
     `
 
-const updateDislikes = gql`
-    mutation mutateLikes($quoteId: ID!, $dislikes:Int!){
-              updateQuote(
-                id: $quoteId
-                dislikes: $dislikes
-              ){
-                id
-                __typename
-                dislikes
-                
-              }
-            }
-    `
+// const updateDislikes = gql`
+//     mutation mutateLikes($quoteId: ID!, $dislikes:Int!){
+//               updateQuote(
+//                 id: $quoteId
+//                 dislikes: $dislikes
+//               ){
+//                 id
+//                 __typename
+//                 dislikes
+//
+//               }
+//             }
+//     `
 
 const UpdateLikesWithData = graphql(updateLikes, {
     props: ({ ownProps, mutate }) => ({
@@ -207,23 +287,23 @@ const UpdateLikesWithData = graphql(updateLikes, {
     }),
 })
 
-const UpdateDisLikesWithData = graphql(updateDislikes, {
-    props: ({ ownProps, mutate }) => ({
-        updateDisLikes({ quoteId, dislikes }) {
-            return mutate({
-                variables: { quoteId, dislikes },
-                optimisticResponse: {
-                    updateQuote: {
-                        id: quoteId,
-                        __typename: 'Quote',
-                        dislikes: dislikes,
-                    },
-                },
-            });
-        },
-    }),
-})
+// const UpdateDisLikesWithData = graphql(updateDislikes, {
+//     props: ({ ownProps, mutate }) => ({
+//         updateDisLikes({ quoteId, dislikes }) {
+//             return mutate({
+//                 variables: { quoteId, dislikes },
+//                 optimisticResponse: {
+//                     updateQuote: {
+//                         id: quoteId,
+//                         __typename: 'Quote',
+//                         dislikes: dislikes,
+//                     },
+//                 },
+//             });
+//         },
+//     }),
+// })
 export default compose(
     UpdateLikesWithData,
-    UpdateDisLikesWithData,
+    //UpdateDisLikesWithData,
 )(QuoteCard)
