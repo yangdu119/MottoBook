@@ -46,7 +46,7 @@ export const makeMainRoutes = () => {
               <Route path="/about" render={(props) => <AboutUs auth={auth} {...props} />} />
               <Route path="/newQuote" render={(props) => <NewQuote auth={auth} {...props} />} />
                 <Route path="/allAuthors" render={(props) => <AllAuthorsPage auth={auth} {...props} />} />
-                <Route path="/occupationCategory/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
+                <Route path="/category/:category" render={(props) => <OccupationCategory auth={auth} {...props} />} />
                 <Route path="/author/:authorName" render={(props) => <AuthorQuotes auth={auth} {...props} />} />
                 <Route path="/search/:authorName" render={(props) => <NewSearchPage auth={auth} {...props} />} />
                     <Route path="/quote/:quoteId" render={(props) => <QuoteDetailPage auth={auth} {...props} />} />

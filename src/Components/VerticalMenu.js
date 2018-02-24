@@ -47,7 +47,7 @@ export default class VerticalMenu extends Component {
         if (titleProps.value === 'clear'){
             history.push(`/`);
         }else{
-            history.push(`/occupationCategory/${titleProps.value}`);
+            history.push(`/category/${titleProps.value}`);
         }
 
 
@@ -81,7 +81,7 @@ export default class VerticalMenu extends Component {
                 <Menu.Item>
                     <Accordion.Title
                         active={activeIndex === 0}
-                        content='Author occupation'
+                        content='Categories'
                         index={0}
                         onClick={this.handleClick}
                     />

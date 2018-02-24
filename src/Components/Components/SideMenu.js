@@ -16,7 +16,7 @@ export default class SideMenu extends Component {
                 </Menu.Item>
 
                 <Menu.Item>
-                    Author Occupations
+                    Categories
 
                     <Menu.Menu>
                         <Menu.Item name='search' active={activeItem === 'search'} onClick={this.handleItemClick}>

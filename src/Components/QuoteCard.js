@@ -5,6 +5,7 @@ import graphqlEndPoint from "../GraphQLConfig"
 import {createApolloFetch} from 'apollo-fetch';
 import gql from 'graphql-tag'
 import { graphql, compose } from "react-apollo";
+import DocumentMeta from 'react-document-meta';
 
 class QuoteCard extends React.Component {
 
@@ -184,8 +185,29 @@ class QuoteCard extends React.Component {
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
         const quoteDetailLink = `/quote/${this.props.quote.id}`
         const occupationList = this.props.quote.authorOccupation.split(",").map(Function.prototype.call, String.prototype.trim);
-
+        const meta = {
+            // title: 'Some Meta Title',
+            // description: 'I am a description, and I can create multiple tags',
+            // canonical: 'http://example.com/path/to/page',
+             meta: {
+                charset: 'utf-8',
+                // name: {
+                //     keywords: 'react,meta,document,html,tags'
+                // },
+                property: {
+                    "og:site_name": "MottoBook",
+                    "og:url": `https://www.mottobook.com/quote/${this.props.quote.id}`,
+                    "og:type": "article",
+                    "og:title": `"${this.props.quote.author} Quotes"`,
+                    "og:description": `"${this.props.quote.authorQuote}"`,
+                    "og:image": `"${this.props.quote.imageUrl}"`,
+                },
+            }
+        };
         return (
+            <div>
+                <DocumentMeta {...meta}>
+                </DocumentMeta>
             <div className="card" >
                 <Card fluid>
                     <Card.Content>
@@ -238,6 +260,7 @@ class QuoteCard extends React.Component {
 
                 </Card>
                 <br/>
+            </div>
             </div>
         )
     }

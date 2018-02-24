@@ -1,0 +1,56 @@
+[2018-02-22 16:20:57,879 INFO root] Taurus CLI Tool v1.10.5
+[2018-02-22 16:20:57,880 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': '/var/folders/jw/xg6599k96sqfmlcw015jf1w00000gq/T/bzt_8OXMSy.log', 'option': None, 'aliases': []}
+[2018-02-22 16:20:57,880 DEBUG root] Python: CPython 2.7.10
+[2018-02-22 16:20:57,880 DEBUG root] OS: ('Darwin', 'STL-YDU-MBPRO.local', '17.4.0', 'Darwin Kernel Version 17.4.0: Sun Dec 17 09:19:54 PST 2017; root:xnu-4570.41.2~1/RELEASE_X86_64', 'x86_64', 'i386')
+[2018-02-22 16:20:57,880 INFO root] Starting with configs: []
+[2018-02-22 16:20:57,881 DEBUG root] Using personal config: /Users/yang/.bzt-rc
+[2018-02-22 16:20:57,881 INFO Engine] Configuring...
+[2018-02-22 16:20:57,882 DEBUG Engine] No machine configs dir: /usr/local/etc/bzt.d
+[2018-02-22 16:20:57,882 DEBUG Engine] Base configs list: ['/Users/yang/work/taurus/taurus/bzt/resources/base-config.yml']
+[2018-02-22 16:20:57,882 DEBUG Engine.Configuration] Configs: ['/Users/yang/work/taurus/taurus/bzt/resources/base-config.yml']
+[2018-02-22 16:20:57,883 DEBUG Engine.Configuration] Reading /Users/yang/work/taurus/taurus/bzt/resources/base-config.yml as YAML
+[2018-02-22 16:20:57,920 DEBUG Engine] User configs list: ['/Users/yang/.bzt-rc']
+[2018-02-22 16:20:57,920 DEBUG Engine.Configuration] Configs: ['/Users/yang/.bzt-rc']
+[2018-02-22 16:20:57,922 DEBUG Engine.Configuration] Reading /Users/yang/.bzt-rc as YAML
+[2018-02-22 16:20:57,927 DEBUG Engine.Configuration] Configs: ['/Users/yang/.bzt-rc']
+[2018-02-22 16:20:57,928 DEBUG Engine.Configuration] Reading /Users/yang/.bzt-rc as YAML
+[2018-02-22 16:20:57,945 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.10.5&installID=macos-c8e0eb18dfb3
+[2018-02-22 16:20:57,951 INFO Engine] Artifacts dir: /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304
+[2018-02-22 16:20:57,951 DEBUG Engine] New artifact filename: /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/effective
+[2018-02-22 16:20:57,954 DEBUG Engine.Configuration] Dumping YAML config into /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/effective.yml
+[2018-02-22 16:20:57,985 DEBUG Engine.Configuration] Dumping JSON config into /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/effective.json
+[2018-02-22 16:20:57,987 DEBUG root] Closing log handler: /var/folders/jw/xg6599k96sqfmlcw015jf1w00000gq/T/bzt_8OXMSy.log
+[2018-02-22 16:20:57,988 DEBUG root] Switched writing logs to /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/bzt.log
+[2018-02-22 16:20:57,988 DEBUG root] Linting config
+[2018-02-22 16:20:57,991 INFO Engine] Preparing...
+[2018-02-22 16:20:57,992 DEBUG Engine] Module config: consolidator defaultdict(None, {'class': 'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2018-02-22 16:20:57,992 DEBUG root] Importing module: bzt.modules.aggregator
+[2018-02-22 16:20:58,046 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/Users/yang/work/taurus/taurus/bzt/modules/aggregator.pyc'>
+[2018-02-22 16:20:58,047 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2018-02-22 16:20:58,047 DEBUG Engine] Module config: monitoring defaultdict(None, {'class': 'bzt.modules.monitoring.Monitoring'})
+[2018-02-22 16:20:58,047 DEBUG root] Importing module: bzt.modules.monitoring
+[2018-02-22 16:20:58,049 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/Users/yang/work/taurus/taurus/bzt/modules/monitoring.pyc'>
+[2018-02-22 16:20:58,050 DEBUG Engine] Module config: local defaultdict(None, {'class': 'bzt.modules.provisioning.Local'})
+[2018-02-22 16:20:58,050 DEBUG root] Importing module: bzt.modules.provisioning
+[2018-02-22 16:20:58,050 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/Users/yang/work/taurus/taurus/bzt/modules/provisioning.pyc'>
+[2018-02-22 16:20:58,050 ERROR root] Config Error: No 'execution' is configured. Did you forget to pass config files?
+[2018-02-22 16:20:58,052 DEBUG root] TaurusConfigError: No 'execution' is configured. Did you forget to pass config files?
+Traceback (most recent call last):
+  File "/Users/yang/work/taurus/taurus/bzt/cli.py", line 249, in perform
+    self.engine.prepare()
+  File "/Users/yang/work/taurus/taurus/bzt/engine.py", line 166, in prepare
+    self.__prepare_provisioning()
+  File "/Users/yang/work/taurus/taurus/bzt/engine.py", line 515, in __prepare_provisioning
+    self.provisioning.prepare()
+  File "/Users/yang/work/taurus/taurus/bzt/modules/provisioning.py", line 68, in prepare
+    super(Local, self).prepare()
+  File "/Users/yang/work/taurus/taurus/bzt/engine.py", line 908, in prepare
+    raise exc
+TaurusConfigError: No 'execution' is configured. Did you forget to pass config files?
+[2018-02-22 16:20:58,052 INFO Engine] Post-processing...
+[2018-02-22 16:20:58,052 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2018-02-22 16:20:58,055 DEBUG Engine.Configuration] Dumping YAML config into /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/effective.yml
+[2018-02-22 16:20:58,088 DEBUG Engine.Configuration] Dumping JSON config into /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/effective.json
+[2018-02-22 16:20:58,090 INFO root] Artifacts dir: /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304
+[2018-02-22 16:20:58,090 WARNING root] Done performing with code: 1
+[2018-02-22 16:20:58,090 DEBUG root] Closing log handler: /Users/yang/aws/appsync/MottoBook/2018-02-22_16-20-57.945304/bzt.log
