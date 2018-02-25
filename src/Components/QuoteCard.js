@@ -234,15 +234,11 @@ class QuoteCard extends React.Component {
 
                         <Image src={this.props.quote.imageUrl} href={quoteDetailLink}/>
 
-                        <Card.Description>
-                            <Icon name='empty heart' />
-                            {this.props.quote.likes}
-                        </Card.Description>
-
 
                     </Card.Content>
 
                     <Card.Content extra>
+
                         <a onClick={this.handleLike}>
                             <Icon name='heart' />
                             Add to my MottoBook
@@ -252,6 +248,9 @@ class QuoteCard extends React.Component {
                             <Icon name='comments' />
                             Comments
                         </a>
+
+                        <Icon name='empty heart' style={{ marginLeft: '2em' }}/>
+                        {this.props.quote.likes}
                     </Card.Content>
 
                     <Card.Content extra>
