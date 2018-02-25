@@ -6,6 +6,7 @@ import {createApolloFetch} from 'apollo-fetch';
 import gql from 'graphql-tag'
 import { graphql, compose } from "react-apollo";
 import DocumentMeta from 'react-document-meta';
+import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon} from 'react-share'
 
 class QuoteCard extends React.Component {
 
@@ -185,29 +186,29 @@ class QuoteCard extends React.Component {
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
         const quoteDetailLink = `/quote/${this.props.quote.id}`
         const occupationList = this.props.quote.authorOccupation.split(",").map(Function.prototype.call, String.prototype.trim);
-        const meta = {
-            // title: 'Some Meta Title',
-            // description: 'I am a description, and I can create multiple tags',
-            // canonical: 'http://example.com/path/to/page',
-             meta: {
-                charset: 'utf-8',
-                // name: {
-                //     keywords: 'react,meta,document,html,tags'
-                // },
-                property: {
-                    "og:site_name": "MottoBook",
-                    "og:url": `https://www.mottobook.com/quote/${this.props.quote.id}`,
-                    "og:type": "article",
-                    "og:title": `"${this.props.quote.author} Quotes"`,
-                    "og:description": `"${this.props.quote.authorQuote}"`,
-                    "og:image": `"${this.props.quote.imageUrl}"`,
-                },
-            }
-        };
+        // const meta = {
+        //     // title: 'Some Meta Title',
+        //     // description: 'I am a description, and I can create multiple tags',
+        //     // canonical: 'http://example.com/path/to/page',
+        //      meta: {
+        //         charset: 'utf-8',
+        //         // name: {
+        //         //     keywords: 'react,meta,document,html,tags'
+        //         // },
+        //         property: {
+        //             "og:site_name": "MottoBook",
+        //             "og:url": `https://www.mottobook.com/quote/${this.props.quote.id}`,
+        //             "og:type": "article",
+        //             "og:title": `"${this.props.quote.author} Quotes"`,
+        //             "og:description": `"${this.props.quote.authorQuote}"`,
+        //             "og:image": `"${this.props.quote.imageUrl}"`,
+        //         },
+        //     }
+        // };
         return (
             <div>
-                <DocumentMeta {...meta}>
-                </DocumentMeta>
+                {/*<DocumentMeta {...meta}>*/}
+                {/*</DocumentMeta>*/}
             <div className="card" >
                 <Card fluid>
                     <Card.Content>
@@ -251,12 +252,36 @@ class QuoteCard extends React.Component {
                             <Icon name='comments' />
                             Comments
                         </a>
-
-                        <a style={{ marginLeft: '2em' }}>
-                            <Icon name='share' />
-                            Share
-                        </a>
                     </Card.Content>
+
+                    <Card.Content extra>
+
+                        <FacebookShareButton style={{display: 'inline-block'}}
+                            url={`https://www.mottobook.com/quote/${this.props.quote.id}`}
+                            quote={`"${this.props.quote.authorQuote}" by ${this.props.quote.author} - ${occupationList[0]}, born: ${this.props.quote.authorBirthday}, ${this.props.quote.authorBirthplace}`}
+                        >
+                            {/*<a style={{ marginLeft: '2em' }}>*/}
+                                {/*<Icon name='share' />*/}
+                                {/*Share*/}
+                            {/*</a>*/}
+                            {/*<Icon name='share' />*/}
+                            <FacebookIcon
+                                size={32}
+                                round />
+
+                        </FacebookShareButton>
+
+                        <TwitterShareButton style={{display: 'inline-block',marginLeft: '2em'}}
+                            url={`https://www.mottobook.com/quote/${this.props.quote.id}`}
+                            title={`"${this.props.quote.authorQuote}" by ${this.props.quote.author} - ${occupationList[0]}, born: ${this.props.quote.authorBirthday}, ${this.props.quote.authorBirthplace}`}
+                            >
+                            <TwitterIcon
+                                size={32}
+                                round />
+                        </TwitterShareButton>
+
+                    </Card.Content>
+
 
                 </Card>
                 <br/>
