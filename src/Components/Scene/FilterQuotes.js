@@ -48,7 +48,7 @@ class FilterQuotes extends Component {
         console.log('FilterQuotes will receive props', this.props)
 
         //handle page load
-        if (!this.props.filter.allQuotes){
+        if (!this.props.filter.quotes){
             this.props.filter.refetch({
                 filter: nextProps.radioSelected
             });
@@ -81,7 +81,7 @@ class FilterQuotes extends Component {
             return (
                 <div>
                     {
-                        this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
+                        this.props.filter.quotes && this.props.filter.quotes.map(quote => (
                             <QuoteCard
                                 key={quote.id}
                                 quote={quote}
@@ -107,7 +107,7 @@ class FilterQuotes extends Component {
 
 const ALL_FILTER_QUERY = gql`
     query allFilterQuery($first: Int!, $skip: Int!, $filter: String!){
-        allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
+        quotes(orderBy: createdAt_DESC, first:$first, skip:$skip, where: {
             authorCategory_contains: $filter
         }){
             id
@@ -141,7 +141,7 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
             console.log("click load filter quotes, filterdata", filterdata);
             return filter.fetchMore({
                 variables: {
-                    skip: filter.allQuotes.length,
+                    skip: filter.quotes.length,
                     filter: filterdata,
                 },
                 updateQuery:(previousResult, {fetchMoreResult}) => {
@@ -149,9 +149,9 @@ const allFilterGraphql = graphql(ALL_FILTER_QUERY, {
                     if(!fetchMoreResult) {
                         return previousResult
                     }
-                    console.log('updated quotes', [...previousResult.allQuotes, ...fetchMoreResult.allQuotes])
+                    console.log('updated quotes', [...previousResult.quotes, ...fetchMoreResult.quotes])
                     return Object.assign({}, previousResult, {
-                        allQuotes: [...previousResult.allQuotes, ...fetchMoreResult.allQuotes]
+                        quotes: [...previousResult.quotes, ...fetchMoreResult.quotes]
                     })
                 }
             })

@@ -29,11 +29,11 @@ class AllQuotes extends Component {
         } else if (error) {
             return <p>Error!</p>;
         } else {
-
+            console.log('this.props', this.props);
             return (
                 <div>
                     {
-                        this.props.data.allQuotes && this.props.data.allQuotes.map(quote => (
+                        this.props.data.quotes && this.props.data.quotes.map(quote => (
                             <QuoteCard
                                 key={quote.id}
                                 quote={quote}
@@ -60,7 +60,7 @@ class AllQuotes extends Component {
 
 const ALL_QUOTES_QUERY = gql`
     query allQuotesQuery($first: Int!, $skip: Int!){
-        allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip){
+        quotes(orderBy: createdAt_DESC, first:$first, skip:$skip){
             id
             authorQuote
             authorBirthday
@@ -95,14 +95,14 @@ const allQuotesGraphql = graphql(ALL_QUOTES_QUERY, {
             //console.log("click load more");
             return data.fetchMore({
                 variables: {
-                    skip: data.allQuotes.length
+                    skip: data.quotes.length
                 },
                 updateQuery:(previousResult, {fetchMoreResult}) => {
                     if(!fetchMoreResult) {
                         return previousResult
                     }
                     return Object.assign({}, previousResult, {
-                        allQuotes: [...previousResult.allQuotes, ...fetchMoreResult.allQuotes]
+                        quotes: [...previousResult.quotes, ...fetchMoreResult.quotes]
                     })
                 }
             })

@@ -42,7 +42,7 @@ class AllAuthorsPage extends Component {
                                 <Table.Body>
                                     {
 
-                                        this.props.allAuthors.allAuthors && this.props.allAuthors.allAuthors.map(
+                                        this.props.allAuthors.authors && this.props.allAuthors.authors.map(
                                             author => (
                                                 <Table.Row>
                                                     <Table.Cell><Link
@@ -67,7 +67,7 @@ class AllAuthorsPage extends Component {
 
 const ALL_AUTHORS_QUERY = gql`
     query allAuthorsQuery{
-        allAuthors(orderBy: author_ASC){
+        authors(orderBy: author_ASC){
             author
             authorCategory
             authorBirthday

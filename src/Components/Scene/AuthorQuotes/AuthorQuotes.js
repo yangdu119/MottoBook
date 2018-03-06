@@ -27,7 +27,7 @@ class AuthorQuotes extends Component {
         }
 
 
-        if (!this.props.filter.allQuotes){
+        if (!this.props.filter.quotes){
             this.props.filter.refetch({
                 filter: this.props.match.params.authorName
             });
@@ -35,8 +35,8 @@ class AuthorQuotes extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState){
-        if (nextProps.filter.allQuotes !== this.props.filter.allQuotes){
-            if (nextProps.filter.allQuotes.length > 0){
+        if (nextProps.filter.quotes !== this.props.filter.quotes){
+            if (nextProps.filter.quotes.length > 0){
                 return true
             }else{
                 return false;
@@ -50,7 +50,7 @@ class AuthorQuotes extends Component {
     componentDidMount(){
         //handle page load
         console.log('componentDidMount this props', this.props)
-        if (!this.props.filter.allQuotes){
+        if (!this.props.filter.quotes){
             this.props.filter.refetch({
                 filter: this.props.match.params.authorName
             });
@@ -61,7 +61,7 @@ class AuthorQuotes extends Component {
     render() {
 
         const { filter: { loading, error } } = this.props;
-        const foundQuotes = this.props.filter.allQuotes;
+        const foundQuotes = this.props.filter.quotes;
         if (loading) {
             return (
                 <div>
@@ -97,7 +97,7 @@ class AuthorQuotes extends Component {
                     <Grid.Column mobile={'16'} textAlign={'center'} computer={'7'}>
                         <div>
                     {
-                        this.props.filter.allQuotes && this.props.filter.allQuotes.map(quote => (
+                        this.props.filter.quotes && this.props.filter.quotes.map(quote => (
                         <QuoteCard
                         key={quote.id}
                         quote={quote}
@@ -134,7 +134,7 @@ class AuthorQuotes extends Component {
 
 const ALL_AUTHOR_QUOTES_QUERY = gql`
     query allFilterQuery($first: Int!, $skip: Int!, $filter: String!){
-        allQuotes(orderBy: createdAt_DESC, first:$first, skip:$skip, filter: {
+        quotes(orderBy: createdAt_DESC, first:$first, skip:$skip, where: {
             author_contains: $filter
         }){
             id
@@ -168,7 +168,7 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
             console.log("click load filter quotes, filterdata", filterdata);
             return filter.fetchMore({
                 variables: {
-                    skip: filter.allQuotes.length,
+                    skip: filter.quotes.length,
                     filter: filterdata,
                 },
                 updateQuery:(previousResult, {fetchMoreResult}) => {
@@ -176,9 +176,9 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
                     if(!fetchMoreResult) {
                         return previousResult
                     }
-                    console.log('updated quotes', [...previousResult.allQuotes, ...fetchMoreResult.allQuotes])
+                    console.log('updated quotes', [...previousResult.quotes, ...fetchMoreResult.quotes])
                     return Object.assign({}, previousResult, {
-                        allQuotes: [...previousResult.allQuotes, ...fetchMoreResult.allQuotes]
+                        quotes: [...previousResult.quotes, ...fetchMoreResult.quotes]
                     })
                 }
             })

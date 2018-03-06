@@ -20,6 +20,7 @@ type Quote @model {
 
   mottoBy: [User!]! @relation(name: "UserMottoQuotes")
   events: [Event!]! @relation(name: "QuoteEvents")
+
 }
 
 type User @model {

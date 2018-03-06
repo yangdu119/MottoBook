@@ -72,8 +72,10 @@ export const makeMainRoutes = () => {
 //const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjd20ym271l610102abyehnsy' })
 
 //MottoBookTest, current production
-const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjde1zc60042w01138sjksteg' })
+//const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjde1zc60042w01138sjksteg' })
 
+//Prisma
+const httpLink = new HttpLink({ uri: 'http://174.138.55.155:4466/mottobook/dev'})
 
 //mottobook-qa, current dev
 //const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjddd8ha42c3n0180sofoohbu' })

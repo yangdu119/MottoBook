@@ -19,7 +19,7 @@ class QuoteDetailPage extends Component {
 
     componentDidMount(){
         //handle page load
-        if (!this.props.quoteGql.Quote){
+        if (!this.props.quoteGql.quote){
             this.props.quoteGql.refetch({
                 id: this.props.match.params.quoteId
             });
@@ -27,7 +27,7 @@ class QuoteDetailPage extends Component {
     }
 
     render() {
-        const quote = this.props.quoteGql.Quote
+        const quote = this.props.quoteGql.quote
         console.log("this props", this.props);
         return (
             <div>
@@ -52,7 +52,7 @@ class QuoteDetailPage extends Component {
 
 const QUOTE_QUERY = gql`
     query quoteQuery($id: ID!){
-        Quote(id:$id){
+        quote(where:{id:$id}){
             id
             authorQuote
             authorBirthday

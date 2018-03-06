@@ -1,5 +1,5 @@
 type Quote @model {
-  id: ID! @isUnique    # read-only (managed by Graphcool)
+  id: ID! @unique    # read-only (managed by Graphcool)
   createdAt: DateTime! # read-only (managed by Graphcool)
   updatedAt: DateTime! # read-only (managed by Graphcool)
 
@@ -23,7 +23,7 @@ type Quote @model {
 }
 
 type Author @model {
-    id: ID! @isUnique    # read-only (managed by Graphcool)
+    id: ID! @unique    # read-only (managed by Graphcool)
     createdAt: DateTime! # read-only (managed by Graphcool)
     updatedAt: DateTime! # read-only (managed by Graphcool)
 
@@ -36,7 +36,7 @@ type Author @model {
 
 
 type User @model {
-  id: ID! @isUnique
+  id: ID! @unique
   createdAt: DateTime!
   updatedAt: DateTime!
 
@@ -55,10 +55,11 @@ type User @model {
 }
 
 type Comment @model {
-    id: ID! @isUnique
+    id: ID! @unique
     createdAt: DateTime!
     updatedAt: DateTime!
 
     text: String!
     user: User! @relation(name: "UserComments")
 }
+
