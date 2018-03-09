@@ -1,0 +1,64 @@
+type Quote @model {
+    id: ID! @unique    # read-only (managed by Graphcool)
+    createdAt: DateTime! # read-only (managed by Graphcool)
+    updatedAt: DateTime! # read-only (managed by Graphcool)
+
+    author: String!
+    authorBirthday: String!
+    authorBirthname: String!
+    authorBirthplace: String!
+    authorOccupation: String!
+    authorQuote: String!
+    authorCategory: String!
+
+    likedBy: [User!]! @relation(name: "UserLikeQuotes")
+    dislikedBy: [User!]! @relation(name: "UserDislikeQuotes")
+
+    likes: Int!
+    dislikes: Int!
+    imageUrl: String!
+    userEmail: String!
+
+    comments: [Comment!]!
+}
+
+type Author @model {
+    id: ID! @unique    # read-only (managed by Graphcool)
+    createdAt: DateTime! # read-only (managed by Graphcool)
+    updatedAt: DateTime! # read-only (managed by Graphcool)
+
+    author: String!
+    authorBirthday: String!
+    authorBirthplace: String!
+    authorOccupation: String!
+    authorCategory: String!
+}
+
+
+type User @model {
+    id: ID! @unique
+    createdAt: DateTime!
+    updatedAt: DateTime!
+
+    email: String!
+    givenname: String!
+    familyname: String!
+    nickname: String!
+    name: String!
+    picture: String!
+    sub: String! @unique
+    locale: String!
+
+    likeQuotes: [Quote!]! @relation(name: "UserLikeQuotes")
+    dislikeQuotes: [Quote!]! @relation(name: "UserDislikeQuotes")
+    comments: [Comment!]! @relation(name: "UserComments")
+}
+
+type Comment @model {
+    id: ID! @unique
+    createdAt: DateTime!
+    updatedAt: DateTime!
+
+    text: String!
+    user: User! @relation(name: "UserComments")
+}

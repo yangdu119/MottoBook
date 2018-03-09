@@ -1,4 +1,4 @@
-service: mottobook
+service: mottobook-dev
 stage: dev
 
 datamodel: datamodel.graphql
@@ -6,6 +6,4 @@ datamodel: datamodel.graphql
 # to enable auth, provide
 # secret: my-secret
 disableAuth: true
-
-
-cluster: MyOpenQuotes
+cluster: yang-du/prisma-us1

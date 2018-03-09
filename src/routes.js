@@ -21,6 +21,7 @@ import AllAuthorsPage from "./Components/Scene/AllAuthorsPage/AllAuthorsPage";
 import NotFound from './Components/Scene/NotFound'
 import QuoteDetailPage from './Components/Scene/QuoteDetailPage/QuoteDetailPage'
 import NewSearchPage from './Components/Scene/SearchPage/NewSearchPage'
+import graphqlEndPoint from "./GraphQLConfig"
 ReactGA.initialize('UA-113147944-1'); //Unique Google Analytics tracking number
 ReactGA.pageview(window.location.pathname + window.location.search);
 
@@ -75,7 +76,7 @@ export const makeMainRoutes = () => {
 //const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjde1zc60042w01138sjksteg' })
 
 //Prisma
-const httpLink = new HttpLink({ uri: 'https://myopenquotes.com/mottobook/dev/'})
+const httpLink = new HttpLink({ uri: graphqlEndPoint.prisma})
 
 //mottobook-qa, current dev
 //const httpLink = new HttpLink({ uri: 'https://api.graph.cool/simple/v1/cjddd8ha42c3n0180sofoohbu' })
