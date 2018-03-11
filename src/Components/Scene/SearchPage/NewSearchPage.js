@@ -6,13 +6,57 @@ import QuoteCard from '../../QuoteCard'
 import { Grid } from 'semantic-ui-react'
 import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
+import graphqlEndPoint from "../../../GraphQLConfig";
+import {createApolloFetch} from "apollo-fetch/dist/index";
 
 const QUOTES_PER_PAGE = 10;
 class NewSearchPage extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            quotesCounts: 0,
+        }
+    }
+
     filterLoadMore = () => {
         this.props.loadFilterQuotes(this.props.match.params.authorName);
     }
+
+    getSearchTotalQuotes = (name) => new Promise(function(resolve, reject){
+        const uri = graphqlEndPoint.prisma
+        const apolloFetch = createApolloFetch({uri})
+        const query = `
+          query getQuotesCount {
+              quotesConnection(
+                where: {
+            OR:[{authorQuote_contains: "${name}"},{author_contains:"${name}"},{authorOccupation_contains:"${name}"}]
+        }) {
+                aggregate {
+                  count
+                }
+              }
+            }
+      `
+
+        apolloFetch({query})
+            .then(result => {
+                const {data} = result;
+                if (data){
+                    resolve(data.quotesConnection.aggregate.count)
+                }
+            })
+    })
+
+    async getCounts(){
+        const count = await this.getSearchTotalQuotes(this.props.match.params.authorName)
+        console.log('getCounts', count)
+        this.setState({
+            quotesCounts: count,
+        })
+        return count
+    }
+
 
     componentWillReceiveProps(nextProps) {
         console.log('componentwillreceiveprops this props',this.props)
@@ -55,11 +99,12 @@ class NewSearchPage extends Component {
                 filter: this.props.match.params.authorName
             });
         }
+        this.getCounts(this.props.match.params.authorName);
     }
 
 
     render() {
-
+        const length = this.props.filter.quotes && this.props.filter.quotes.length;
         const { filter: { loading, error } } = this.props;
         const foundQuotes = this.props.filter.quotes;
         if (loading) {
@@ -106,7 +151,7 @@ class NewSearchPage extends Component {
                                 }
 
                                 {
-                                    foundQuotes && foundQuotes.length>0 &&
+                                    (this.state.quotesCounts !==length) && foundQuotes && foundQuotes.length>0 &&
                                     <Button primary onClick={this.filterLoadMore}>
                                         Load More Quotes
                                     </Button>

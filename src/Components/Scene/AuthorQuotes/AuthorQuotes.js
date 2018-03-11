@@ -6,13 +6,24 @@ import QuoteCard from '../../QuoteCard'
 import { Grid } from 'semantic-ui-react'
 import MottoBookHeader from '../../Header'
 import MottoBookFooter from '../../Footer'
+import graphqlEndPoint from "../../../GraphQLConfig";
+import {createApolloFetch} from "apollo-fetch/dist/index";
 
 const QUOTES_PER_PAGE = 10;
+let hasMoreQuotes = true;
 class AuthorQuotes extends Component {
 
     filterLoadMore = () => {
         this.props.loadFilterQuotes(this.props.match.params.authorName);
     }
+
+    constructor(props){
+        super(props);
+        this.state = {
+            quotesCounts: 0,
+        }
+    }
+
 
     componentWillReceiveProps(nextProps) {
         console.log('componentwillreceiveprops this props',this.props)
@@ -34,6 +45,29 @@ class AuthorQuotes extends Component {
         }
     }
 
+    getAuthorTotalQuotes = (name) => new Promise(function(resolve, reject){
+        const uri = graphqlEndPoint.prisma
+        const apolloFetch = createApolloFetch({uri})
+        const query = `
+          query getQuotesCount {
+              quotesConnection(
+                where: {author_contains: "${name}"}) {
+                aggregate {
+                  count
+                }
+              }
+            }
+      `
+
+        apolloFetch({query})
+            .then(result => {
+                const {data} = result;
+                if (data){
+                    resolve(data.quotesConnection.aggregate.count)
+                }
+            })
+    })
+
     shouldComponentUpdate(nextProps, nextState){
         if (nextProps.filter.quotes !== this.props.filter.quotes){
             if (nextProps.filter.quotes.length > 0){
@@ -47,19 +81,32 @@ class AuthorQuotes extends Component {
         }
     }
 
+    async getCounts(){
+        const count = await this.getAuthorTotalQuotes(this.props.match.params.authorName)
+        console.log('getCounts', count)
+        this.setState({
+            quotesCounts: count,
+        })
+        return count
+    }
+
     componentDidMount(){
         //handle page load
         console.log('componentDidMount this props', this.props)
+
         if (!this.props.filter.quotes){
             this.props.filter.refetch({
                 filter: this.props.match.params.authorName
             });
         }
+        const count = this.getCounts();
     }
 
 
     render() {
-
+        console.log('authorQuotes state quotesCounts', this.state.quotesCounts)
+        const length = this.props.filter.quotes && this.props.filter.quotes.length;
+        console.log('filter quotes length', length);
         const { filter: { loading, error } } = this.props;
         const foundQuotes = this.props.filter.quotes;
         if (loading) {
@@ -106,7 +153,7 @@ class AuthorQuotes extends Component {
                     }
 
                     {
-                        foundQuotes && foundQuotes.length>0 &&
+                        (this.state.quotesCounts !==length) && foundQuotes && foundQuotes.length>0 &&
                         <Button primary onClick={this.filterLoadMore}>
                         Load More Quotes
                         </Button>
@@ -176,6 +223,15 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
                     if(!fetchMoreResult) {
                         return previousResult
                     }
+                    const allNewQuotes = [...previousResult.quotes, ...fetchMoreResult.quotes]
+                    const previousQuotes = [...previousResult.quotes]
+                    console.log('newquotes length', allNewQuotes.length)
+                    console.log('previous quotes length', previousQuotes.length)
+                    if (allNewQuotes.length === previousQuotes.length){
+                        console.log('set has more quotes to false')
+                        hasMoreQuotes = false;
+                    }
+                    console.log('previous quotes', previousQuotes)
                     console.log('updated quotes', [...previousResult.quotes, ...fetchMoreResult.quotes])
                     return Object.assign({}, previousResult, {
                         quotes: [...previousResult.quotes, ...fetchMoreResult.quotes]
