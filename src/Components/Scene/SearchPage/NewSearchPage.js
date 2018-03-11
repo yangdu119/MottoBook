@@ -45,7 +45,6 @@ class NewSearchPage extends Component {
         }else{
             return false;
         }
-        console.log('shouldComponentUpdate, nextProps',nextProps)
     }
 
     componentDidMount(){

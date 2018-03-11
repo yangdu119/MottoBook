@@ -11,7 +11,6 @@ import AboutUs from './Components/AboutUs'
 import NewQuote from './Components/NewQuote'
 import OccupationCategory from './Components/Scene/OccupationCategory'
 import AuthorQuotes from './Components/Scene/AuthorQuotes/AuthorQuotes'
-import SearchPage from './Components/Scene/SearchPage/SearchPage'
 import { ApolloProvider } from 'react-apollo'
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
@@ -38,7 +37,8 @@ const handleAuthentication = ({location}) => {
 }
 
 export const makeMainRoutes = () => {
-  return (
+
+    return (
       <ApolloProvider client={client}>
         <Router history={history} onUpdate={fireTracking}>
                 <Switch>

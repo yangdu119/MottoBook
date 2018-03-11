@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {Card, Image, Icon, List} from 'semantic-ui-react'
-import graphqlEndPoint from "../GraphQLConfig"
-import {createApolloFetch} from 'apollo-fetch';
 import gql from 'graphql-tag'
 import { graphql, compose } from "react-apollo";
-import DocumentMeta from 'react-document-meta';
 import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon} from 'react-share'
 
 class QuoteCard extends React.Component {
@@ -15,170 +12,33 @@ class QuoteCard extends React.Component {
         return authorName
     }
 
-    getQuoteLikesDislikes = (quoteId) => new Promise(function(resolve, reject){
-        const uri = graphqlEndPoint.prisma
-        const apolloFetch = createApolloFetch({uri})
-        const getLikesQuery = `
-            query getLikes{
-              quote(where: {id: "${quoteId}"}){
-                likes
-                dislikes
-                likedBy{
-                    id
-                    name
-                }
-                dislikedBy{
-                    id
-                    name
-                }
-              }
-            }
-        `
 
-        apolloFetch({query:getLikesQuery})
-            .then(result => {
-                const {data, errors, extensions} = result;
-                if (data){
-                    resolve(data.quote)
-                }
-            })
-    })
+    async incrementLikes(){
+        const prisma_userId = this.props.auth.userProfile.prisma_userId;
 
-    getUserId = (sub) => new Promise(function(resolve, reject){
-        const uri = graphqlEndPoint.prisma
-        const apolloFetch = createApolloFetch({uri})
-        const query = `
-            query{
-              user(where:{sub: "${sub}"}){
-                id
-              }
-            }
-        `
-
-        apolloFetch({query})
-            .then(result => {
-                const {data, errors, extensions} = result;
-                if (data){
-                    resolve(data.user.id)
-                }
-            })
-    })
-
-    addQuoteToMyLikes = (quoteId, userId) => new Promise(function(resolve, reject){
-        const uri = graphqlEndPoint.prisma
-        const apolloFetch = createApolloFetch({uri})
-        const query = `
-            mutation {
-              updateQuote(
-                where:{
-                  id:"${quoteId}"
-                }
-                data:{
-                  likedBy:{
-                    connect:{
-                      id:"${userId}"
-                    }
-                  }
-                }
-              ){
-                id
-              }
-            }
-        `
-
-        apolloFetch({query})
-            .then(result => {
-                const {data, errors, extensions} = result;
-                if (data){
-                    resolve(data)
-                }
-            })
-    })
-
-    addQuoteToMyDisLikes = (quoteId, userId) => new Promise(function(resolve, reject){
-        const uri = graphqlEndPoint.prisma
-        const apolloFetch = createApolloFetch({uri})
-        const query = `
-            mutation {
-              updateQuote(
-                where:{
-                  id:"${quoteId}"
-                }
-                data:{
-                  dislikedBy:{
-                    connect:{
-                      id:"${userId}"
-                    }
-                  }
-                }
-              ){
-                id
-              }
-            }
-        `
-
-        apolloFetch({query})
-            .then(result => {
-                const {data, errors, extensions} = result;
-                if (data){
-                    resolve(data)
-                }
-            })
-    })
-
-    getUserProfile = (that) => new Promise(function(resolve, reject){
-        const { userProfile, getProfile } = that.props.auth;
-        if (!userProfile) {
-            getProfile((err, profile) => {
-                resolve(profile)
-            });
-        } else {
-            resolve(userProfile)
-        }
-    })
-
-    incrementLikesHelper(quoteId, likes){
-        this.props.updateLikes({
-            quoteId: quoteId,
-            likes: likes+1
-        })
-    }
-
-    async incrementLikes(quoteId){
-        const {likes, likedBy} = await this.getQuoteLikesDislikes(quoteId)
-        //todo submit user profile upon clicking like or dislike
-        const {sub} = await this.getUserProfile(this);
-        const userId = await this.getUserId(sub)
-        await this.addQuoteToMyLikes(quoteId,userId);
-
-        if (likedBy.filter(e => e.id === userId).length ==0){
+        if (this.props.quote.likedBy.filter(e => e.id === prisma_userId).length ===0){
             this.props.updateLikes({
-                quoteId: quoteId,
-                likes: likes+1
+                quoteId: this.props.quote.id,
+                likes: this.props.quote.likes+1,
+                userId: prisma_userId
             })
         }else{
             //tell user he already add the quote in his mottobook
         }
-        //await this.addQuoteToMyLikes(quoteId,this.props.auth.)
     }
 
-    async incrementDisLikes(quoteId){
-        const {dislikes, dislikedBy} = await this.getQuoteLikesDislikes(quoteId)
-        console.log('dislikes', dislikedBy)
-        //todo submit user profile upon clicking like or dislike
-        const {sub} = await this.getUserProfile(this);
-        const userId = await this.getUserId(sub)
-        await this.addQuoteToMyDisLikes(quoteId,userId);
+    async incrementDisLikes(){
+        const prisma_userId = this.props.auth.userProfile.prisma_userId;
 
-        if (dislikedBy.filter(e => e.id === userId).length ==0){
+        if (this.props.quote.dislikedBy.filter(e => e.id === prisma_userId).length ===0){
             this.props.updateDisLikes({
-                quoteId: quoteId,
-                dislikes: dislikes+1
+                quoteId: this.props.quote.id,
+                dislikes: this.props.quote.dislikes+1,
+                userId: prisma_userId
             })
         }else{
             //tell user he already add the quote in his mottobook
         }
-        //await this.addQuoteToMyLikes(quoteId,this.props.auth.)
     }
 
 
@@ -186,11 +46,10 @@ class QuoteCard extends React.Component {
         const { isAuthenticated } = this.props.auth;
         if (!isAuthenticated()){
             this.props.auth.login();
-            console.log('navigate to login page')
         }else{
             //first increment like count on quote
             //second add edges relationship between user and quote
-            this.incrementLikesHelper(this.props.quote.id, this.props.quote.likes);
+            this.incrementLikes();
         }
     }
 
@@ -198,9 +57,8 @@ class QuoteCard extends React.Component {
         const { isAuthenticated } = this.props.auth;
         if (!isAuthenticated()){
             this.props.auth.login();
-            console.log('navigate to login page')
         }else{
-            this.incrementDisLikes(this.props.quote.id)
+            this.incrementDisLikes()
         }
     }
 
@@ -208,7 +66,6 @@ class QuoteCard extends React.Component {
         const { isAuthenticated } = this.props.auth;
         if (!isAuthenticated()){
             this.props.auth.login();
-            console.log('navigate to login page')
         }
     }
 
@@ -220,29 +77,9 @@ class QuoteCard extends React.Component {
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
         const quoteDetailLink = `/quote/${this.props.quote.id}`
         const occupationList = this.props.quote.authorOccupation.split(",").map(Function.prototype.call, String.prototype.trim);
-        // const meta = {
-        //     // title: 'Some Meta Title',
-        //     // description: 'I am a description, and I can create multiple tags',
-        //     // canonical: 'http://example.com/path/to/page',
-        //      meta: {
-        //         charset: 'utf-8',
-        //         // name: {
-        //         //     keywords: 'react,meta,document,html,tags'
-        //         // },
-        //         property: {
-        //             "og:site_name": "MottoBook",
-        //             "og:url": `https://www.mottobook.com/quote/${this.props.quote.id}`,
-        //             "og:type": "article",
-        //             "og:title": `"${this.props.quote.author} Quotes"`,
-        //             "og:description": `"${this.props.quote.authorQuote}"`,
-        //             "og:image": `"${this.props.quote.imageUrl}"`,
-        //         },
-        //     }
-        // };
+
         return (
             <div>
-                {/*<DocumentMeta {...meta}>*/}
-                {/*</DocumentMeta>*/}
             <div className="card" >
                 <Card fluid>
                     <Card.Content>
@@ -336,38 +173,52 @@ class QuoteCard extends React.Component {
     }
 }
 const updateLikes = gql`
-    mutation mutateLikes($quoteId: ID!, $likes:Int!){
+    mutation mutateLikes($quoteId: ID!, $userId: ID!, $likes:Int!){
               updateQuote(
                   where:{id: $quoteId}
-                  data:{likes: $likes}
+                  data:{likes: $likes, likedBy: {
+                      connect: {
+                          id: $userId
+                      }
+                  }}
               ){
                 id
                 __typename
                 likes
-                
+                likedBy{
+                    id
+                    name
+                }
               }
             }
     `
 
 const updateDislikes = gql`
-    mutation mutateDislikes($quoteId: ID!, $dislikes:Int!){
+    mutation mutateDisLikes($quoteId: ID!, $userId: ID!, $dislikes:Int!){
         updateQuote(
             where:{id: $quoteId}
-            data:{dislikes: $dislikes}
+            data:{dislikes: $dislikes, dislikedBy: {
+                connect: {
+                    id: $userId
+                }
+            }}
         ){
             id
             __typename
             dislikes
-
+            dislikedBy{
+                id
+                name
+            }
         }
     }
-    `
+`
 
 const UpdateLikesWithData = graphql(updateLikes, {
     props: ({ ownProps, mutate }) => ({
-        updateLikes({ quoteId, likes }) {
+        updateLikes({ quoteId, userId, likes }) {
             return mutate({
-                variables: { quoteId, likes },
+                variables: { quoteId, userId, likes },
 
                 optimisticResponse: {
                     updateQuote: {
@@ -383,9 +234,9 @@ const UpdateLikesWithData = graphql(updateLikes, {
 
 const UpdateDisLikesWithData = graphql(updateDislikes, {
     props: ({ ownProps, mutate }) => ({
-        updateDisLikes({ quoteId, dislikes }) {
+        updateDisLikes({ quoteId, userId, dislikes }) {
             return mutate({
-                variables: { quoteId, dislikes },
+                variables: { quoteId, userId, dislikes },
                 optimisticResponse: {
                     updateQuote: {
                         id: quoteId,

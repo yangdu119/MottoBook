@@ -7,32 +7,13 @@ import MottoBookFooter from './Footer'
 import AllQuotes from './AllQuotes';
 
 export default class Home extends Component {
-    constructor() {
-        super();
 
-        this.state = {
-            radioSelected: 'clear',
+    componentDidMount() {
+        if (this.props.auth.isAuthenticated()){
+            console.log('authenticated, get userid')
+            this.props.auth.getUserIDHelper();
         }
     }
-
-    handleContextRef = contextRef => this.setState({ contextRef })
-
-    handleCategoryClick = (item) => {
-
-        this.setState({
-            radioSelected: item.value
-        })
-    }
-
-    // handleAuthorNameChange = (name) =>{
-    //     this.setState({
-    //         authorName: name
-    //     })
-    // }
-    //
-    // handleAuthorNameSubmit = () => {
-    //
-    // }
 
     render() {
         return (

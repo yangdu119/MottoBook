@@ -8,11 +8,6 @@ const QUOTES_PER_PAGE = 10;
 const RANDOM_SKIP_NUMBER = Math.floor(Math.random() * 150);
 class AllQuotes extends Component {
 
-    static defaultProps = {
-        events: [],
-        deleteEvent: () => null,
-    }
-
     filterLoadMore = () => {
         console.log('state filterValue: ', this.state.filterValue);
         this.props.loadFilterQuotes(this.state.filterValue);
@@ -29,7 +24,6 @@ class AllQuotes extends Component {
         } else if (error) {
             return <p>Error!</p>;
         } else {
-            console.log('this.props', this.props);
             return (
                 <div>
                     {
@@ -72,6 +66,14 @@ const ALL_QUOTES_QUERY = gql`
             dislikes
             imageUrl
             createdAt
+            dislikedBy{
+                id
+                name
+            }
+            likedBy{
+                id
+                name
+            }
         }
     }
 `
