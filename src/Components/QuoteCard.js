@@ -7,58 +7,51 @@ import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon} from
 
 class QuoteCard extends React.Component {
 
+
+
     processLink(authorName) {
         authorName = authorName.replace(/ /g,"_");
         return authorName
     }
 
 
-    async incrementLikes(){
+    incrementLikes(){
         const prisma_userId = this.props.auth.userProfile.prisma_userId;
-
-        if (this.props.quote.likedBy.filter(e => e.id === prisma_userId).length ===0){
-            this.props.updateLikes({
-                quoteId: this.props.quote.id,
-                likes: this.props.quote.likes+1,
-                userId: prisma_userId
-            })
-        }else{
-            //tell user he already add the quote in his mottobook
-        }
+        console.log('prisma_userId', prisma_userId)
+        this.props.updateLikes({
+            quoteId: this.props.quote.id,
+            likes: this.props.quote.likes+1,
+            userId: prisma_userId
+        })
     }
 
-    async incrementDisLikes(){
+    decrementLikes(){
+        console.log('decrementLikes props', this.props)
         const prisma_userId = this.props.auth.userProfile.prisma_userId;
 
-        if (this.props.quote.dislikedBy.filter(e => e.id === prisma_userId).length ===0){
-            this.props.updateDisLikes({
-                quoteId: this.props.quote.id,
-                dislikes: this.props.quote.dislikes+1,
-                userId: prisma_userId
-            })
-        }else{
-            //tell user he already add the quote in his mottobook
-        }
+        this.props.decrementLikes({
+            quoteId: this.props.quote.id,
+            likes: this.props.quote.likes-1,
+            userId: prisma_userId
+        })
     }
 
 
     handleLike = () => {
-        const { isAuthenticated } = this.props.auth;
-        if (!isAuthenticated()){
-            this.props.auth.login();
-        }else{
-            //first increment like count on quote
-            //second add edges relationship between user and quote
-            this.incrementLikes();
-        }
-    }
 
-    handleDislike = () => {
         const { isAuthenticated } = this.props.auth;
         if (!isAuthenticated()){
             this.props.auth.login();
         }else{
-            this.incrementDisLikes()
+            const prisma_userId = this.props.auth.userProfile.prisma_userId;
+            // if user doesn't like the quote yet.
+            if (this.props.quote.likedBy.filter(e => e.id === prisma_userId).length ===0) {
+                console.log('incrementlikes')
+                this.incrementLikes();
+            }else{
+                console.log('decrementlikes')
+                this.decrementLikes();
+            }
         }
     }
 
@@ -77,6 +70,21 @@ class QuoteCard extends React.Component {
         const autorLink = `/author/${this.processLink(this.props.quote.author)}`
         const quoteDetailLink = `/quote/${this.props.quote.id}`
         const occupationList = this.props.quote.authorOccupation.split(",").map(Function.prototype.call, String.prototype.trim);
+        const { isAuthenticated } = this.props.auth;
+
+        let likesIcon = <Icon name='thumbs outline up' />;
+        let dislikesIcon = <Icon name='thumbs outline down' />;
+        if (isAuthenticated() && this.props.auth.userProfile){
+            const userId = this.props.auth.userProfile.prisma_userId;
+            const likedBy = this.props.quote.likedBy;
+            const dislikedBy = this.props.quote.dislikedBy;
+            if (likedBy && likedBy.some(e => e.id === userId)){
+                likesIcon = <Icon name='thumbs up' />
+            }
+            if (dislikedBy && dislikedBy.some(e => e.id === userId)){
+                dislikesIcon = <Icon name='thumbs down' />
+            }
+        }
 
         return (
             <div>
@@ -116,16 +124,10 @@ class QuoteCard extends React.Component {
                         {/*</a>*/}
 
                         <a onClick={this.handleLike} style={{ marginLeft: '2em' }}>
-                            <Icon name='thumbs outline up' />
+
+                            {likesIcon}
                             {this.props.quote.likes} Likes
                         </a>
-
-                        <a onClick={this.handleDislike} style={{ marginLeft: '2em' }}>
-                            <Icon name='thumbs outline down' />
-                            {this.props.quote.dislikes} Dislikes
-                        </a>
-
-
 
                         <a style={{ marginLeft: '2em' }} onClick={this.handleComments}>
                             <Icon name='comments' />
@@ -193,20 +195,20 @@ const updateLikes = gql`
             }
     `
 
-const updateDislikes = gql`
-    mutation mutateDisLikes($quoteId: ID!, $userId: ID!, $dislikes:Int!){
+const decrementLikes = gql`
+    mutation mutateLikes($quoteId: ID!, $userId: ID!, $likes:Int!){
         updateQuote(
             where:{id: $quoteId}
-            data:{dislikes: $dislikes, dislikedBy: {
-                connect: {
+            data:{likes: $likes, likedBy: {
+                disconnect: {
                     id: $userId
                 }
             }}
         ){
             id
             __typename
-            dislikes
-            dislikedBy{
+            likes
+            likedBy{
                 id
                 name
             }
@@ -232,23 +234,26 @@ const UpdateLikesWithData = graphql(updateLikes, {
     }),
 })
 
-const UpdateDisLikesWithData = graphql(updateDislikes, {
+const DecrementLikesWithData = graphql(decrementLikes, {
     props: ({ ownProps, mutate }) => ({
-        updateDisLikes({ quoteId, userId, dislikes }) {
+        decrementLikes({ quoteId, userId, likes }) {
             return mutate({
-                variables: { quoteId, userId, dislikes },
+                variables: { quoteId, userId, likes },
+
                 optimisticResponse: {
                     updateQuote: {
                         id: quoteId,
                         __typename: 'Quote',
-                        dislikes: dislikes,
+                        likes: likes,
                     },
                 },
             });
         },
     }),
 })
+
+
 export default compose(
     UpdateLikesWithData,
-    UpdateDisLikesWithData,
+    DecrementLikesWithData,
 )(QuoteCard)

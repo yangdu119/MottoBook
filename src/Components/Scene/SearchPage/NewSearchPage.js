@@ -61,9 +61,6 @@ class NewSearchPage extends Component {
     componentWillReceiveProps(nextProps) {
         console.log('componentwillreceiveprops this props',this.props)
         if (nextProps.match.params.authorName !== this.props.match.params.authorName){
-            console.log(' nextProps', nextProps.match.params.authorName)
-            console.log('this Props', this.props.match.params.authorName)
-            console.log('nextProps changes, update')
             let authorName = nextProps.match.params.authorName
             this.props.filter.refetch({
                 filter: authorName
@@ -193,6 +190,14 @@ const ALL_AUTHOR_QUOTES_QUERY = gql`
             dislikes
             imageUrl
             createdAt
+            dislikedBy{
+                id
+                name
+            }
+            likedBy{
+                id
+                name
+            }
         }
     }
 `

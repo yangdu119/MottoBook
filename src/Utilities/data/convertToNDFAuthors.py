@@ -38,15 +38,15 @@ with open('authors_golden_category.json') as quotes_raw_data:
 		items = items +1
 
 
-		# if items == 3000:
-		# 	fileCount = fileCount +1
-		# 	json_data = json.dumps(output)
-		# 	output["values"] = []
-		# 	filename = "00000" + str(fileCount)+".json"
-		# 	fh = open(filename,'w')
-		# 	fh.write(json_data)
-		# 	fh.close()
-		# 	items = 0
+		if items == 2000:
+			fileCount = fileCount +1
+			json_data = json.dumps(output)
+			output["values"] = []
+			filename = "00000" + str(fileCount)+".json"
+			fh = open(filename,'w')
+			fh.write(json_data)
+			fh.close()
+			items = 0
 
 	fileCount = fileCount +1
 	json_data = json.dumps(output)

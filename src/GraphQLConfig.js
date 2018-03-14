@@ -3,9 +3,9 @@ export default {
     //"graphqlEndPoint": 'https://api.graph.cool/simple/v1/cjde1zc60042w01138sjksteg',
 
     //Production
-    "prisma": 'https://myopenquotes.com/mottobook/dev/',
+    //"prisma": 'https://myopenquotes.com/mottobook_prod/prod',
 
-    //Dev
-    //"prisma": 'https://us1.prisma.sh/yang-du/mottobook-dev/dev',
+    //Current Production
+    "prisma": 'https://myopenquotes.com/mottobook/dev/',
 
 }

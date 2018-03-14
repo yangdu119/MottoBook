@@ -54,7 +54,7 @@ with open('quotes_pretty.json') as quotes_raw_data:
 		items = items +1
 
 
-		if items == 2000:
+		if items == 1000:
 			fileCount = fileCount +1
 			json_data = json.dumps(output)
 			output["values"] = []

@@ -10,7 +10,6 @@ import graphqlEndPoint from "../../../GraphQLConfig";
 import {createApolloFetch} from "apollo-fetch/dist/index";
 
 const QUOTES_PER_PAGE = 10;
-let hasMoreQuotes = true;
 class AuthorQuotes extends Component {
 
     filterLoadMore = () => {
@@ -28,9 +27,6 @@ class AuthorQuotes extends Component {
     componentWillReceiveProps(nextProps) {
         console.log('componentwillreceiveprops this props',this.props)
         if (nextProps.match.params.authorName !== this.props.match.params.authorName){
-            console.log(' nextProps', nextProps.match.params.authorName)
-            console.log('this Props', this.props.match.params.authorName)
-            console.log('nextProps changes, update')
             let authorName = nextProps.match.params.authorName
             this.props.filter.refetch({
                 filter: authorName
@@ -83,7 +79,6 @@ class AuthorQuotes extends Component {
 
     async getCounts(){
         const count = await this.getAuthorTotalQuotes(this.props.match.params.authorName)
-        console.log('getCounts', count)
         this.setState({
             quotesCounts: count,
         })
@@ -91,9 +86,6 @@ class AuthorQuotes extends Component {
     }
 
     componentDidMount(){
-        //handle page load
-        console.log('componentDidMount this props', this.props)
-
         if (!this.props.filter.quotes){
             this.props.filter.refetch({
                 filter: this.props.match.params.authorName
@@ -104,9 +96,7 @@ class AuthorQuotes extends Component {
 
 
     render() {
-        console.log('authorQuotes state quotesCounts', this.state.quotesCounts)
         const length = this.props.filter.quotes && this.props.filter.quotes.length;
-        console.log('filter quotes length', length);
         const { filter: { loading, error } } = this.props;
         const foundQuotes = this.props.filter.quotes;
         if (loading) {
@@ -195,6 +185,14 @@ const ALL_AUTHOR_QUOTES_QUERY = gql`
             dislikes
             imageUrl
             createdAt
+            dislikedBy{
+                id
+                name
+            }
+            likedBy{
+                id
+                name
+            }
         }
     }
 `
@@ -225,14 +223,6 @@ const allAuthorQuotesGraphql = graphql(ALL_AUTHOR_QUOTES_QUERY, {
                     }
                     const allNewQuotes = [...previousResult.quotes, ...fetchMoreResult.quotes]
                     const previousQuotes = [...previousResult.quotes]
-                    console.log('newquotes length', allNewQuotes.length)
-                    console.log('previous quotes length', previousQuotes.length)
-                    if (allNewQuotes.length === previousQuotes.length){
-                        console.log('set has more quotes to false')
-                        hasMoreQuotes = false;
-                    }
-                    console.log('previous quotes', previousQuotes)
-                    console.log('updated quotes', [...previousResult.quotes, ...fetchMoreResult.quotes])
                     return Object.assign({}, previousResult, {
                         quotes: [...previousResult.quotes, ...fetchMoreResult.quotes]
                     })
