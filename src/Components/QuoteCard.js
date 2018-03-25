@@ -166,7 +166,7 @@ class QuoteCard extends React.Component {
                         </TwitterShareButton>
 
                         <EmailShareButton style={{display: 'inline-block',marginLeft: '2em'}}
-                            subject={`https://www.mottobook.com/quote/${this.props.quote.id}`}
+                            subject={`${this.props.quote.author} Quote -- mottobook.com`}
                             body={`"${this.props.quote.authorQuote}" by ${this.props.quote.author} - ${occupationList[0]}, born: ${this.props.quote.authorBirthday}, ${this.props.quote.authorBirthplace}`}
                         >
                             <EmailIcon
