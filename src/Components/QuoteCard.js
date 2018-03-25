@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {Card, Image, Icon, List} from 'semantic-ui-react'
 import gql from 'graphql-tag'
 import { graphql, compose } from "react-apollo";
-import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon} from 'react-share'
+import {FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, EmailShareButton, EmailIcon} from 'react-share'
 
 class QuoteCard extends React.Component {
 
@@ -74,6 +74,7 @@ class QuoteCard extends React.Component {
 
         let likesIcon = <Icon name='thumbs outline up' />;
         let dislikesIcon = <Icon name='thumbs outline down' />;
+        const emailIcon = <Icon name='mail outline' size='big'/>;
         if (isAuthenticated() && this.props.auth.userProfile){
             const userId = this.props.auth.userProfile.prisma_userId;
             const likedBy = this.props.quote.likedBy;
@@ -123,16 +124,16 @@ class QuoteCard extends React.Component {
                             {/*Add to my MottoBook*/}
                         {/*</a>*/}
 
-                        <a onClick={this.handleLike} style={{ marginLeft: '2em' }}>
+                        <a onClick={this.handleLike}>
 
                             {likesIcon}
                             {this.props.quote.likes} Likes
                         </a>
 
-                        <a style={{ marginLeft: '2em' }} onClick={this.handleComments}>
-                            <Icon name='comments' />
-                            Comments
-                        </a>
+                        {/*<a style={{ marginLeft: '2em' }} onClick={this.handleComments}>*/}
+                            {/*<Icon name='comments' />*/}
+                            {/*Comments*/}
+                        {/*</a>*/}
 
                         {/*<Icon name='empty heart' style={{ marginLeft: '2em' }}/>*/}
                         {/*{this.props.quote.likes}*/}
@@ -163,6 +164,15 @@ class QuoteCard extends React.Component {
                                 size={32}
                                 round />
                         </TwitterShareButton>
+
+                        <EmailShareButton style={{display: 'inline-block',marginLeft: '2em'}}
+                            subject={`https://www.mottobook.com/quote/${this.props.quote.id}`}
+                            body={`"${this.props.quote.authorQuote}" by ${this.props.quote.author} - ${occupationList[0]}, born: ${this.props.quote.authorBirthday}, ${this.props.quote.authorBirthplace}`}
+                        >
+                            <EmailIcon
+                                size={32}
+                                round />
+                        </EmailShareButton>
 
                     </Card.Content>
 
