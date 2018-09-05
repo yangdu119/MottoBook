@@ -6,6 +6,6 @@ export default {
     //"prisma": 'https://myopenquotes.com/mottobook_prod/prod',
 
     //Current Production
-    "prisma": 'https://myopenquotes.com/mottobook/dev/',
+    "prisma": 'https://159.65.109.0/mottobook/dev/',
 
 }
