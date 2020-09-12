@@ -6,7 +6,7 @@
     "aws-sdk": "^2.188.0",
     "axios": "^0.17.1",
     "graphcool-lib": "^0.1.4",
-    "node-fetch": "^1.7.3",
+    "node-fetch": "^2.6.1",
     "serverless-python-requirements": "^3.3.0",
     "whatwg-fetch": "^2.0.3",
     "xmldom": "^0.1.27",
